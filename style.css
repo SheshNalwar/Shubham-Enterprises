@@ -255,7 +255,7 @@ html, body{
     height: 30vh;
     width: 15vw;
     font-size: 2.3vh;
-    /* border: 2px solid #0E3041; */
+    border: 2px solid #0E3041;
     color: #0E3041;
     margin-top: 2vh;
     border-radius: 20px;
