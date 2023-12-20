@@ -50,7 +50,9 @@ html, body{
     font-weight: 900;
     text-transform: uppercase;
 }
-
+.nav-menu li a:hover{
+    color: white;
+}
 .nav-menu {
     display: flex;
     align-items: center;
@@ -67,7 +69,9 @@ html, body{
     color: #0E3041;
     font-weight: 700;
 }
-
+.nav-menu li a:hover{
+    color: white;
+}
 .nav i{
     display: none;
 }
