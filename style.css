@@ -67,7 +67,9 @@ html, body{
     color: #0E3041;
     font-weight: 700;
 }
-
+.nav-menu li a:hover{
+    color: white;
+}
 .nav i{
     display: none;
 }
