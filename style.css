@@ -100,7 +100,7 @@ html, body{
     height: 50%;
     width: 85%;
     text-align: center;
-    position: absolute;
+    position: absolute;  
     color: #0E3041;
     border: 2px solid  red;
 }
