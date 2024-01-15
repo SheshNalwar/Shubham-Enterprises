@@ -73,10 +73,33 @@ html, body{
 .nav-menu li a:hover{
     color: white;
 }
-.nav i{
+
+#hamburger{
+    width: 50px;
+    height: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    gap: .4rem;
+    cursor: pointer;
+}
+.lines{
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+    transition: .2s all ease;
     display: none;
 }
-
+.line1{
+    transform: translateY(11px)rotate(45deg);
+}
+.line2{
+    transform: translateX(200px);
+}
+.line3{
+    transform: translateY(-11px)rotate(-45deg);
+}
 .page1 {
     height: 100%;
     width: 100%;
@@ -102,11 +125,11 @@ html, body{
     text-align: center;
     position: absolute;  
     color: #0E3041;
-} 
+}
 
 .page1-content h1 {
     font-size: 12vh;
-    font-weight: 800;  
+    font-weight: 900;  
 }
 
 .page1-content2{
@@ -483,6 +506,9 @@ html, body{
 
 
 @media(max-width:600px){
+    .lines{
+        display: block;
+    }
     .nav {
         height: 8vh;
         width: 100%;
@@ -516,12 +542,6 @@ html, body{
         height: 100%;
         width: calc(100% - 80%);
         display: none;
-    }
-
-    .nav i{
-        color: #0E3041;
-        font-size: 8vw;
-        display: block;
     }
 
     .page1{
