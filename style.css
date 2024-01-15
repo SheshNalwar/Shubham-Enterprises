@@ -82,6 +82,7 @@ html, body{
     display: flex;
     gap: .4rem;
     cursor: pointer;
+    
 }
 .lines{
     width: 50px;
