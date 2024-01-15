@@ -31,5 +31,13 @@ gsap.to('.nav', {
     }
  })
 
+function hamburgermenu(){
+    const line1 = document.getElementById("line1");
+    const line2 = document.getElementById("line2");
+    const line3 = document.getElementById("line3");
+    line1.classList.toggle("line1");
+    line2.classList.toggle("line2");
+    line3.classList.toggle("line3");
+}
 
  
