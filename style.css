@@ -259,6 +259,7 @@ body {
     border: 7px solid #0E3041;
     margin-top: 2vh;
     overflow: hidden;
+    margin-left: 1.5vw;
     box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
 }
 
@@ -314,6 +315,7 @@ body {
     border: 7px solid #d39874;
     margin-top: 2vh;
     overflow: hidden;
+    margin-left: 1.5vw;
     box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
 }
 
@@ -369,6 +371,7 @@ body {
     border: 7px solid #0E3041;
     margin-top: 2vh;
     overflow: hidden;
+    margin-left: 1.5vw;
     box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
 }
 
@@ -424,6 +427,7 @@ body {
     border: 7px solid #d39874;
     margin-top: 2vh;
     overflow: hidden;
+    margin-left: 1.5vw;
     box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
 }
 
@@ -478,33 +482,6 @@ body {
     color: #0E3041;
     text-align: center;
 }
-
-.page4 .options-container {
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.page4 .option {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-.page4 .option-header {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.page4 .arrow {
-    float: right;
-}
-
-.page4 .option-info {
-    display: none;
-    padding: 10px;
-}
-
 
 
 @media(max-width:600px) {
@@ -717,8 +694,8 @@ body {
         display: flex;
         flex-direction: row;
         gap: 5vw;
-        /* margin-top: 1vh; */
     }
+    
     .page3  #review-box .review-left {
         height: 100%;
         width: 30%;
