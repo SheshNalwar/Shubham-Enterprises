@@ -527,13 +527,8 @@ body {
         justify-content: space-between;
     }
 
-<<<<<<< HEAD
-    .nav-brand{
-        height: 100%; 
-=======
     .nav-brand {
         height: 100%;
->>>>>>> 4cbe48d5513f017ebbec89a3d7c2c14f9d35c72b
         width: 80%;
         display: flex;
         align-items: center;
@@ -559,7 +554,6 @@ body {
         display: none;
     }
 
-<<<<<<< HEAD
     #hamburger{
         display: block;
     }
@@ -582,9 +576,6 @@ body {
     }
 
     .page1{
-=======
-    .page1 {
->>>>>>> 4cbe48d5513f017ebbec89a3d7c2c14f9d35c72b
         height: 55%;
         width: 100%;
         position: relative;
@@ -658,11 +649,7 @@ body {
         width: 40vw;
         padding: 2vw;
         border-radius: 20px;
-<<<<<<< HEAD
-        box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
-=======
         box-shadow: 40px 40px 60px #0000003b, inset -40px, -40px, 60px #ffffff67;
->>>>>>> 4cbe48d5513f017ebbec89a3d7c2c14f9d35c72b
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -721,10 +708,6 @@ body {
         padding: 0 2vw;
     }
 
-<<<<<<< HEAD
-    .page3 #review-box{
-        height: 22%;
-=======
     .page3 .review-container .review1 {
         height: 45%;
         width: 40%;
@@ -745,7 +728,6 @@ body {
 
     .page3 .review-container .review1 .review-img img {
         height: 100%;
->>>>>>> 4cbe48d5513f017ebbec89a3d7c2c14f9d35c72b
         width: 100%;
         margin-top: 2vh;
         display: flex;
@@ -757,34 +739,6 @@ body {
         /* box-shadow: 10px 10px 30px #0000001c, inset -10px -10px 30px #ffffff2a; */
     }
 
-<<<<<<< HEAD
-    .page3  #review-box .review-left  .review-img{
-        margin-top: 2vh;
-        height: 15vw;
-        width: 15vw;
-        margin-left: 35%;
-        border: none;
-        margin-top: 4vh;
-        box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
-    }
-
-    .page3  #review-box .review-left {
-        height: 100%;
-        width: 30%;
-        justify-content: center;
-    }
-
-    .page3  #review-box .review-right {
-        height: 100%;
-        width: 70%;
-    }
-
-    .page3  #review-box .review-left .review-name{
-        height: 10vw;
-        width: 100%;
-        margin-left: 15%;
-        background-color: transparent;
-=======
     .page3 .review-container .review1 .review-name {
         height: 25vh;
         width: 40vw;
@@ -799,7 +753,6 @@ body {
         height: 18vh;
         width: 40vw;
         border: 4px solid #0E3041;
->>>>>>> 4cbe48d5513f017ebbec89a3d7c2c14f9d35c72b
         color: #0E3041;
         font-size: 4vw;
         margin-top: 1vh;
@@ -807,13 +760,6 @@ body {
         box-shadow: 10px 10px 30px #00000028, inset -20px -20px 40px #ffffff2a;
     }
 
-<<<<<<< HEAD
-    .page3  #review-box .review-right .review-content{
-        height: 80%;
-        width: 90%;
-        font-size: 3vw;
-        margin-top: 2vh;
-=======
     .page3 .review-container .review2 {
         height: 45%;
         width: 40%;
@@ -946,7 +892,6 @@ body {
         height: 18vh;
         width: 40vw;
         border: 4px solid #0E3041;
->>>>>>> 4cbe48d5513f017ebbec89a3d7c2c14f9d35c72b
         color: #0E3041;
         border: none;
         box-shadow: 10px 10px 30px #00000028, inset -20px -20px 30px #ffffff2a;
