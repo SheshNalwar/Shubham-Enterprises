@@ -483,6 +483,56 @@ body {
     text-align: center;
 }
 
+.page4 .header {
+    background-color: #27ae60;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+}
+
+.page4 .resources {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.page4 .resources h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page4 .resources p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.page4 .resources ul {
+    margin-bottom: 20px;
+}
+
+.page4 .resources ul li {
+    margin-bottom: 10px;
+}
+
+.page4 .resources button {
+    background-color: #27ae60;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #219350;
+}
+
 
 @media(max-width:600px) {
     .lines {
