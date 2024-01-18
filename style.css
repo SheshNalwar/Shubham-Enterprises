@@ -534,8 +534,7 @@ body {
         align-items: center;
         justify-content: center;
         gap: 3vw;
-    }
-    
+    }   
 
     .nav-brand #logo {
         height: 7vh;
@@ -552,6 +551,27 @@ body {
         height: 100%;
         width: calc(100% - 80%);
         display: none;
+    }
+
+    #hamburger{
+        display: block;
+    }
+
+    .lines{
+        width: 40px;
+        height: 5px;
+        margin-top: 5px;
+        background-color: #0E3041;
+    }
+
+    .line1{
+        transform: translateY(10px)rotate(45deg);
+    }
+    .line2{
+        transform: translateX(200px);
+    }
+    .line3{
+        transform: translateY(-10px)rotate(-45deg);
     }
 
     .page1 {
@@ -628,6 +648,7 @@ body {
         width: 40vw;
         padding: 2vw;
         border-radius: 20px;
+        box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
         box-shadow: 40px 40px 60px #0000003b, inset -40px, -40px, 60px #ffffff67;
         text-align: center;
         display: flex;
@@ -718,6 +739,33 @@ body {
         /* box-shadow: 10px 10px 30px #0000001c, inset -10px -10px 30px #ffffff2a; */
     }
 
+    .page3  #review-box .review-left  .review-img{
+        margin-top: 2vh;
+        height: 15vw;
+        width: 15vw;
+        margin-left: 35%;
+        border: none;
+        margin-top: 4vh;
+        box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
+    }
+
+    .page3  #review-box .review-left {
+        height: 100%;
+        width: 30%;
+        justify-content: center;
+    }
+
+    .page3  #review-box .review-right {
+        height: 100%;
+        width: 70%;
+    }
+
+    .page3  #review-box .review-left .review-name{
+        height: 10vw;
+        width: 100%;
+        margin-left: 15%;
+        background-color: transparent;
+    }
     .page3 .review-container .review1 .review-name {
         height: 25vh;
         width: 40vw;
@@ -739,6 +787,12 @@ body {
         box-shadow: 10px 10px 30px #00000028, inset -20px -20px 40px #ffffff2a;
     }
 
+    .page3  #review-box .review-right .review-content{
+        height: 80%;
+        width: 90%;
+        font-size: 3vw;
+        margin-top: 2vh;
+    }
     .page3 .review-container .review2 {
         height: 45%;
         width: 40%;
