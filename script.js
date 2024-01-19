@@ -1,20 +1,20 @@
-function toggleInfo(infoId) {
-    var info = document.getElementById(infoId);
-    var isInfoVisible = window.getComputedStyle(info).getPropertyValue('display') !== 'none';
+function toggleAnswer(id) {
+    var question = $('#' + id).prev('.question');
+    var answer = $('#' + id);
 
-    // Toggle the display property
-    info.style.display = isInfoVisible ? 'none' : 'block';
-
-    // Move the remaining options down with margin
-    var options = document.getElementsByClassName('option');
-    var offset = 0;
-    for (var i = 0; i < options.length; i++) {
-        if (options[i].id !== infoId.replace('info', 'option')) {
-            options[i].style.marginTop = offset + 'px';
-            offset += 10; // Adjust the margin as needed
-        }
+    if (answer.is(':visible')) {
+      answer.slideUp();
+      question.removeClass('rotate');
+      $('.page4').css('margin-bottom', '0px'); // Adjust as needed
+    } else {
+      $('.answer').slideUp(); // Hide other answers
+      $('.question').removeClass('rotate'); // Remove rotation from other questions
+      answer.slideDown();
+      question.toggleClass('rotate');
+      $('.page4').css('margin-bottom', '100px'); // Adjust as needed
     }
-}
+  }
+
 
 gsap.to('.nav', {
     backgroundColor: "#fff",
@@ -39,5 +39,3 @@ function hamburgermenu(){
     line2.classList.toggle("line2");
     line3.classList.toggle("line3");
 }
-
- 
