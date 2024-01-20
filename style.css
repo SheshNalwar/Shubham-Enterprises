@@ -471,7 +471,7 @@ body {
     color: #333;
 }
 
-.page4 .page4-heading{
+.page4 .page4-heading {
     height: 10%;
     width: 100%;
     display: flex;
@@ -479,33 +479,26 @@ body {
     align-items: center;
 }
 
-.page4 .page4-heading h2{
+.page4 .page4-heading h2 {
     font-size: 5vh;
     font-weight: 800;
     color: #0E3041;
     text-transform: uppercase;
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-
-  .faq-container {
+.faq-container {
     max-width: 1000px;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+}
 
-  .faq-column {
+.faq-column {
     width: 48%;
-  }
+}
 
-  .question {
+.question {
     cursor: pointer;
     width: 100%;
     padding: 15px;
@@ -514,23 +507,23 @@ body {
     border-radius: 8px;
     position: relative;
     transition: background-color 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+    box-shadow: 10px 10px 20px #00000027, inset -10px -10px 20px #ffffff2a;
+}
 
-  .question::before {
+.question::before {
     content: '+';
     display: inline-block;
     position: absolute;
     right: 20px;
     font-size: 20px;
     transition: transform 0.3s;
-  }
+}
 
-  .question.rotate::before {
+.question.rotate::before {
     transform: rotate(45deg);
-  }
+}
 
-  .answer {
+.answer {
     display: none;
     width: 100%;
     padding: 15px;
@@ -539,15 +532,15 @@ body {
     border-radius: 8px;
     margin-top: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
 
-footer{
+footer {
     height: 60%;
     width: 100%;
     background-color: #0E3041;
 }
 
-footer .top-button{
+footer .top-button {
     height: 10%;
     width: 100%;
     color: #fff;
@@ -559,7 +552,7 @@ footer .top-button{
     cursor: pointer;
 }
 
-footer .footer-lists{
+footer .footer-lists {
     height: 60%;
     width: 100%;
     border-bottom: 1px solid grey;
@@ -576,14 +569,16 @@ footer .footer-lists li {
     cursor: pointer;
     font-size: 1.1vw;
 }
-footer .footer-lists ul{
+
+footer .footer-lists ul {
     text-align: center;
 }
+
 footer .footer-bottom {
     height: 20%;
     width: 100%;
     color: #fff;
-    font-size: 1vw;    
+    font-size: 1vw;
 }
 
 footer .footer-bottom ul {
@@ -594,11 +589,13 @@ footer .footer-bottom ul {
     align-items: center;
     justify-content: center;
     gap: 3vw;
-    top:50%;
+    top: 50%;
 }
-.menuPage{
+
+.menuPage {
     display: none;
 }
+
 @media(max-width:600px) {
     .lines {
         display: block;
@@ -611,29 +608,34 @@ footer .footer-bottom ul {
         gap: .4rem;
         z-index: 10;
     }
-    .footer-lists{
+
+    .footer-lists {
         padding: 0 5vw;
     }
-    .footer-bottom ul li{
+
+    .footer-bottom ul li {
         font-size: 3vw;
         text-wrap: wrap;
     }
+
     .menuPage li {
         list-style: none;
         margin: 25px;
         text-align: center;
     }
-    
+
     .menuPage li a {
         font-size: 7vw;
         text-decoration: none;
         color: white;
         font-weight: 700;
     }
-    .menuPage{
+
+    .menuPage {
         display: none;
     }
-    .active{
+
+    .active {
         display: block;
         width: 100%;
         height: 100%;
@@ -642,16 +644,19 @@ footer .footer-bottom ul {
         top: 0%;
         z-index: 2;
     }
-    .active{
+
+    .active {
         display: flex;
         align-items: center;
         justify-content: center;
         transition: .3s all ease;
     }
+
     footer .footer-lists li {
         text-align: center;
         font-size: 2.8vw;
     }
+
     .nav {
         height: 8vh;
         width: 100%;
@@ -668,7 +673,7 @@ footer .footer-bottom ul {
         align-items: center;
         justify-content: center;
         gap: 3vw;
-    }   
+    }
 
     .nav-brand #logo {
         height: 7vh;
@@ -687,24 +692,26 @@ footer .footer-bottom ul {
         display: none;
     }
 
-    #hamburger{
+    #hamburger {
         display: block;
     }
 
-    .lines{
+    .lines {
         width: 40px;
         height: 5px;
         margin-top: 5px;
         background-color: #0E3041;
     }
 
-    .line1{
+    .line1 {
         transform: translateY(10px)rotate(45deg);
     }
-    .line2{
+
+    .line2 {
         transform: translateX(200px);
     }
-    .line3{
+
+    .line3 {
         transform: translateY(-10px)rotate(-45deg);
     }
 
@@ -771,7 +778,7 @@ footer .footer-bottom ul {
         width: 100%;
         margin-top: 1vh;
         display: flex;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 6vw;
@@ -840,31 +847,31 @@ footer .footer-bottom ul {
     .page3 .review-container {
         height: calc(100% - 10%);
         width: 100%;
-        display:block;
+        display: block;
         padding: 0 2vw;
         color: #0E3041;
     }
 
-    .page3  #review-box {
+    .page3 #review-box {
         height: 25%;
         width: 100%;
         display: flex;
         flex-direction: row;
         gap: 5vw;
     }
-    
-    .page3  #review-box .review-left {
+
+    .page3 #review-box .review-left {
         height: 100%;
         width: 30%;
         justify-content: center;
-    }    
+    }
 
-    .page3  #review-box .review-right {
+    .page3 #review-box .review-right {
         height: 100%;
         width: 70%;
     }
 
-    .page3  #review-box .review-left  .review-img{
+    .page3 #review-box .review-left .review-img {
         margin-top: 2vh;
         height: 15vw;
         width: 15vw;
@@ -874,7 +881,7 @@ footer .footer-bottom ul {
         box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
     }
 
-    .page3  #review-box .review-left .review-name{
+    .page3 #review-box .review-left .review-name {
         height: 10vw;
         width: 100%;
         margin-left: 10%;
@@ -886,7 +893,7 @@ footer .footer-bottom ul {
         box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
     }
 
-    .page3  #review-box .review-right .review-content{
+    .page3 #review-box .review-right .review-content {
         height: 70%;
         width: 90%;
         font-size: 3vw;
@@ -895,24 +902,25 @@ footer .footer-bottom ul {
         border: none;
         box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
     }
-    .page4{
+
+    .page4 {
         height: auto;
         width: 100%;
         padding: 0 5vw;
     }
 
-    .page4 .page4-heading{
+    .page4 .page4-heading {
         height: 10%;
         width: 100%;
-        margin-top: 5vh;        
+        margin-top: 5vh;
     }
 
-    .page4 .page4-heading h2{
+    .page4 .page4-heading h2 {
         font-size: 6vw;
         text-align: center;
     }
 
-    .faq-column{
+    .faq-column {
         flex-direction: column;
         width: 100%;
     }
