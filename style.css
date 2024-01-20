@@ -469,7 +469,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     color: #333;
-}
+  }
 
 .page4 .page4-heading{
     height: 10%;
@@ -487,7 +487,7 @@ body {
     margin-top: 7vh;
 }
 
-.page4 .faq-container {
+  .page4 .faq-container {
     padding: 0 5vw;
     width: 100%;
     margin: 20px auto;
@@ -495,13 +495,13 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+  }
 
-.page4 .faq-column {
+  .page4 .faq-column {
     width: 48%;
-}
+  }
 
-.page4 .question {
+  .page4 .question {
     cursor: pointer;
     width: 100%;
     padding: 15px;
@@ -511,22 +511,22 @@ body {
     position: relative;
     transition: background-color 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.page4 .question::before {
+  .page4 .question::before {
     content: '+';
     display: inline-block;
     position: absolute;
     right: 20px;
     font-size: 20px;
     transition: transform 0.3s;
-}
+  }
 
-.page4 .question.rotate::before {
+  .page4 .question.rotate::before {
     transform: rotate(45deg);
-}
+  }
 
-.page4 .answer {
+  .page4 .answer {
     display: none;
     width: 100%;
     padding: 15px;
@@ -535,7 +535,7 @@ body {
     border-radius: 8px;
     margin-top: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  }
 
 footer{
     height: 60%;
@@ -607,12 +607,8 @@ footer .footer-bottom ul {
         gap: .4rem;
         z-index: 10;
     }
-    .footer-lists{
-        padding: 0 5vw;
-    }
     .footer-bottom ul li{
         font-size: 3vw;
-        text-wrap: wrap;
     }
     .menuPage li {
         list-style: none;
@@ -767,7 +763,7 @@ footer .footer-bottom ul {
         width: 100%;
         margin-top: 1vh;
         display: flex;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 6vw;
@@ -892,33 +888,11 @@ footer .footer-bottom ul {
         box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
     }
 
-    .page4 {
-        height: 100%;
-        width: 100%;
-    }
-
-    .page4 .page4-heading{
+    .page4 h2{
         height: 10%;
-        width: 100%;  
-    }
-
-    .page4 .page4-heading h2{
-        font-size: 6vw;
-        text-align: center;
-    }
-    
-    .page4 .faq-container{
-        height: 80%;
         width: 100%;
-        margin-top: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        font-size: 5vw;
+        margin-top:15%;
+        padding: 5px;
     }
-
-    .page4 .faq-column{
-        width: 90%;
-    }
-
 }
