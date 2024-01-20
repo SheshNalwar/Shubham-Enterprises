@@ -621,9 +621,10 @@ footer .footer-bottom ul {
     }
 
     .phuto {
-        width: auto;
+        width: 46vw;
         height: 46vw;
         justify-content: center;
+        box-shadow: 10px 10px 30px #00000056, inset -10px -10px 30px #ffffff70;
     }
 
     .slogan {
