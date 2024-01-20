@@ -125,6 +125,8 @@ section {
     height: 400px;
     width: 400px;
     margin: auto;
+    border-radius: 50%;
+    box-shadow: 20px 20px 40px #00000056, inset -20px -20px 40px #ffffff70;
 }
 
 .phuto img {
@@ -149,12 +151,11 @@ section {
     word-spacing: 4px;
 }
 
-.title {
+.content .title {
     color: #0E3041;
     font-size: 2.5rem;
     text-align: center;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 900;
 }
 
 .page2 {
