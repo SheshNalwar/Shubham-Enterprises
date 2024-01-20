@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
+    font-family: "Poppins", sans-serif;
 }
 
 .nav {
@@ -101,49 +103,58 @@ body {
     transform: translateY(-11px)rotate(-45deg);
 }
 
-.page1 {
-    height: 100%;
-    width: 100%;
-    position: relative;
+p {
+    color: rgb(85, 85, 85);
+}
+
+section {
+    padding-top: 15vh;
+    margin: 0 8rem;
+    min-height: fit-content;
+}
+
+#landingPage {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 5rem;
+    height: 100vh;
 }
 
-.page1 img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
+.phuto {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto;
 }
 
-.page1-content {
-    height: 50%;
-    width: 85%;
+.phuto img {
+    border-radius: 50%;
+}
+
+.content {
+    align-self: center;
     text-align: center;
-    position: absolute;
+}
+
+.content p {
+    font-weight: 600;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+    line-height: 24px;
+    word-spacing: 4px;
+}
+
+.title {
     color: #0E3041;
-}
-
-.page1-content h1 {
-    font-size: 12vh;
-    font-weight: 900;
-}
-
-.page1-content2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.page1-content2 p {
-    margin-top: 1vh;
-    width: 65%;
-    font-size: 2.5vh;
-    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .page2 {
@@ -596,7 +607,32 @@ footer .footer-bottom ul {
     display: none;
 }
 
-@media(max-width:600px) {
+@media screen and (max-width:600px) {
+    #landingPage {
+        height: 83vh;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    section {
+        height: fit-content;
+        margin: 0 5%;
+    }
+
+    .phuto {
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+
+    .slogan {
+        font-size: 1.25rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
     .lines {
         display: block;
     }
