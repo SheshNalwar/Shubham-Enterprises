@@ -1,18 +1,14 @@
-function toggleAnswer(id) {
-  var question = $('#' + id).prev('.question');
-  var answer = $('#' + id);
+function toggleAnswer(index) {
+  var answer = $(".answer").eq(index - 1);
+  var icon = $(".icon").eq(index - 1);
 
-  if (answer.is(':visible')) {
-    answer.slideUp();
-    question.removeClass('rotate');
-  } else {
-    $('.answer').slideUp(); // Hide other answers
-    $('.question').removeClass('rotate'); // Remove rotation from other questions
-    answer.slideDown();
-    question.toggleClass('rotate');
-  }
+  // Hide other answers
+  $(".answer").not(answer).slideUp().removeClass("answer-visible");
+
+  // Toggle visibility for the clicked answer
+  answer.slideToggle().toggleClass("answer-visible");
+  icon.html(answer.hasClass("answer-visible") ? "-" : "+");
 }
-
 
 gsap.to('.nav', {
     backgroundColor: "#fff",
