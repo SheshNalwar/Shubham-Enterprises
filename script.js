@@ -1,19 +1,17 @@
 function toggleAnswer(id) {
-    var question = $('#' + id).prev('.question');
-    var answer = $('#' + id);
+  var question = $('#' + id).prev('.question');
+  var answer = $('#' + id);
 
-    if (answer.is(':visible')) {
-      answer.slideUp();
-      question.removeClass('rotate');
-      $('.page4').css('margin-bottom', '0px'); // Adjust as needed
-    } else {
-      $('.answer').slideUp(); // Hide other answers
-      $('.question').removeClass('rotate'); // Remove rotation from other questions
-      answer.slideDown();
-      question.toggleClass('rotate');
-      $('.page4').css('margin-bottom', '100px'); // Adjust as needed
-    }
+  if (answer.is(':visible')) {
+    answer.slideUp();
+    question.removeClass('rotate');
+  } else {
+    $('.answer').slideUp(); // Hide other answers
+    $('.question').removeClass('rotate'); // Remove rotation from other questions
+    answer.slideDown();
+    question.toggleClass('rotate');
   }
+}
 
 
 gsap.to('.nav', {
