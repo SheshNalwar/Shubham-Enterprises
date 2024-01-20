@@ -607,8 +607,12 @@ footer .footer-bottom ul {
         gap: .4rem;
         z-index: 10;
     }
+    .footer-lists{
+        padding: 0 5vw;
+    }
     .footer-bottom ul li{
         font-size: 3vw;
+        text-wrap: wrap;
     }
     .menuPage li {
         list-style: none;
