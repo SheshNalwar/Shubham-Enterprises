@@ -117,7 +117,6 @@ body {
     object-fit: cover;
     position: absolute;
     z-index: -1;
-    box-shadow: 0 20px 40px #F1CDB7;
 }
 
 .page1-content {
