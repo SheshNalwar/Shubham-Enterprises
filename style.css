@@ -497,13 +497,6 @@ section {
     text-transform: uppercase;
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-}
-
 .faq-container {
     max-width: 1000px;
     margin: 20px auto;
@@ -525,7 +518,7 @@ body {
     border-radius: 8px;
     position: relative;
     transition: background-color 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 20px #00000027, inset -10px -10px 20px #ffffff2a;
 }
 
 .question::before {
