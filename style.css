@@ -610,7 +610,7 @@ footer .footer-bottom ul {
 
 @media screen and (max-width:600px) {
     #landingPage {
-        height: 83vh;
+        height: 100vh;
         margin-bottom: 0;
         display: block;
     }
