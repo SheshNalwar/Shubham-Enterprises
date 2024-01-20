@@ -130,11 +130,11 @@ section {
     width: 400px;
     margin: auto;
     border-radius: 50%;
-    box-shadow: 20px 20px 40px #00000056, inset -20px -20px 40px #ffffff70;
+    box-shadow: 30px 30px 60px #00000056, inset -20px -20px 60px #ffffff70;
 }
 
 .phuto img {
-    border-radius: 50%;
+    border-radius: 20px;
 }
 .content {
     align-self: center;
@@ -143,6 +143,13 @@ section {
 .content p {
     font-weight: 600;
     text-align: left;
+}
+.content p img{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 5px 5px 10px #00000049, inset -5px -5px 10px #ffffff70;
 }
 
 .slogan1{
