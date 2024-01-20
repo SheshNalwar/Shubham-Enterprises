@@ -486,48 +486,59 @@ body {
     text-transform: uppercase;
 }
 
-.page4 .faq-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 20px auto;
-    margin-top: 5vh;
-    color: #0E3041;
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
   }
 
-  .faq-item {
-    width: 40%;
-    margin-bottom: 20px;
-    position: relative;
+  .faq-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .faq-column {
+    width: 48%;
   }
 
   .question {
     cursor: pointer;
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 8px;
     position: relative;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .icon {
+  .question::before {
+    content: '+';
+    display: inline-block;
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-weight: bold;
+    right: 20px;
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+
+  .question.rotate::before {
+    transform: rotate(45deg);
   }
 
   .answer {
     display: none;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  .faq-container > .faq-item:nth-child(even) {
-    margin-right: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
 footer{
@@ -893,7 +904,7 @@ footer .footer-bottom ul {
     .page4 .page4-heading{
         height: 10%;
         width: 100%;
-        
+        margin-top: 5vh;        
     }
 
     .page4 .page4-heading h2{
@@ -901,8 +912,8 @@ footer .footer-bottom ul {
         text-align: center;
     }
 
-    .faq-item {
+    .faq-column{
+        flex-direction: column;
         width: 100%;
-      }
-
+    }
 }
