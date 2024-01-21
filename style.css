@@ -238,7 +238,7 @@ section {
 
 .content button:hover {
     background-color: transparent;
-    border: 3px solid #0E3041;
+    box-shadow: inset 0 0 0 3px #0E3041;
     color: #0E3041;
     transition: 0.2s all ease-in-out;
 }
