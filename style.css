@@ -803,12 +803,35 @@ footer .footer-bottom ul {
     }
 
     #hamburger {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         flex-direction: row;
         display: flex;
+        justify-content: center;
         gap: .4rem;
         z-index: 10;
+        /* overflow-y:scroll; */
     }
+
+    .sub-menu {
+        display: none;
+        flex-direction: column;
+        margin-left: 20px;
+        font-size: 5vw;
+    }
+
+    .sub-menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 8px;
+        margin: 0;
+        transition: background-color 0.3s;
+    }
+
+
+    .sub-menu a:hover {
+        background-color: #555;
+    }
+
 
     .footer-lists {
         padding: 0 10vw;

@@ -54,3 +54,14 @@ function hamburgermenu(){
     line3.classList.toggle("line3");
     navin.classList.toggle("active");
 }
+
+function toggleMenu() {
+  var menuOptions = document.querySelector('.menuPage');
+  menuOptions.style.display = (menuOptions.style.display === 'flex') ? 'none' : 'flex';
+}
+
+
+function toggleSubMenu(subMenuId) {
+  var subMenu = document.getElementById(subMenuId);
+  subMenu.style.display = (subMenu.style.display === 'flex') ? 'none' : 'flex';
+}

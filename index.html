@@ -13,8 +13,29 @@
     <div class="menuPage">
         <ul>
         <li><a href="#" target="_blank">Home</a></li>
-        <li><a href="#" target="_blank" onclick="toggleSubMenu('loansSubMenu')">Loans</a></li>
-        <li><a href="#" target="_blank"  onclick="toggleSubMenu('calculatorSubMenu')">Loan Calculator</a></li>
+        <li><a href="#" onclick="toggleSubMenu('loansSubMenu')">Loans</a></li>
+        <div class="sub-menu" id="loansSubMenu">
+            <a href="#">Personal Loan</a>
+            <a href="#">Business Loan</a>
+            <a href="#">Home Loan</a>
+            <a href="#">Car Loan</a>
+            <a href="#"> Commercial Vehicle Loan</a>
+            <a href="#">Tractor Loan</a>
+            <a href="#">Mortgage Loan</a>
+            <a href="#">Agri Loan</a>
+            <!-- Add more loan options as needed -->
+        </div>
+        <li><a href="#" onclick="toggleSubMenu('calculatorSubMenu')">Loan Calculator</a></li>
+        <div class="sub-menu" id="calculatorSubMenu">
+            <a href="#">Personal Loan Calculator</a>
+            <a href="#">Business Loan Calculator</a>
+            <a href="#">Home Loan Calculator</a>
+            <a href="#">Car Loan Calculator</a>
+            <a href="#"> Commercial Vehicle Loan Calculator</a>
+            <a href="#">Tractor Loan Calculator</a>
+            <a href="#">Mortgage Loan Calculator</a>
+            <a href="#">Agri Loan Calculator</a>
+        </div>
         <li><a href="#" target="_blank">About us</a></li>
         <li><a href="#" target="_blank">Contact Us</a></li>
         </ul>
