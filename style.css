@@ -15,14 +15,13 @@ body {
 
 ::-webkit-scrollbar{
     width: 12px;
-    background-color: #ccc;
+    background-color: #ccc; 
     border-radius: 10px;
-    /* border: 1px solid #0E3041; */
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #0E3041; /* Set the color of the scrollbar thumb */
-    border-radius: 10px; /* Set the border radius of the thumb */
+    background-color: #0E3041; 
+    border-radius: 10px; 
     border: 1px solid #fff;
 }
 
