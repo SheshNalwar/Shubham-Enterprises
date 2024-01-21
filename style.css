@@ -803,6 +803,7 @@ footer .footer-bottom ul {
     .nav-brand h1 {
         font-size: 6vw;
         font-weight: 900;
+        line-height: 1;
     }
 
     .nav-menu {
