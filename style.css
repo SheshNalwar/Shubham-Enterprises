@@ -803,13 +803,11 @@ footer .footer-bottom ul {
     }
 
     #hamburger {
-        /* flex-wrap: wrap; */
         flex-direction: row;
         display: flex;
         justify-content: center;
         gap: .4rem;
         z-index: 10;
-        /* overflow-y:scroll; */
     }
 
     .sub-menu {
