@@ -657,6 +657,18 @@ footer .footer-bottom ul {
     display: none;
 }
 
+@keyframes fade {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width:600px) {
     #landingPage {
         height: auto;
@@ -774,13 +786,13 @@ footer .footer-bottom ul {
         position: fixed;
         top: 0%;
         z-index: 2;
+        animation: fade .3s;
     }
 
     .active {
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: .3s all ease;
     }
 
     footer .footer-lists li {
