@@ -13,6 +13,19 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: #ccc;
+    border-radius: 10px;
+    /* border: 1px solid #0E3041; */
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0E3041; /* Set the color of the scrollbar thumb */
+    border-radius: 10px; /* Set the border radius of the thumb */
+    border: 1px solid #fff;
+}
+
 .nav {
     height: 12vh;
     width: 100%;
