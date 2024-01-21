@@ -126,10 +126,10 @@ section {
 
 .phuto {
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 20px;
     box-shadow: 30px 30px 60px #00000056, inset -20px -20px 60px #ffffff70;
 }
 
