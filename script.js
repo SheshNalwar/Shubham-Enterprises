@@ -28,6 +28,13 @@ gsap.to('.nav', {
     }
  })
 
+ let dropIcon = document.getElementById("dropdown");
+ dropIcon.addEventListener("mouseover",()=>{
+  document.getElementById("up-arrow").src="Covers/down-arrow.png";
+ })
+dropIcon.addEventListener("mouseleave",()=>{
+  document.getElementById("up-arrow").src="Covers/up-arrow.png";
+})
  let btn = document.querySelector(".top-button");
  btn.addEventListener('click',(e)=>{
     e.preventDefault();
