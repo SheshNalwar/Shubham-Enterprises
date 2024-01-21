@@ -121,8 +121,8 @@ p {
 }
 #dropdown img{
     margin: auto;
-    width: 1rem;
-    height: 1rem;
+    width: 1vw;
+    height: 1vw;
 }
 #dropdown p{
     color: #0E3041;
