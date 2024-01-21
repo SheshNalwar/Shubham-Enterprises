@@ -666,6 +666,8 @@ footer .footer-bottom ul {
         height: 80vw;
         border-radius: 20px;
         margin: 0;
+        margin-top: -3vh;
+        /* border: 2px solid red; */
         justify-content: center;
         box-shadow: 10px 10px 30px #00000056, inset -10px -10px 30px #ffffff70;
     }
