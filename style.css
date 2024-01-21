@@ -84,8 +84,12 @@ body {
     font-weight: 700;
 }
 
+.nav-menu li a:hover{
+    border-bottom: 4px solid #0E3041;
+}
+
 .nav-color:hover{
-    color: #d39874;
+    /* color: #d39874; */
 }
 
 #hamburger {
@@ -743,8 +747,8 @@ footer .footer-bottom ul {
     }
 
     .phuto {
-        width: 80vw;
-        height: 80vw;
+        width: 100vw;
+        height: 100vw;
         border-radius: 20px;
         margin: 0;
         margin-top: -3vh;
@@ -754,6 +758,7 @@ footer .footer-bottom ul {
     }
 
     .phuto img {
+        height: 100%;
         width: 100%;
     }
 
