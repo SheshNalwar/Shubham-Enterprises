@@ -807,14 +807,16 @@ footer .footer-bottom ul {
         display: flex;
         justify-content: center;
         gap: .4rem;
-        z-index: 10;
+        z-index: 2;
     }
 
     .sub-menu {
+        height: 100%;
         display: none;
         flex-direction: column;
         margin-left: 20px;
         font-size: 5vw;
+        z-index: 2;
     }
 
     .sub-menu a {
@@ -862,8 +864,16 @@ footer .footer-bottom ul {
     }
 
     .menuPage {
+        height: 200vh;
         display: none;
         overflow-y: auto;
+        margin-top: 8vh;
+    }
+
+    .menuPage ul{
+        height: auto;
+        margin: auto;
+        margin-bottom: 30vh;
     }
 
     .active {
