@@ -865,6 +865,7 @@ footer .footer-bottom ul {
 
     .menuPage {
         display: none;
+        overflow-y: auto;
     }
 
     .active {
