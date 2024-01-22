@@ -36,6 +36,13 @@ function dropDownBox() {
   dropIcon.addEventListener("mouseleave", () => {
     document.getElementById("up-arrow").src = "Covers/up-arrow.png";
   })
+  let dropIcon2 = document.getElementById("dropdown2");
+  dropIcon2.addEventListener("mouseover", () => {
+    document.getElementById("up-arrow2").src = "Covers/down-arrow.png";
+  })
+  dropIcon2.addEventListener("mouseleave", () => {
+    document.getElementById("up-arrow2").src = "Covers/up-arrow.png";
+  })
 }
 dropDownBox();
 

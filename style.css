@@ -65,6 +65,7 @@ body {
     color: #0E3041;
     font-weight: 900;
     text-transform: uppercase;
+    text-wrap: nowrap;
 }
 
 .nav-menu {
@@ -82,6 +83,7 @@ body {
     text-decoration: none;
     color: #0E3041;
     font-weight: 700;
+    text-wrap: nowrap;
 }
 
 .nav-color:hover{
@@ -127,6 +129,7 @@ p {
 #dropdown p{
     color: #0E3041;
     font-weight: 700;
+    text-wrap: nowrap;
 }
 
 #dropdown {
@@ -137,6 +140,31 @@ p {
     display: flex;
     cursor: pointer;
     gap: 5px;
+}
+
+#dropdown2 img{
+    margin: auto;
+    width: 1vw;
+    height: 1vw;
+}
+#dropdown2 p{
+    color: #0E3041;
+    font-weight: 700;
+    text-wrap: nowrap;
+}
+
+#dropdown2 {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    width: fit-content;
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+}
+
+#dropdown2:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a:hover {
