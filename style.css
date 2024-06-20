@@ -636,10 +636,10 @@ section {
 }
 
 .page4 .page4-heading h2 {
-  font-size: 5vh;
-  font-weight: 800;
-  color: #0e3041;
-  text-transform: uppercase;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #0E3041;
+    text-transform: uppercase;
 }
 
 .faq-container {
