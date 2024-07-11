@@ -1,6 +1,118 @@
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "../css/homepage.css";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Homepage = () => {
-  
+  useEffect(() => {
+    const backToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+
+    // Use gsap only after window load
+    if (typeof window !== 'undefined') {
+      gsap.to('.nav', {
+        backgroundColor: "#fff",
+        borderBottom: '1px solid #D3D3D3',
+        duration: 0.2,
+        scrollTrigger: {
+          trigger: "#navbar",
+          scroller: "body",
+          start: "top -1%",
+          end: "top -2%",
+          scrub: 0.8
+        }
+      });
+    }
+
+    const dropDownBox = () => {
+      let dropIcon = document.getElementById("dropdown");
+      if (dropIcon) {
+        dropIcon.addEventListener("mouseover", () => {
+          document.getElementById("up-arrow").src = "Covers/down-arrow.png";
+        });
+        dropIcon.addEventListener("mouseleave", () => {
+          document.getElementById("up-arrow").src = "Covers/up-arrow.png";
+        });
+      }
+      let dropIcon2 = document.getElementById("dropdown2");
+      if (dropIcon2) {
+        dropIcon2.addEventListener("mouseover", () => {
+          document.getElementById("up-arrow2").src = "Covers/down-arrow.png";
+        });
+        dropIcon2.addEventListener("mouseleave", () => {
+          document.getElementById("up-arrow2").src = "Covers/up-arrow.png";
+        });
+      }
+    };
+
+    const setUpBackToTop = () => {
+      let btn = document.querySelector(".top-button");
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          backToTop();
+        });
+      }
+    };
+
+    dropDownBox();
+    setUpBackToTop();
+
+    return () => {
+      let btn = document.querySelector(".top-button");
+      if (btn) {
+        btn.removeEventListener('click', backToTop);
+      }
+    };
+  }, []); // empty dependency array means this effect runs once on component mount
+
+  const toggleMenu = () => {
+    var menuOptions = document.querySelector('.menuPage');
+    if (menuOptions) {
+      menuOptions.style.display = (menuOptions.style.display === 'flex') ? 'none' : 'flex';
+    }
+  };
+
+  const toggleSubMenu = (subMenuId) => {
+    var subMenu = document.getElementById(subMenuId);
+    if (subMenu) {
+      subMenu.style.display = (subMenu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  };
+
+  const toggleAnswer = (id) => {
+    var question = document.getElementById(id).previousElementSibling;
+    var answer = document.getElementById(id);
+
+    if (answer && question) {
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        question.classList.remove('rotate');
+      } else {
+        document.querySelectorAll('.answer').forEach(ans => {
+          if (ans !== answer) {
+            ans.style.display = 'none';
+          }
+        });
+
+        document.querySelectorAll('.question').forEach(q => {
+          if (q !== question) {
+            q.classList.remove('rotate');
+          }
+        });
+
+        answer.style.display = 'block';
+        question.classList.add('rotate');
+      }
+    }
+  };
+
   return (
     <>
       <section id="landingPage">
@@ -8,7 +120,6 @@ const Homepage = () => {
           <img src="/img3.jpeg" alt="" />
         </div>
         <div className="content">
-          {/* <h1 className="title">SHUBHAM ENTERPRISES</h1> */}
           <p className="slogan1">
             Quick Loans, Easy Steps: Your Fast Track to Financial Ease!
             <img src="/img2.jpeg" alt="" />
@@ -85,7 +196,7 @@ const Homepage = () => {
         </div>
 
         <div className="review-container">
-          <div id="review-box" className="review1">
+          <div className="review1">
             <div className="review-left">
               <div className="review-img">
                 <img src="/img1.jpeg" alt="" />
@@ -100,7 +211,7 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div id="review-box" className="review2">
+          <div className="review2">
             <div className="review-left">
               <div className="review-img">
                 <img src="/img2.jpeg" alt="" />
@@ -115,7 +226,7 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div id="review-box" className="review3">
+          <div className="review3">
             <div className="review-left">
               <div className="review-img">
                 <img src="/img1.jpeg" alt="" />
@@ -130,7 +241,7 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div id="review-box" className="review4">
+          <div className="review4">
             <div className="review-left">
               <div className="review-img">
                 <img src="/img2.jpeg" alt="" />
@@ -154,7 +265,7 @@ const Homepage = () => {
 
         <div className="faq-container">
           <div className="faq-column">
-            <div className="question" onClick="toggleAnswer('q1')">
+            <div className="question" onClick={() => toggleAnswer('q1')}>
               What is Lorem Ipsum?
             </div>
             <div className="answer" id="q1">
@@ -162,7 +273,7 @@ const Homepage = () => {
               industry.
             </div>
 
-            <div className="question" onClick="toggleAnswer('q2')">
+            <div className="question" onClick={() => toggleAnswer('q2')}>
               Why do we use it?
             </div>
             <div className="answer" id="q2">
@@ -170,76 +281,48 @@ const Homepage = () => {
               the readable content of a page when looking at its layout.
             </div>
 
-            <div className="question" onClick="toggleAnswer('q3')">
+            <div className="question" onClick={() => toggleAnswer('q3')}>
               Where does it come from?
             </div>
             <div className="answer" id="q3">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </div>
-
-            <div className="question" onClick="toggleAnswer('q4')">
-              Is it safe?
-            </div>
-            <div className="answer" id="q4">
-              Yes, it is safe and widely used in the design and typesetting
-              industry.
-            </div>
-
-            <div className="question" onClick="toggleAnswer('q5')">
-              How can I get started?
-            </div>
-            <div className="answer" id="q5">
-              Getting started with Lorem Ipsum is easy, just add the text to
-              your design.
-            </div>
           </div>
 
           <div className="faq-column">
-            <div className="question" onClick="toggleAnswer('q6')">
+            <div className="question" onClick={() => toggleAnswer('q4')}>
+              Where can I get some?
+            </div>
+            <div className="answer" id="q4">
+              There are many variations of passages of Lorem Ipsum available.
+            </div>
+
+            <div className="question" onClick={() => toggleAnswer('q5')}>
               What is Lorem Ipsum?
             </div>
-            <div className="answer" id="q6">
+            <div className="answer" id="q5">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </div>
 
-            <div className="question" onClick="toggleAnswer('q7')">
+            <div className="question" onClick={() => toggleAnswer('q6')}>
               Why do we use it?
             </div>
-            <div className="answer" id="q7">
+            <div className="answer" id="q6">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
-            </div>
-
-            <div className="question" onClick="toggleAnswer('q8')">
-              Where does it come from?
-            </div>
-            <div className="answer" id="q8">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </div>
-
-            <div className="question" onClick="toggleAnswer('q9')">
-              Is it safe?
-            </div>
-            <div className="answer" id="q9">
-              Yes, it is safe and widely used in the design and typesetting
-              industry.
-            </div>
-
-            <div className="question" onClick="toggleAnswer('q10')">
-              How can I get started?
-            </div>
-            <div className="answer" id="q10">
-              Getting started with Lorem Ipsum is easy, just add the text to
-              your design.
             </div>
           </div>
         </div>
       </div>
 
+
+
+
+
       <footer>
-        <div className="top-button">Back To Top</div>
-        <div className="footer-lists">
+        <button className="top-button">Back to Top</button>
+        <div class="footer-lists">
           <ul>
             <b>Quick Links</b>
             <li>Home</li>
@@ -266,7 +349,7 @@ const Homepage = () => {
             <li>Address: Solapur</li>
           </ul>
         </div>
-        <div className="footer-bottom">
+        <div class="footer-bottom">
           <ul>
             <li>Privacy Policy</li>
             <li>Terms</li>
