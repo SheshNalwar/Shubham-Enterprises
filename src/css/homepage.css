@@ -1,7 +1,6 @@
 section {
     padding-top: 15vh;
     padding: 0 10vw;
-    /* margin: 0 8rem; */
     min-height: fit-content;
     box-shadow: 10px 10px 40px #00000041, inset -10px -10px 40px #ffffff40;
 }

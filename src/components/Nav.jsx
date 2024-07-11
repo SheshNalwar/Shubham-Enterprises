@@ -1,6 +1,6 @@
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "../css/nav.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,16 +13,16 @@ const Nav = () => {
             let dropIcon2 = document.getElementById("dropdown2");
 
             dropIcon.addEventListener("mouseover", () => {
-                document.getElementById("up-arrow").src = "Covers/down-arrow.png";
+                document.getElementById("up-arrow").src = "down-arrow.png";
             });
             dropIcon.addEventListener("mouseleave", () => {
-                document.getElementById("up-arrow").src = "Covers/up-arrow.png";
+                document.getElementById("up-arrow").src = "up-arrow.png";
             });
             dropIcon2.addEventListener("mouseover", () => {
-                document.getElementById("up-arrow2").src = "Covers/down-arrow.png";
+                document.getElementById("up-arrow2").src = "down-arrow.png";
             });
             dropIcon2.addEventListener("mouseleave", () => {
-                document.getElementById("up-arrow2").src = "Covers/up-arrow.png";
+                document.getElementById("up-arrow2").src = "up-arrow.png";
             });
         };
 
@@ -40,12 +40,12 @@ const Nav = () => {
         dropDownBox();
         document.getElementById("hamburger").addEventListener('click', hamburgermenu);
 
-        gsap.to('.nav', {
+        gsap.to('nav', {
             backgroundColor: "#fff",
             borderBottom: '1px solid #D3D3D3',
             duration: 0.2,
             scrollTrigger: {
-                trigger: "#navbar",
+                trigger: "nav",
                 scroller: "body",
                 start: "top -1%",
                 end: "top -2%",
@@ -60,7 +60,7 @@ const Nav = () => {
 
     return (
         <>
-            <div className="nav">
+            <nav>
                 <div className="nav-brand">
                     <img id="logo" src="/logo-transparent-gold.png" alt="" />
                     <h1>Shubham Enterprises</h1>
@@ -70,7 +70,7 @@ const Nav = () => {
                     <li><a href="#" target="_blank" className="nav-color">Home</a></li>
                     <li id="dropdown">
                         <p>Loans</p>
-                        <img src="Covers/up-arrow.png" alt="" id="up-arrow" />
+                        <img src="up-arrow.png" alt="" id="up-arrow" />
                         <div className="dropdown-content">
                             <a href="" target="_blank">Personal Loans</a>
                             <a href="" target="_blank">Business Loans</a>
@@ -84,7 +84,7 @@ const Nav = () => {
                     </li>
                     <li id="dropdown2">
                         <p>Loan Calculator</p>
-                        <img src="Covers/up-arrow.png" alt="" id="up-arrow2" />
+                        <img src="up-arrow.png" alt="" id="up-arrow2" />
                         <div className="dropdown-content">
                             <a href="" target="_blank">Personal Loan Calculator</a>
                             <a href="" target="_blank">Business Loan Calculator</a>
@@ -105,7 +105,7 @@ const Nav = () => {
                     <div id="line2" className="lines"></div>
                     <div id="line3" className="lines"></div>
                 </div>
-            </div>
+            </nav>
         </>
     )
 }

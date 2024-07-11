@@ -1,32 +1,31 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import "../css/homepage.css";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
+import "../css/homepage.css";
+import gsap from "gsap";
+import Loans from "../components/Loans";
+import Review from "../components/Review";
 
 const Homepage = () => {
   useEffect(() => {
     const backToTop = () => {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     };
-
-    // Use gsap only after window load
-    if (typeof window !== 'undefined') {
-      gsap.to('.nav', {
+    if (typeof window !== "undefined") {
+      gsap.to("nav", {
         backgroundColor: "#fff",
-        borderBottom: '1px solid #D3D3D3',
+        borderBottom: "1px solid #D3D3D3",
         duration: 0.2,
         scrollTrigger: {
           trigger: "#navbar",
           scroller: "body",
           start: "top -1%",
           end: "top -2%",
-          scrub: 0.8
-        }
+          scrub: 0.8,
+        },
       });
     }
 
@@ -54,7 +53,7 @@ const Homepage = () => {
     const setUpBackToTop = () => {
       let btn = document.querySelector(".top-button");
       if (btn) {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener("click", (e) => {
           e.preventDefault();
           backToTop();
         });
@@ -67,22 +66,24 @@ const Homepage = () => {
     return () => {
       let btn = document.querySelector(".top-button");
       if (btn) {
-        btn.removeEventListener('click', backToTop);
+        btn.removeEventListener("click", backToTop);
       }
     };
-  }, []); // empty dependency array means this effect runs once on component mount
+  }, []);
 
   const toggleMenu = () => {
-    var menuOptions = document.querySelector('.menuPage');
+    var menuOptions = document.querySelector(".menuPage");
     if (menuOptions) {
-      menuOptions.style.display = (menuOptions.style.display === 'flex') ? 'none' : 'flex';
+      menuOptions.style.display =
+        menuOptions.style.display === "flex" ? "none" : "flex";
     }
   };
 
   const toggleSubMenu = (subMenuId) => {
     var subMenu = document.getElementById(subMenuId);
     if (subMenu) {
-      subMenu.style.display = (subMenu.style.display === 'flex') ? 'none' : 'flex';
+      subMenu.style.display =
+        subMenu.style.display === "flex" ? "none" : "flex";
     }
   };
 
@@ -91,24 +92,24 @@ const Homepage = () => {
     var answer = document.getElementById(id);
 
     if (answer && question) {
-      if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-        question.classList.remove('rotate');
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        question.classList.remove("rotate");
       } else {
-        document.querySelectorAll('.answer').forEach(ans => {
+        document.querySelectorAll(".answer").forEach((ans) => {
           if (ans !== answer) {
-            ans.style.display = 'none';
+            ans.style.display = "none";
           }
         });
 
-        document.querySelectorAll('.question').forEach(q => {
+        document.querySelectorAll(".question").forEach((q) => {
           if (q !== question) {
-            q.classList.remove('rotate');
+            q.classList.remove("rotate");
           }
         });
 
-        answer.style.display = 'block';
-        question.classList.add('rotate');
+        answer.style.display = "block";
+        question.classList.add("rotate");
       }
     }
   };
@@ -139,54 +140,18 @@ const Homepage = () => {
           <h1>OUR SERVICES</h1>
         </div>
         <div className="loan-types">
-          <div className="loans">
-            <img src="/personal-loan-icon.png" alt="" />
-            <span>
-              <h4>Personal Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/business loan icon.png" alt="" />
-            <span>
-              <h4>Business Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/Home Loan icon.jpg" alt="" />
-            <span>
-              <h4>Home Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/car loan icon.jpg" alt="" />
-            <span>
-              <h4>Car Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/commercial vehicle loan icon.jpg" alt="" />
-            <span>
-              <h4>Commercial Vehicle Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/Tractor loan icon.jpg" alt="" />
-            <span>
-              <h4>Tractor Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/mortgage loan icon.jpg" alt="" />
-            <span>
-              <h4>Mortgage Loans</h4>
-            </span>
-          </div>
-          <div className="loans">
-            <img src="/agri loan icon.jpg" alt="" />
-            <span>
-              <h4>Agri Loans</h4>
-            </span>
-          </div>
+          <Loans imgSrc="personaLoan.png" loan="Personal" alt="Personal-Loan" />
+          <Loans imgSrc="businessLoan.png" loan="Business" alt="BusinessLoan" />
+          <Loans imgSrc="HomeLoan.jpg" loan="Home" alt="HomeLoan" />
+          <Loans imgSrc="CarLoan.jpg" loan="Car" alt="CarLoan" />
+          <Loans imgSrc="TractorLoan.jpg" loan="Tractor" alt="Tractor-Loan" />
+          <Loans imgSrc="MortgageLoan.jpg" loan="Mortgage" alt="MortgageLoan" />
+          <Loans imgSrc="AgriLoan.jpg" loan="Agri" alt="Agri-Loan" />
+          <Loans
+            imgSrc="CommercialVLoan.jpg"
+            loan="Commercial Vehicle"
+            alt="Commercial-Vehicle"
+          />
         </div>
       </div>
 
@@ -196,65 +161,30 @@ const Homepage = () => {
         </div>
 
         <div className="review-container">
-          <div className="review1">
-            <div className="review-left">
-              <div className="review-img">
-                <img src="/img1.jpeg" alt="" />
-              </div>
-              <div className="review-name">lorem</div>
-            </div>
-            <div className="review-right">
-              <div className="review-content">
-                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                animi quos reiciendis cumque esse, explicabo "
-              </div>
-            </div>
-          </div>
-
-          <div className="review2">
-            <div className="review-left">
-              <div className="review-img">
-                <img src="/img2.jpeg" alt="" />
-              </div>
-              <div className="review-name">lorem</div>
-            </div>
-            <div className="review-right">
-              <div className="review-content">
-                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                animi quos reiciendis cumque esse, explicabo "
-              </div>
-            </div>
-          </div>
-
-          <div className="review3">
-            <div className="review-left">
-              <div className="review-img">
-                <img src="/img1.jpeg" alt="" />
-              </div>
-              <div className="review-name">lorem</div>
-            </div>
-            <div className="review-right">
-              <div className="review-content">
-                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                animi quos reiciendis cumque esse, explicabo "
-              </div>
-            </div>
-          </div>
-
-          <div className="review4">
-            <div className="review-left">
-              <div className="review-img">
-                <img src="/img2.jpeg" alt="" />
-              </div>
-              <div className="review-name">lorem</div>
-            </div>
-            <div className="review-right">
-              <div className="review-content">
-                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                animi quos reiciendis cumque esse, explicabo "
-              </div>
-            </div>
-          </div>
+          <Review
+            imgSrc="img1.jpeg"
+            alt="review1"
+            name="A"
+            className="review1"
+          />
+          <Review
+            imgSrc="img2.jpeg"
+            alt="review2"
+            name="B"
+            className="review2"
+          />
+          <Review
+            imgSrc="img1.jpeg"
+            alt="review3"
+            name="C"
+            className="review3"
+          />
+          <Review
+            imgSrc="img2.jpeg"
+            alt="review4"
+            name="D"
+            className="review4"
+          />
         </div>
       </div>
 
@@ -265,7 +195,7 @@ const Homepage = () => {
 
         <div className="faq-container">
           <div className="faq-column">
-            <div className="question" onClick={() => toggleAnswer('q1')}>
+            <div className="question" onClick={() => toggleAnswer("q1")}>
               What is Lorem Ipsum?
             </div>
             <div className="answer" id="q1">
@@ -273,7 +203,7 @@ const Homepage = () => {
               industry.
             </div>
 
-            <div className="question" onClick={() => toggleAnswer('q2')}>
+            <div className="question" onClick={() => toggleAnswer("q2")}>
               Why do we use it?
             </div>
             <div className="answer" id="q2">
@@ -281,7 +211,7 @@ const Homepage = () => {
               the readable content of a page when looking at its layout.
             </div>
 
-            <div className="question" onClick={() => toggleAnswer('q3')}>
+            <div className="question" onClick={() => toggleAnswer("q3")}>
               Where does it come from?
             </div>
             <div className="answer" id="q3">
@@ -290,14 +220,14 @@ const Homepage = () => {
           </div>
 
           <div className="faq-column">
-            <div className="question" onClick={() => toggleAnswer('q4')}>
+            <div className="question" onClick={() => toggleAnswer("q4")}>
               Where can I get some?
             </div>
             <div className="answer" id="q4">
               There are many variations of passages of Lorem Ipsum available.
             </div>
 
-            <div className="question" onClick={() => toggleAnswer('q5')}>
+            <div className="question" onClick={() => toggleAnswer("q5")}>
               What is Lorem Ipsum?
             </div>
             <div className="answer" id="q5">
@@ -305,7 +235,7 @@ const Homepage = () => {
               industry.
             </div>
 
-            <div className="question" onClick={() => toggleAnswer('q6')}>
+            <div className="question" onClick={() => toggleAnswer("q6")}>
               Why do we use it?
             </div>
             <div className="answer" id="q6">
@@ -316,13 +246,9 @@ const Homepage = () => {
         </div>
       </div>
 
-
-
-
-
       <footer>
         <button className="top-button">Back to Top</button>
-        <div class="footer-lists">
+        <div className="footer-lists">
           <ul>
             <b>Quick Links</b>
             <li>Home</li>
@@ -349,7 +275,7 @@ const Homepage = () => {
             <li>Address: Solapur</li>
           </ul>
         </div>
-        <div class="footer-bottom">
+        <div className="footer-bottom">
           <ul>
             <li>Privacy Policy</li>
             <li>Terms</li>
