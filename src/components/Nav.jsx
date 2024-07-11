@@ -5,7 +5,7 @@ const Nav = () => {
         <>
             <div class="nav">
                 <div class="nav-brand">
-                    <img id="logo" src="Covers/logo-transparent-gold.png" alt="" />
+                    <img id="logo" src="/logo-transparent-gold.png" alt="" />
                     <h1>Shubham Enterprises</h1>
                 </div>
 

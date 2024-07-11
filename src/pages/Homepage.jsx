@@ -4,17 +4,17 @@ const Homepage = () => {
     return (
         <>
             <section id="landingPage">
-                <div class="phuto">
-                    <img src="Covers/img3.jpeg" alt="" />
+                <div className="phuto">
+                    <img src="/img3.jpeg" alt="" />
                 </div>
-                <div class="content">
-                    {/* <h1 class="title">SHUBHAM ENTERPRISES</h1> */}
-                    <p class="slogan1">
+                <div className="content">
+                    {/* <h1 className="title">SHUBHAM ENTERPRISES</h1> */}
+                    <p className="slogan1">
                         Quick Loans, Easy Steps: Your Fast Track to Financial Ease!
-                        <img src="Covers/img2.jpeg" alt="" />
-                        <img src="Covers/img1.jpeg" alt="" />
+                        <img src="/img2.jpeg" alt="" />
+                        <img src="/img1.jpeg" alt="" />
                     </p>
-                    <p class="slogan">
+                    <p className="slogan">
                         At SHUBHAM ENTERPRISES, we go beyond loans, we empower dreams. With a
                         legacy of trust and financial expertise, we are your dedicated partner
                         in achieving your goals and aspirations.
@@ -23,55 +23,55 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <div class="page2">
+            <div className="page2">
                 <div id="page2-heading">
                     <h1>OUR SERVICES</h1>
                 </div>
-                <div class="loan-types">
-                    <div class="loans">
-                        <img src="Covers/personal-loan-icon.png" alt="" />
+                <div className="loan-types">
+                    <div className="loans">
+                        <img src="/personal-loan-icon.png" alt="" />
                         <span>
                             <h4>Personal Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/business loan icon.png" alt="" />
+                    <div className="loans">
+                        <img src="/business loan icon.png" alt="" />
                         <span>
                             <h4>Business Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/Home Loan icon.jpg" alt="" />
+                    <div className="loans">
+                        <img src="/Home Loan icon.jpg" alt="" />
                         <span>
                             <h4>Home Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/car loan icon.jpg" alt="" />
+                    <div className="loans">
+                        <img src="/car loan icon.jpg" alt="" />
                         <span>
                             <h4>Car Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/commercial vehicle loan icon.jpg" alt="" />
+                    <div className="loans">
+                        <img src="/commercial vehicle loan icon.jpg" alt="" />
                         <span>
                             <h4>Commercial Vehicle Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/Tractor loan icon.jpg" alt="" />
+                    <div className="loans">
+                        <img src="/Tractor loan icon.jpg" alt="" />
                         <span>
                             <h4>Tractor Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/mortgage loan icon.jpg" alt="" />
+                    <div className="loans">
+                        <img src="/mortgage loan icon.jpg" alt="" />
                         <span>
                             <h4>Mortgage Loans</h4>
                         </span>
                     </div>
-                    <div class="loans">
-                        <img src="Covers/agri loan icon.jpg" alt="" />
+                    <div className="loans">
+                        <img src="/agri loan icon.jpg" alt="" />
                         <span>
                             <h4>Agri Loans</h4>
                         </span>
@@ -79,66 +79,66 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div class="page3">
-                <div class="page3-heading">
+            <div className="page3">
+                <div className="page3-heading">
                     <h2>" In the Words of Our Customers "</h2>
                 </div>
 
-                <div class="review-container">
-                    <div id="review-box" class="review1">
-                        <div class="review-left">
-                            <div class="review-img">
-                                <img src="Covers/img1.jpeg" alt="" />
+                <div className="review-container">
+                    <div id="review-box" className="review1">
+                        <div className="review-left">
+                            <div className="review-img">
+                                <img src="/img1.jpeg" alt="" />
                             </div>
-                            <div class="review-name">lorem</div>
+                            <div className="review-name">lorem</div>
                         </div>
-                        <div class="review-right">
-                            <div class="review-content">
+                        <div className="review-right">
+                            <div className="review-content">
                                 " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
                                 animi quos reiciendis cumque esse, explicabo "
                             </div>
                         </div>
                     </div>
 
-                    <div id="review-box" class="review2">
-                        <div class="review-left">
-                            <div class="review-img">
-                                <img src="Covers/img2.jpeg" alt="" />
+                    <div id="review-box" className="review2">
+                        <div className="review-left">
+                            <div className="review-img">
+                                <img src="/img2.jpeg" alt="" />
                             </div>
-                            <div class="review-name">lorem</div>
+                            <div className="review-name">lorem</div>
                         </div>
-                        <div class="review-right">
-                            <div class="review-content">
+                        <div className="review-right">
+                            <div className="review-content">
                                 " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
                                 animi quos reiciendis cumque esse, explicabo "
                             </div>
                         </div>
                     </div>
 
-                    <div id="review-box" class="review3">
-                        <div class="review-left">
-                            <div class="review-img">
-                                <img src="Covers/img1.jpeg" alt="" />
+                    <div id="review-box" className="review3">
+                        <div className="review-left">
+                            <div className="review-img">
+                                <img src="/img1.jpeg" alt="" />
                             </div>
-                            <div class="review-name">lorem</div>
+                            <div className="review-name">lorem</div>
                         </div>
-                        <div class="review-right">
-                            <div class="review-content">
+                        <div className="review-right">
+                            <div className="review-content">
                                 " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
                                 animi quos reiciendis cumque esse, explicabo "
                             </div>
                         </div>
                     </div>
 
-                    <div id="review-box" class="review4">
-                        <div class="review-left">
-                            <div class="review-img">
-                                <img src="Covers/img2.jpeg" alt="" />
+                    <div id="review-box" className="review4">
+                        <div className="review-left">
+                            <div className="review-img">
+                                <img src="/img2.jpeg" alt="" />
                             </div>
-                            <div class="review-name">lorem</div>
+                            <div className="review-name">lorem</div>
                         </div>
-                        <div class="review-right">
-                            <div class="review-content">
+                        <div className="review-right">
+                            <div className="review-content">
                                 " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
                                 animi quos reiciendis cumque esse, explicabo "
                             </div>
@@ -147,85 +147,85 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div class="page4">
-                <div class="page4-heading">
+            <div className="page4">
+                <div className="page4-heading">
                     <h2>FREQUENTLY ASKED QUESTIONS</h2>
                 </div>
 
-                <div class="faq-container">
-                    <div class="faq-column">
-                        <div class="question" onclick="toggleAnswer('q1')">
+                <div className="faq-container">
+                    <div className="faq-column">
+                        <div className="question" onclick="toggleAnswer('q1')">
                             What is Lorem Ipsum?
                         </div>
-                        <div class="answer" id="q1">
+                        <div className="answer" id="q1">
                             Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q2')">
+                        <div className="question" onclick="toggleAnswer('q2')">
                             Why do we use it?
                         </div>
-                        <div class="answer" id="q2">
+                        <div className="answer" id="q2">
                             It is a long established fact that a reader will be distracted by
                             the readable content of a page when looking at its layout.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q3')">
+                        <div className="question" onclick="toggleAnswer('q3')">
                             Where does it come from?
                         </div>
-                        <div class="answer" id="q3">
+                        <div className="answer" id="q3">
                             Contrary to popular belief, Lorem Ipsum is not simply random text.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q4')">Is it safe?</div>
-                        <div class="answer" id="q4">
+                        <div className="question" onclick="toggleAnswer('q4')">Is it safe?</div>
+                        <div className="answer" id="q4">
                             Yes, it is safe and widely used in the design and typesetting
                             industry.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q5')">
+                        <div className="question" onclick="toggleAnswer('q5')">
                             How can I get started?
                         </div>
-                        <div class="answer" id="q5">
+                        <div className="answer" id="q5">
                             Getting started with Lorem Ipsum is easy, just add the text to your
                             design.
                         </div>
                     </div>
 
-                    <div class="faq-column">
-                        <div class="question" onclick="toggleAnswer('q6')">
+                    <div className="faq-column">
+                        <div className="question" onclick="toggleAnswer('q6')">
                             What is Lorem Ipsum?
                         </div>
-                        <div class="answer" id="q6">
+                        <div className="answer" id="q6">
                             Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q7')">
+                        <div className="question" onclick="toggleAnswer('q7')">
                             Why do we use it?
                         </div>
-                        <div class="answer" id="q7">
+                        <div className="answer" id="q7">
                             It is a long established fact that a reader will be distracted by
                             the readable content of a page when looking at its layout.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q8')">
+                        <div className="question" onclick="toggleAnswer('q8')">
                             Where does it come from?
                         </div>
-                        <div class="answer" id="q8">
+                        <div className="answer" id="q8">
                             Contrary to popular belief, Lorem Ipsum is not simply random text.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q9')">Is it safe?</div>
-                        <div class="answer" id="q9">
+                        <div className="question" onclick="toggleAnswer('q9')">Is it safe?</div>
+                        <div className="answer" id="q9">
                             Yes, it is safe and widely used in the design and typesetting
                             industry.
                         </div>
 
-                        <div class="question" onclick="toggleAnswer('q10')">
+                        <div className="question" onclick="toggleAnswer('q10')">
                             How can I get started?
                         </div>
-                        <div class="answer" id="q10">
+                        <div className="answer" id="q10">
                             Getting started with Lorem Ipsum is easy, just add the text to your
                             design.
                         </div>
@@ -234,8 +234,8 @@ const Homepage = () => {
             </div>
 
             <footer>
-                <div class="top-button">Back To Top</div>
-                <div class="footer-lists">
+                <div className="top-button">Back To Top</div>
+                <div className="footer-lists">
                     <ul>
                         <b>Quick Links</b>
                         <li>Home</li>
@@ -262,7 +262,7 @@ const Homepage = () => {
                         <li>Address: Solapur</li>
                     </ul>
                 </div>
-                <div class="footer-bottom">
+                <div className="footer-bottom">
                     <ul>
                         <li>Privacy Policy</li>
                         <li>Terms</li>
