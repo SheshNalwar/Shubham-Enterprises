@@ -1,58 +1,63 @@
 function toggleAnswer(id) {
-  var question = $('#' + id).prev('.question');
-  var answer = $('#' + id);
+  var question = $("#" + id).prev(".question");
+  var answer = $("#" + id);
 
-  if (answer.is(':visible')) {
+  if (answer.is(":visible")) {
     answer.slideUp();
-    question.removeClass('rotate');
+    question.removeClass("rotate");
   } else {
-    $('.answer').slideUp(); // Hide other answers
-    $('.question').removeClass('rotate'); // Remove rotation from other questions
+    $(".answer").slideUp(); // Hide other answers
+    $(".question").removeClass("rotate"); // Remove rotation from other questions
     answer.slideDown();
-    question.toggleClass('rotate');
+    question.toggleClass("rotate");
   }
 }
 
-gsap.to('.nav', {
+gsap.to(".nav", {
   backgroundColor: "#fff",
   // height: "105px",
-  borderBottom: '1px solid #D3D3D3',
+  borderBottom: "1px solid #D3D3D3",
   duration: 0.2,
   scrollTrigger: {
-    trigger: "#navbar",
+    trigger: ".nav",
     scroller: "body",
     // markers: true,
     start: "top -1%",
     end: "top -2",
-    scrub: 0.8
-  }
-})
+    scrub: 0.8,
+  },
+});
+gsap.from(".phuto",1.8, {
+  scale:0.98,
+  duration:5,
+  
+});
 
 function dropDownBox() {
   let dropIcon = document.getElementById("dropdown");
   dropIcon.addEventListener("mouseover", () => {
     document.getElementById("up-arrow").src = "Covers/down-arrow.png";
-  })
+  });
   dropIcon.addEventListener("mouseleave", () => {
     document.getElementById("up-arrow").src = "Covers/up-arrow.png";
-  })
+  });
   let dropIcon2 = document.getElementById("dropdown2");
   dropIcon2.addEventListener("mouseover", () => {
     document.getElementById("up-arrow2").src = "Covers/down-arrow.png";
-  })
+  });
   dropIcon2.addEventListener("mouseleave", () => {
     document.getElementById("up-arrow2").src = "Covers/up-arrow.png";
-  })
+  });
 }
 dropDownBox();
 
 function backToTop() {
   let btn = document.querySelector(".top-button");
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 }
@@ -70,11 +75,12 @@ function hamburgermenu() {
 }
 
 function toggleMenu() {
-  var menuOptions = document.querySelector('.menuPage');
-  menuOptions.style.display = (menuOptions.style.display === 'flex') ? 'none' : 'flex';
+  var menuOptions = document.querySelector(".menuPage");
+  menuOptions.style.display =
+    menuOptions.style.display === "flex" ? "none" : "flex";
 }
 
 function toggleSubMenu(subMenuId) {
   var subMenu = document.getElementById(subMenuId);
-  subMenu.style.display = (subMenu.style.display === 'flex') ? 'none' : 'flex';
+  subMenu.style.display = subMenu.style.display === "flex" ? "none" : "flex";
 }

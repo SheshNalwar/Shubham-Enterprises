@@ -231,14 +231,16 @@ section {
 
 .phuto {
   display: flex;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   margin: auto;
   border-radius: 20px;
   box-shadow: 30px 30px 60px #00000056, inset -20px -20px 60px #ffffff70;
 }
 
 .phuto img {
+  height: 350px;
+  width: 350px;
   border-radius: 20px;
 }
 
@@ -636,10 +638,10 @@ section {
 }
 
 .page4 .page4-heading h2 {
-    font-size: 5vh;
-    font-weight: 700;
-    color: #0E3041;
-    text-transform: uppercase;
+  font-size: 5vh;
+  font-weight: 700;
+  color: #0e3041;
+  text-transform: uppercase;
 }
 
 .faq-container {
@@ -767,4 +769,3 @@ footer .footer-bottom ul {
     opacity: 1;
   }
 }
-
