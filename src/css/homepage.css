@@ -438,6 +438,9 @@ section {
 
 .faq-column {
     width: 48%;
+    position: relative;
+    margin-bottom: 20px;
+    /* Add margin to space out columns */
 }
 
 .question {
@@ -448,7 +451,7 @@ section {
     margin: 10px 0;
     border-radius: 8px;
     position: relative;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     box-shadow: 10px 10px 20px #00000027, inset -10px -10px 20px #ffffff2a;
 }
 
@@ -466,14 +469,21 @@ section {
 }
 
 .answer {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     width: 100%;
-    padding: 15px;
+    padding: 0 15px;
     background-color: #fff;
-    border: 1px solid #ccc;
     border-radius: 8px;
     margin-top: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.answer.show {
+    max-height: 200px;
+    /* adjust based on the height of your answers */
+    padding: 15px;
 }
 
 footer {
