@@ -1,8 +1,7 @@
-import LoanDetails from "../components/LoanDetails";
-import { loanDetails } from "../utils/Data"
-
-const HomeLoan = () => {
-  const firstLoanDetail = loanDetails[2];
+import LoanDetails from "../../components/LoanDetails";
+import { loanDetails } from "../../utils/Data"
+const CarLoan = () => {
+  const firstLoanDetail = loanDetails[3];
   return (
     <div style={{ paddingTop: "5rem" }}>
       {
@@ -20,4 +19,5 @@ const HomeLoan = () => {
   );
 };
 
-export default HomeLoan;
+export default CarLoan;
+
