@@ -1,61 +1,35 @@
+import { LinkBtn, loanTypesData, NavLoanLinks } from "../Index";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { NavLink } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
-import { LinkBtn, loanTypesData, NavLoanLinks } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [arrowSrc, setArrowSrc] = useState("up-arrow.png");
+  const handleMouseOver = () => {
+    setArrowSrc("down-arrow.png");
+  };
+  const handleMouseOut = () => {
+    setArrowSrc("up-arrow.png");
+  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    const dropDownBox = () => {
-      let dropIcon = document.getElementById("dropdown");
-      dropIcon.addEventListener("mouseover", () => {
-        document.getElementById("up-arrow").src = "down-arrow.png";
-      });
-      dropIcon.addEventListener("mouseleave", () => {
-        document.getElementById("up-arrow").src = "up-arrow.png";
-      });
-    };
-
-    const hamburgermenu = () => {
-      const line1 = document.getElementById("line1");
-      const line2 = document.getElementById("line2");
-      const line3 = document.getElementById("line3");
-      const navin = document.querySelector(".menuPage");
-      line1.classList.toggle("line1");
-      line2.classList.toggle("line2");
-      line3.classList.toggle("line3");
-      navin.classList.toggle("active");
-    };
-
-    dropDownBox();
-
-    gsap.to("nav", {
-      backgroundColor: "#fff",
-      borderBottom: "1px solid #D3D3D3",
-      duration: 0.2,
-      scrollTrigger: {
-        trigger: "nav",
-        scroller: "body",
-        start: "top -1%",
-        end: "top -2%",
-        scrub: 0.8,
-      },
-    });
-
-    return () => {
-      document
-        .getElementById("hamburger")
-        .removeEventListener("click", hamburgermenu);
-    };
-  }, []);
+  gsap.to("nav", {
+    backgroundColor: "#fff",
+    borderBottom: "1px solid #D3D3D3",
+    duration: 0.2,
+    scrollTrigger: {
+      trigger: "nav",
+      scroller: "body",
+      start: "top -1%",
+      end: "top -2%",
+      scrub: 0.8,
+    },
+  });
 
   return (
     <>
@@ -69,9 +43,13 @@ const Nav = () => {
           <li>
             <LinkBtn className="nav-color" name="Home" navTo="/" target="" />
           </li>
-          <li id="dropdown">
+          <li
+            id="dropdown"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
             <p>Loans</p>
-            <img src="up-arrow.png" alt="" id="up-arrow" />
+            <img src={arrowSrc} alt="arrow" id="up-arrow" />
             <div className="dropdown-content">
               {loanTypesData.map((loan, index) => (
                 <NavLoanLinks

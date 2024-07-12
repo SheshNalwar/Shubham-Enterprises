@@ -24,20 +24,18 @@ footer .footer-lists {
   border-bottom: 1px solid grey;
   color: #fff;
   display: flex;
-  /* margin-top: 2vw; */
+  text-align: center;
   justify-content: center;
   gap: 15vw;
 }
-
-footer .footer-lists li {
+footer .footer-lists a {
+  text-decoration: none;
   margin-top: 1vh;
-  list-style-type: none;
-  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.1vw;
-}
-
-footer .footer-lists ul {
-  text-align: center;
 }
 
 footer .footer-bottom {

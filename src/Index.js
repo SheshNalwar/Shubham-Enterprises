@@ -1,29 +1,28 @@
-// Pages :
-import CommercialVLoan from "./pages/CommercialVLoan";
-import LoanCalculator from "./pages/LoanCalculator";
-import BusinessLoan from "./pages/BusinessLoan";
-import MortgageLoan from "./pages/MortgageLoan";
-import PersonalLoan from "./pages/PersonalLoan";
-import AboutUsPage from "./pages/AboutUsPage";
-import TractorLoan from "./pages/TractorLoan";
-import HomeLoan from "./pages/HomeLoan";
-import AgriLoan from "./pages/AgriLoan";
-import Homepage from "./pages/Homepage";
-import CarLoan from "./pages/CarLoan";
-
+// Loan Pages :
+import CommercialVLoan from "./pages/Loans/CommercialVLoan";
+import BusinessLoan from "./pages/Loans/BusinessLoan";
+import MortgageLoan from "./pages/Loans/MortgageLoan";
+import PersonalLoan from "./pages/Loans/PersonalLoan";
+import TractorLoan from "./pages/Loans/TractorLoan";
+import HomeLoan from "./pages/Loans/HomeLoan";
+import AgriLoan from "./pages/Loans/AgriLoan";
+import CarLoan from "./pages/Loans/CarLoan";
 export {
-  LoanCalculator,
   CommercialVLoan,
   BusinessLoan,
   MortgageLoan,
   PersonalLoan,
   TractorLoan,
-  AboutUsPage,
   HomeLoan,
-  Homepage,
   AgriLoan,
   CarLoan,
 };
+
+// Pages :
+import AboutUsPage from "./pages/AboutUsPage";
+import Homepage from "./pages/Homepage";
+import LoanCalculatorPage from "./pages/LoanCalculatorPage";
+export { LoanCalculatorPage, AboutUsPage, Homepage };
 
 // Components
 import NavLoanLinks from "./components/NavLoanLinks";
@@ -51,5 +50,5 @@ export {
   loanTypesData,
   NavLoanLinks,
   Footer,
-  LoanDetails
+  LoanDetails,
 };

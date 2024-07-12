@@ -1,5 +1,5 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
 import {
@@ -15,71 +15,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
   const [visibleAnswer, setVisibleAnswer] = useState(null);
-
-  useEffect(() => {
-    const backToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
-    if (typeof window !== "undefined") {
-      gsap.to("nav", {
-        backgroundColor: "#fff",
-        borderBottom: "1px solid #D3D3D3",
-        duration: 0.2,
-        scrollTrigger: {
-          trigger: "#navbar",
-          scroller: "body",
-          start: "top -1%",
-          end: "top -2%",
-          scrub: 0.8,
-        },
-      });
-    }
-
-    const dropDownBox = () => {
-      let dropIcon = document.getElementById("dropdown");
-      if (dropIcon) {
-        dropIcon.addEventListener("mouseover", () => {
-          document.getElementById("up-arrow").src = "Covers/down-arrow.png";
-        });
-        dropIcon.addEventListener("mouseleave", () => {
-          document.getElementById("up-arrow").src = "Covers/up-arrow.png";
-        });
-      }
-      let dropIcon2 = document.getElementById("dropdown2");
-      if (dropIcon2) {
-        dropIcon2.addEventListener("mouseover", () => {
-          document.getElementById("up-arrow2").src = "Covers/down-arrow.png";
-        });
-        dropIcon2.addEventListener("mouseleave", () => {
-          document.getElementById("up-arrow2").src = "Covers/up-arrow.png";
-        });
-      }
-    };
-
-    const setUpBackToTop = () => {
-      let btn = document.querySelector(".top-button");
-      if (btn) {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          backToTop();
-        });
-      }
-    };
-
-    dropDownBox();
-    setUpBackToTop();
-
-    return () => {
-      let btn = document.querySelector(".top-button");
-      if (btn) {
-        btn.removeEventListener("click", backToTop);
-      }
-    };
-  }, []);
-
+  const firstColumnFaqs = faqsData.slice(0, 7);
+  const secondColumnFaqs = faqsData.slice(7, 14);
   const toggleMenu = () => {
     var menuOptions = document.querySelector(".menuPage");
     if (menuOptions) {
@@ -99,9 +36,6 @@ const Homepage = () => {
   const toggleAnswer = (id) => {
     setVisibleAnswer((prevId) => (prevId === id ? null : id));
   };
-
-  const firstColumnFaqs = faqsData.slice(0, 7);
-  const secondColumnFaqs = faqsData.slice(7, 14);
 
   return (
     <>
@@ -170,8 +104,9 @@ const Homepage = () => {
             {firstColumnFaqs.map((faq) => (
               <div key={faq.id}>
                 <div
-                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
-                    }`}
+                  className={`question ${
+                    visibleAnswer === faq.id ? "rotate" : ""
+                  }`}
                   onClick={() => toggleAnswer(faq.id)}
                 >
                   {faq.question}
@@ -188,8 +123,9 @@ const Homepage = () => {
             {secondColumnFaqs.map((faq) => (
               <div key={faq.id}>
                 <div
-                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
-                    }`}
+                  className={`question ${
+                    visibleAnswer === faq.id ? "rotate" : ""
+                  }`}
                   onClick={() => toggleAnswer(faq.id)}
                 >
                   {faq.question}

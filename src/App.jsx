@@ -8,7 +8,7 @@ import {
   Footer,
   HomeLoan,
   Homepage,
-  LoanCalculator,
+  LoanCalculatorPage,
   MortgageLoan,
   Nav,
   PersonalLoan,
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutUs" element={<AboutUsPage />} />
-          <Route path="/loanCalculator" element={<LoanCalculator />} />
+          <Route path="/loanCalculator" element={<LoanCalculatorPage />} />
           <Route path="/personalLoan" element={<PersonalLoan />} />
           <Route path="/homeLoan" element={<HomeLoan />} />
           <Route path="/agriLoan" element={<AgriLoan />} />
