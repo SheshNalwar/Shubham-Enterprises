@@ -52,23 +52,76 @@ const Nav = () => {
   return (
     <>
       <nav>
-        <div className="nav-brand">
-          <img id="logo" src="Logo.png" alt="logo" />
-          <h1>Shubham Enterprises</h1>
+        <div className="navBar">
+          <div className="nav-brand">
+            <img id="logo" src="Logo.png" alt="logo" />
+            <h1>Shubham Enterprises</h1>
+          </div>
+          <div className="nav-menu">
+            <li>
+              <LinkBtn className="nav-color" name="Home" navTo="/" target="" />
+            </li>
+            <li
+              id="dropdown"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              <p>Loans</p>
+              <img src={arrowSrc} alt="arrow" id="up-arrow" />
+              <div className="dropdown-content">
+                {loanTypesData.map((loan, index) => (
+                  <NavLoanLinks
+                    key={index}
+                    loanName={loan.loanName}
+                    navTo={loan.navigation}
+                  />
+                ))}
+              </div>
+            </li>
+            <li>
+              <LinkBtn
+                className="nav-color"
+                name="Loan Calculator"
+                navTo="/loanCalculator"
+                target=""
+              />
+            </li>
+            <li>
+              <LinkBtn
+                className="nav-color"
+                name="About Us"
+                navTo="/aboutUs"
+                target=""
+              />
+            </li>
+            <li>
+              <LinkBtn
+                className="nav-color"
+                name="Contact Us"
+                navTo="https://www.google.com/"
+                target="_blank"
+              />
+            </li>
+          </div>
         </div>
-
-        <div className="nav-menu">
-          <li>
-            <LinkBtn className="nav-color" name="Home" navTo="/" target="" />
-          </li>
-          <li
-            id="dropdown"
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-          >
-            <p>Loans</p>
-            <img src={arrowSrc} alt="arrow" id="up-arrow" />
-            <div className="dropdown-content">
+        <div id="hamburger" onClick={toggleMenu}>
+          <div id="line1" className={`lines ${isOpen ? "line1" : ""}`}></div>
+          <div id="line2" className={`lines ${isOpen ? "line2" : ""}`}></div>
+          <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
+        </div>
+        <div className={isOpen ? "active" : "menuPage"}>
+          <ul>
+            <li>
+              <LinkBtn className="" name="Home" navTo="/" target="" />
+            </li>
+            <li>
+              <p onClick={() => toggleSubMenu("loansSubMenu")}>Loans</p>
+            </li>
+            <div
+              className={`sub-menu ${
+                subMenuOpen.loansSubMenu ? "show" : "hide"
+              }`}
+            >
               {loanTypesData.map((loan, index) => (
                 <NavLoanLinks
                   key={index}
@@ -77,74 +130,28 @@ const Nav = () => {
                 />
               ))}
             </div>
-          </li>
-          <li>
-            <LinkBtn
-              className="nav-color"
-              name="Loan Calculator"
-              navTo="/loanCalculator"
-              target=""
-            />
-          </li>
-          <li>
-            <LinkBtn
-              className="nav-color"
-              name="About Us"
-              navTo="/aboutUs"
-              target=""
-            />
-          </li>
-          <li>
-            <LinkBtn
-              className="nav-color"
-              name="Contact Us"
-              navTo="https://www.google.com/"
-              target="_blank"
-            />
-          </li>
-        </div>
-
-        <div id="hamburger" onClick={toggleMenu}>
-          <div id="line1" className={`lines ${isOpen ? "line1" : ""}`}></div>
-          <div id="line2" className={`lines ${isOpen ? "line2" : ""}`}></div>
-          <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
+            <li>
+              <NavLink to="/loanCalculator">Loan Calculator</NavLink>
+            </li>
+            <li>
+              <LinkBtn
+                className=""
+                name="About Us"
+                navTo="/aboutUs"
+                target=""
+              />
+            </li>
+            <li>
+              <LinkBtn
+                className=""
+                name="Contact Us"
+                navTo="https://www.google.com/"
+                target="_blank"
+              />
+            </li>
+          </ul>
         </div>
       </nav>
-      <div style={{paddingTop:"10vh"}}>
-        <ul>
-          <li>
-            <LinkBtn className="" name="Home" navTo="/" target="" />
-          </li>
-          <li>
-            <p onClick={() => toggleSubMenu("loansSubMenu")}>Loans</p>
-          </li>
-          <div
-            className={`sub-menu ${subMenuOpen.loansSubMenu ? "show" : "hide"}`}
-          >
-            {loanTypesData.map((loan, index) => (
-              <NavLoanLinks
-                key={index}
-                loanName={loan.loanName}
-                navTo={loan.navigation}
-              />
-            ))}
-          </div>
-          <li>
-            <NavLink to="/loanCalculator">Loan Calculator</NavLink>
-          </li>
-          <li>
-            <LinkBtn className="" name="About Us" navTo="/aboutUs" target="" />
-          </li>
-          <li>
-            <LinkBtn
-              className=""
-              name="Contact Us"
-              navTo="https://www.google.com/"
-              target="_blank"
-            />
-          </li>
-        </ul>
-      </div>
     </>
   );
 };

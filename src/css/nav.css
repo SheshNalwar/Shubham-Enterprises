@@ -4,16 +4,22 @@ nav {
   background-color: #fff;
   border: none;
   color: #000;
-  padding: 0 4vw;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5vw;
   position: fixed;
   z-index: 2;
 }
-
-.nav-brand {
+.navBar {
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  padding: 0 2vw;
+  color: #000;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.navBar > .nav-brand {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,9 +32,6 @@ nav {
   border-radius: 50%;
 }
 
-.nav-brand #white-logo {
-  display: none;
-}
 
 .nav-brand h1 {
   font-size: 5vh;
@@ -42,7 +45,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
+  gap: 4vw;
 }
 
 .nav-menu li {
@@ -82,7 +85,7 @@ nav {
   width: 50px;
   height: 20px;
   cursor: pointer;
-  display: block;
+  display: none;
   z-index: 99;
 }
 
@@ -166,4 +169,3 @@ p {
 #dropdown:hover .dropdown-content {
   display: block;
 }
-

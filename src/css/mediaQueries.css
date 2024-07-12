@@ -82,6 +82,7 @@
     justify-content: center;
     gap: 0.4rem;
     z-index: 2;
+    position: relative;
   }
 
   .sub-menu {
@@ -147,8 +148,7 @@
   }
 
   .menuPage {
-    height: 200vh;
-    display: none;
+    /* height: 100vh; */
     overflow-y: auto;
     margin-top: 8vh;
   }
@@ -169,12 +169,21 @@
     z-index: 2;
     animation: fade 0.3s;
   }
-
+*/
   .active {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-  } */
+    /* height: 100%; */
+    /* width: 100%; */
+    right: 50%;
+    background-color: aqua;
+    display:inline;
+    position: absolute;
+    animation: fade 0.3s;
+    top: 10vh;
+    /* z-index: 99; */
+  }
 
   footer .footer-lists li {
     text-align: center;
@@ -184,7 +193,7 @@
   nav {
     height: 10vh;
     width: 100%;
-    padding: 2vw;
+    padding: 4vw;
   }
 
   .nav-brand {
