@@ -48,3 +48,29 @@ export const loanTypesData = [
     navigation: "commercialVLoan",
   },
 ];
+export const reviewsData = [
+  {
+    imgSrc: "img1.jpeg",
+    classNaav: "review1",
+    alt: "review1",
+    name: "A",
+  },
+  {
+    imgSrc: "img2.jpeg",
+    classNaav: "review2",
+    alt: "review2",
+    name: "B",
+  },
+  {
+    imgSrc: "img1.jpeg",
+    classNaav: "review3",
+    alt: "review3",
+    name: "C",
+  },
+  {
+    imgSrc: "img2.jpeg",
+    classNaav: "review4",
+    alt: "review4",
+    name: "D",
+  },
+];

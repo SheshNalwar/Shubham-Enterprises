@@ -2,7 +2,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
-import { Loans, Review, loanTypesData } from "../Index";
+import { Loans, Review, loanTypesData, reviewsData } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
@@ -154,30 +154,15 @@ const Homepage = () => {
         </div>
 
         <div className="review-container">
-          <Review
-            imgSrc="img1.jpeg"
-            alt="review1"
-            name="A"
-            className="review1"
-          />
-          <Review
-            imgSrc="img2.jpeg"
-            alt="review2"
-            name="B"
-            className="review2"
-          />
-          <Review
-            imgSrc="img1.jpeg"
-            alt="review3"
-            name="C"
-            className="review3"
-          />
-          <Review
-            imgSrc="img2.jpeg"
-            alt="review4"
-            name="D"
-            className="review4"
-          />
+          {reviewsData.map((review, index) => (
+            <Review
+              key={index}
+              imgSrc={review.imgSrc}
+              alt={review.alt}
+              name={review.name}
+              className={review.classNaav}
+            />
+          ))}
         </div>
       </div>
 
