@@ -1,12 +1,34 @@
-import React from "react";
-import Nav from "./components/Nav";
-import Homepage from "./pages/Homepage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  AgriLoan,
+  BusinessLoan,
+  CarLoan,
+  CommercialVLoan,
+  HomeLoan,
+  Homepage,
+  MortgageLoan,
+  Nav,
+  PersonalLoan,
+  TractorLoan,
+} from "./Index";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Homepage />
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/personalLoan" element={<PersonalLoan />} />
+          <Route path="/homeLoan" element={<HomeLoan />} />
+          <Route path="/agriLoan" element={<AgriLoan />} />
+          <Route path="/carLoan" element={<CarLoan />} />
+          <Route path="/businessLoan" element={<BusinessLoan />} />
+          <Route path="/mortgageLoan" element={<MortgageLoan />} />
+          <Route path="/tractorLoan" element={<TractorLoan />} />
+          <Route path="/commercialVLoan" element={<CommercialVLoan />} />
+        </Routes>
+      </Router>
     </>
   );
 }

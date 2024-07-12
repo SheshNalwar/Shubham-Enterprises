@@ -1,11 +1,10 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
-gsap.registerPlugin(ScrollTrigger);
 import "../css/homepage.css";
 import gsap from "gsap";
-import Loans from "../components/Loans";
-import Review from "../components/Review";
+import { Loans, Review } from "../Index";
 
+gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
   useEffect(() => {
     const backToTop = () => {
@@ -90,7 +89,6 @@ const Homepage = () => {
   const toggleAnswer = (id) => {
     var question = document.getElementById(id).previousElementSibling;
     var answer = document.getElementById(id);
-
     if (answer && question) {
       if (answer.style.display === "block") {
         answer.style.display = "none";
@@ -101,13 +99,11 @@ const Homepage = () => {
             ans.style.display = "none";
           }
         });
-
         document.querySelectorAll(".question").forEach((q) => {
           if (q !== question) {
             q.classList.remove("rotate");
           }
         });
-
         answer.style.display = "block";
         question.classList.add("rotate");
       }
