@@ -35,13 +35,13 @@ const Nav = () => {
       scrub: 0.8,
     },
   });
-  const toggleMenu2 = () => {
-    var menuOptions = document.querySelector(".menuPage");
-    if (menuOptions) {
-      menuOptions.style.display =
-        menuOptions.style.display === "flex" ? "none" : "flex";
-    }
-  };
+  // const toggleMenu2 = () => {
+  //   var menuOptions = document.querySelector(".menuPage");
+  //   if (menuOptions) {
+  //     menuOptions.style.display =
+  //       menuOptions.style.display === "flex" ? "none" : "flex";
+  //   }
+  // };
 
   const toggleSubMenu = (menuId) => {
     setSubMenuOpen((prevState) => ({
@@ -110,15 +110,13 @@ const Nav = () => {
           <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
         </div>
       </nav>
-      <div className={`menuPage ${isOpen ? "active" : ""}`}>
+      <div style={{paddingTop:"10vh"}}>
         <ul>
           <li>
-            {/* <LinkBtn className="" name="Home" navTo="/" target="" /> */}
+            <LinkBtn className="" name="Home" navTo="/" target="" />
           </li>
           <li>
-            <a href="#" onClick={() => toggleSubMenu("loansSubMenu")}>
-              Loans
-            </a>
+            <p onClick={() => toggleSubMenu("loansSubMenu")}>Loans</p>
           </li>
           <div
             className={`sub-menu ${subMenuOpen.loansSubMenu ? "show" : "hide"}`}

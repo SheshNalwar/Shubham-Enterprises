@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="footer-lists">
         <ul>
           <b>Quick Links</b>
-          {/* <LinkBtn className="" name="Home" navTo="/" /> */}
+          <LinkBtn className="" name="Home" navTo="/" />
           <LinkBtn
             className="nav-color"
             name="Loan Calculator"
