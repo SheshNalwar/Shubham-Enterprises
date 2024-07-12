@@ -12,7 +12,10 @@ import {
 } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const Homepage = () => {
+  const [visibleAnswer, setVisibleAnswer] = useState(null);
+
   useEffect(() => {
     const backToTop = () => {
       window.scrollTo({
@@ -93,11 +96,12 @@ const Homepage = () => {
     }
   };
 
-  const [visibleAnswer, setVisibleAnswer] = useState(null);
-
   const toggleAnswer = (id) => {
     setVisibleAnswer((prevId) => (prevId === id ? null : id));
   };
+
+  const firstColumnFaqs = faqsData.slice(0, 7);
+  const secondColumnFaqs = faqsData.slice(7, 14);
 
   return (
     <>
@@ -161,25 +165,42 @@ const Homepage = () => {
         </div>
 
         <div className="faq-container">
-          {faqsData.map((faq) => (
-            <div key={faq.id} className="faq-column">
-              <div
-                className={`question ${
-                  visibleAnswer === faq.id ? "rotate" : ""
-                }`}
-                onClick={() => toggleAnswer(faq.id)}
-              >
-                {faq.question}
+          <div className="faq-column">
+            {firstColumnFaqs.map((faq) => (
+              <div key={faq.id}>
+                <div
+                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
+                    }`}
+                  onClick={() => toggleAnswer(faq.id)}
+                >
+                  {faq.question}
+                </div>
+                <div
+                  className={`answer ${visibleAnswer === faq.id ? "show" : ""}`}
+                >
+                  {faq.answer}
+                </div>
               </div>
-              <div
-                className="answer"
-                id={faq.id}
-                style={{ display: visibleAnswer === faq.id ? "block" : "none" }}
-              >
-                {faq.answer}
+            ))}
+          </div>
+          <div className="faq-column">
+            {secondColumnFaqs.map((faq) => (
+              <div key={faq.id}>
+                <div
+                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
+                    }`}
+                  onClick={() => toggleAnswer(faq.id)}
+                >
+                  {faq.question}
+                </div>
+                <div
+                  className={`answer ${visibleAnswer === faq.id ? "show" : ""}`}
+                >
+                  {faq.answer}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>
