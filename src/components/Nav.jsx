@@ -3,12 +3,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useState } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [arrowSrc, setArrowSrc] = useState("up-arrow.png");
+  const [subMenuOpen, setSubMenuOpen] = useState({
+    loansSubMenu: false,
+    calculatorSubMenu: false,
+  });
   const handleMouseOver = () => {
     setArrowSrc("down-arrow.png");
   };
@@ -30,7 +35,20 @@ const Nav = () => {
       scrub: 0.8,
     },
   });
+  const toggleMenu2 = () => {
+    var menuOptions = document.querySelector(".menuPage");
+    if (menuOptions) {
+      menuOptions.style.display =
+        menuOptions.style.display === "flex" ? "none" : "flex";
+    }
+  };
 
+  const toggleSubMenu = (menuId) => {
+    setSubMenuOpen((prevState) => ({
+      ...prevState,
+      [menuId]: !prevState[menuId],
+    }));
+  };
   return (
     <>
       <nav>
@@ -92,17 +110,19 @@ const Nav = () => {
           <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
         </div>
       </nav>
-      <div class="menuPage">
+      <div className={`menuPage ${isOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <LinkBtn className="" name="Home" navTo="/" target="" />
+            {/* <LinkBtn className="" name="Home" navTo="/" target="" /> */}
           </li>
           <li>
-            <a href="#" onclick="toggleSubMenu('loansSubMenu')">
+            <a href="#" onClick={() => toggleSubMenu("loansSubMenu")}>
               Loans
             </a>
           </li>
-          <div class="sub-menu" id="loansSubMenu">
+          <div
+            className={`sub-menu ${subMenuOpen.loansSubMenu ? "show" : "hide"}`}
+          >
             {loanTypesData.map((loan, index) => (
               <NavLoanLinks
                 key={index}
@@ -112,9 +132,7 @@ const Nav = () => {
             ))}
           </div>
           <li>
-            <a href="#" onclick="toggleSubMenu('calculatorSubMenu')">
-              Loan Calculator
-            </a>
+            <NavLink to="/loanCalculator">Loan Calculator</NavLink>
           </li>
           <li>
             <LinkBtn className="" name="About Us" navTo="/aboutUs" target="" />

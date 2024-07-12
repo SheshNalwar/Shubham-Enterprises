@@ -17,21 +17,6 @@ const Homepage = () => {
   const [visibleAnswer, setVisibleAnswer] = useState(null);
   const firstColumnFaqs = faqsData.slice(0, 7);
   const secondColumnFaqs = faqsData.slice(7, 14);
-  const toggleMenu = () => {
-    var menuOptions = document.querySelector(".menuPage");
-    if (menuOptions) {
-      menuOptions.style.display =
-        menuOptions.style.display === "flex" ? "none" : "flex";
-    }
-  };
-
-  const toggleSubMenu = (subMenuId) => {
-    var subMenu = document.getElementById(subMenuId);
-    if (subMenu) {
-      subMenu.style.display =
-        subMenu.style.display === "flex" ? "none" : "flex";
-    }
-  };
 
   const toggleAnswer = (id) => {
     setVisibleAnswer((prevId) => (prevId === id ? null : id));

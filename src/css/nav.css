@@ -82,11 +82,12 @@ nav {
   width: 50px;
   height: 20px;
   cursor: pointer;
-  display: none;
+  display: block;
+  z-index: 99;
 }
 
 .lines {
-  width: 50px;
+  width: 40px;
   height: 5px;
   border-radius: 5px;
   background-color: black;
@@ -104,6 +105,10 @@ nav {
 
 .line3 {
   transform: translateY(-11px) rotate(-45deg);
+}
+
+.menuPage {
+  display: none;
 }
 
 p {
@@ -162,6 +167,3 @@ p {
   display: block;
 }
 
-.menuPage {
-  display: none;
-}

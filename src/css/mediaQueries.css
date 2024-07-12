@@ -87,24 +87,33 @@
   .sub-menu {
     height: 100%;
     display: none;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin-left: 20px;
     font-size: 5vw;
     z-index: 2;
   }
 
+  .sub-menu.show {
+    display: block;
+  }
+
+  .sub-menu.hide {
+    display: none;
+  }
+
   .sub-menu a {
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    padding: 8px;
+    padding: 5px;
     margin: 0;
     text-align: center;
     text-wrap: nowrap;
     transition: background-color 0.3s;
-  }
-
-  .sub-menu a:hover {
-    background-color: #555;
   }
 
   .footer-lists {
@@ -156,7 +165,7 @@
     height: 100%;
     background-color: #0e3041;
     position: fixed;
-    top: 0%;
+    top: 2%;
     z-index: 2;
     animation: fade 0.3s;
   }
@@ -172,13 +181,10 @@
     font-size: 2.8vw;
   }
 
-  .nav {
-    height: 8vh;
+  nav {
+    height: 10vh;
     width: 100%;
-    padding: 0 4vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 2vw;
   }
 
   .nav-brand {
@@ -210,12 +216,16 @@
 
   #hamburger {
     display: block;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
   }
 
   .lines {
-    width: 40px;
-    height: 5px;
-    margin-top: 5px;
+    width: 30px;
+    height: 4px;
     background-color: #0e3041;
   }
 
