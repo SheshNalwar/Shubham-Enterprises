@@ -34,6 +34,7 @@ import Loans from "./components/Loans";
 import Card from "./components/Card";
 import Faq from "./components/Faq";
 import Nav from "./components/Nav";
+import LoanDetails from "./components/LoanDetails";
 
 // utils
 import { loanTypesData, reviewsData, faqsData } from "./utils/Data";
@@ -50,4 +51,5 @@ export {
   loanTypesData,
   NavLoanLinks,
   Footer,
+  LoanDetails
 };
