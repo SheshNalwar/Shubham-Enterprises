@@ -418,6 +418,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15vh;
 }
 
 .page4 .page4-heading h2 {

@@ -1,4 +1,4 @@
-const Review = ({ className, imgSrc, alt, name }) => {
+const Review = ({ className, imgSrc, alt, name, content }) => {
   return (
     <div className={className}>
       <div className="review-left">
@@ -9,8 +9,7 @@ const Review = ({ className, imgSrc, alt, name }) => {
       </div>
       <div className="review-right">
         <div className="review-content">
-          " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi
-          quos reiciendis cumque esse, explicabo "
+          {content}
         </div>
       </div>
     </div>

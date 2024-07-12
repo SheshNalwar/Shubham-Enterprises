@@ -143,6 +143,7 @@ const Homepage = () => {
               alt={review.alt}
               name={review.name}
               className={review.classNaav}
+              content={review.content}
             />
           ))}
         </div>
@@ -157,9 +158,8 @@ const Homepage = () => {
           {faqsData.map((faq) => (
             <div key={faq.id} className="faq-column">
               <div
-                className={`question ${
-                  visibleAnswer === faq.id ? "rotate" : ""
-                }`}
+                className={`question ${visibleAnswer === faq.id ? "rotate" : ""
+                  }`}
                 onClick={() => toggleAnswer(faq.id)}
               >
                 {faq.question}
