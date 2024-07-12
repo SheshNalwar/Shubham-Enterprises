@@ -48,6 +48,7 @@ export const loanTypesData = [
     navigation: "commercialVLoan",
   },
 ];
+
 export const reviewsData = [
   {
     imgSrc: "img1.jpeg",
@@ -164,7 +165,6 @@ export const faqsData = [
     id: "q14",
   },
 ];
-
 
 export const loanDetails = [
   {

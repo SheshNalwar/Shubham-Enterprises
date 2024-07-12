@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
+  AboutUsPage,
   AgriLoan,
   BusinessLoan,
   CarLoan,
@@ -7,6 +8,7 @@ import {
   Footer,
   HomeLoan,
   Homepage,
+  LoanCalculator,
   MortgageLoan,
   Nav,
   PersonalLoan,
@@ -20,6 +22,8 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/aboutUs" element={<AboutUsPage />} />
+          <Route path="/loanCalculator" element={<LoanCalculator />} />
           <Route path="/personalLoan" element={<PersonalLoan />} />
           <Route path="/homeLoan" element={<HomeLoan />} />
           <Route path="/agriLoan" element={<AgriLoan />} />

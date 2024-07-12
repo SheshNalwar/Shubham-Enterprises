@@ -1,29 +1,26 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NavLink } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
-import { loanTypesData, NavLoanLinks } from "../Index";
+import { LinkBtn, loanTypesData, NavLoanLinks } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     const dropDownBox = () => {
       let dropIcon = document.getElementById("dropdown");
-      let dropIcon2 = document.getElementById("dropdown2");
-
       dropIcon.addEventListener("mouseover", () => {
         document.getElementById("up-arrow").src = "down-arrow.png";
       });
       dropIcon.addEventListener("mouseleave", () => {
         document.getElementById("up-arrow").src = "up-arrow.png";
-      });
-      dropIcon2.addEventListener("mouseover", () => {
-        document.getElementById("up-arrow2").src = "down-arrow.png";
-      });
-      dropIcon2.addEventListener("mouseleave", () => {
-        document.getElementById("up-arrow2").src = "up-arrow.png";
       });
     };
 
@@ -39,9 +36,6 @@ const Nav = () => {
     };
 
     dropDownBox();
-    document
-      .getElementById("hamburger")
-      .addEventListener("click", hamburgermenu);
 
     gsap.to("nav", {
       backgroundColor: "#fff",
@@ -73,9 +67,7 @@ const Nav = () => {
 
         <div className="nav-menu">
           <li>
-            <NavLink to="/" className="nav-color">
-              Home
-            </NavLink>
+            <LinkBtn className="nav-color" name="Home" navTo="/" target="" />
           </li>
           <li id="dropdown">
             <p>Loans</p>
@@ -90,55 +82,75 @@ const Nav = () => {
               ))}
             </div>
           </li>
-          <li id="dropdown2">
-            <p>Loan Calculator</p>
-            <img src="up-arrow.png" alt="" id="up-arrow2" />
-            <div className="dropdown-content">
-              <a href="" target="_blank">
-                Personal Loan Calculator
-              </a>
-              <a href="" target="_blank">
-                Business Loan Calculator
-              </a>
-              <a href="" target="_blank">
-                Home Loan Calculator
-                <br />
-              </a>
-              <a href="" target="_blank">
-                Car Loan Calculator
-              </a>
-              <a href="" target="_blank">
-                Commercial Vehicle Loan Calculator
-              </a>
-              <a href="" target="_blank">
-                Tractor Loan Calculator
-              </a>
-              <a href="" target="_blank">
-                Mortgage Loan Calculator
-              </a>
-              <a href="" target="_blank">
-                Agri Loan Calculator
-              </a>
-            </div>
+          <li>
+            <LinkBtn
+              className="nav-color"
+              name="Loan Calculator"
+              navTo="/loanCalculator"
+              target=""
+            />
           </li>
           <li>
-            <a href="#" target="_blank" className="nav-color">
-              About us
-            </a>
+            <LinkBtn
+              className="nav-color"
+              name="About Us"
+              navTo="/aboutUs"
+              target=""
+            />
           </li>
           <li>
-            <a href="#" target="_blank" className="nav-color">
-              Contact Us
-            </a>
+            <LinkBtn
+              className="nav-color"
+              name="Contact Us"
+              navTo="https://www.google.com/"
+              target="_blank"
+            />
           </li>
         </div>
 
-        <div id="hamburger">
-          <div id="line1" className="lines"></div>
-          <div id="line2" className="lines"></div>
-          <div id="line3" className="lines"></div>
+        <div id="hamburger" onClick={toggleMenu}>
+          <div id="line1" className={`lines ${isOpen ? "line1" : ""}`}></div>
+          <div id="line2" className={`lines ${isOpen ? "line2" : ""}`}></div>
+          <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
         </div>
       </nav>
+      <div class="menuPage">
+        <ul>
+          <li>
+            <LinkBtn className="" name="Home" navTo="/" target="" />
+          </li>
+          <li>
+            <a href="#" onclick="toggleSubMenu('loansSubMenu')">
+              Loans
+            </a>
+          </li>
+          <div class="sub-menu" id="loansSubMenu">
+            {loanTypesData.map((loan, index) => (
+              <NavLoanLinks
+                key={index}
+                loanName={loan.loanName}
+                navTo={loan.navigation}
+              />
+            ))}
+          </div>
+          <li>
+            <a href="#" onclick="toggleSubMenu('calculatorSubMenu')">
+              Loan Calculator
+            </a>
+          </li>
+          <li>
+            <LinkBtn className="" name="About Us" navTo="/aboutUs" target="" />
+          </li>
+          <li>
+            <LinkBtn
+              className=""
+              name="Contact Us"
+              navTo="https://www.google.com/"
+              target="_blank"
+            />
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

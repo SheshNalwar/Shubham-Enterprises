@@ -2,7 +2,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useState } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
-import { Loans, Review, loanTypesData, reviewsData, faqsData } from "../Index";
+import {
+  Loans,
+  Review,
+  loanTypesData,
+  reviewsData,
+  faqsData,
+  LinkBtn,
+} from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
@@ -109,7 +116,7 @@ const Homepage = () => {
             a legacy of trust and financial expertise, we are your dedicated
             partner in achieving your goals and aspirations.
           </p>
-          <button>About us</button>
+          <LinkBtn className="homeAboutUs" name="About Us" navTo="/aboutUs" />
         </div>
       </section>
 
@@ -143,7 +150,6 @@ const Homepage = () => {
               alt={review.alt}
               name={review.name}
               className={review.classNaav}
-              content={review.content}
             />
           ))}
         </div>
@@ -158,8 +164,9 @@ const Homepage = () => {
           {faqsData.map((faq) => (
             <div key={faq.id} className="faq-column">
               <div
-                className={`question ${visibleAnswer === faq.id ? "rotate" : ""
-                  }`}
+                className={`question ${
+                  visibleAnswer === faq.id ? "rotate" : ""
+                }`}
                 onClick={() => toggleAnswer(faq.id)}
               >
                 {faq.question}
