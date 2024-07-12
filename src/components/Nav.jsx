@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
+import { loanTypesData, NavLoanLinks } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,31 +81,13 @@ const Nav = () => {
             <p>Loans</p>
             <img src="up-arrow.png" alt="" id="up-arrow" />
             <div className="dropdown-content">
-              <a href="" target="_blank">
-                Personal Loans
-              </a>
-              <a href="" target="_blank">
-                Business Loans
-              </a>
-              <a href="" target="_blank">
-                Home Loans
-                <br />
-              </a>
-              <a href="" target="_blank">
-                Car Loans
-              </a>
-              <a href="" target="_blank">
-                Commercial Vehicle Loans
-              </a>
-              <a href="" target="_blank">
-                Tractor Loans
-              </a>
-              <a href="" target="_blank">
-                Mortgage Loans
-              </a>
-              <a href="" target="_blank">
-                Agri Loans
-              </a>
+              {loanTypesData.map((loan, index) => (
+                <NavLoanLinks
+                  key={index}
+                  loanName={loan.loanName}
+                  navTo={loan.navigation}
+                />
+              ))}
             </div>
           </li>
           <li id="dropdown2">

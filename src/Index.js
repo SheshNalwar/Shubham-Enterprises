@@ -3,6 +3,7 @@ import CommercialVLoan from "./pages/CommercialVLoan";
 import BusinessLoan from "./pages/BusinessLoan";
 import MortgageLoan from "./pages/MortgageLoan";
 import PersonalLoan from "./pages/PersonalLoan";
+import AboutUsPage from "./pages/AboutUsPage";
 import TractorLoan from "./pages/TractorLoan";
 import HomeLoan from "./pages/HomeLoan";
 import AgriLoan from "./pages/AgriLoan";
@@ -15,6 +16,7 @@ export {
   MortgageLoan,
   PersonalLoan,
   TractorLoan,
+  AboutUsPage,
   HomeLoan,
   Homepage,
   AgriLoan,
@@ -22,14 +24,15 @@ export {
 };
 
 // Components
+import NavLoanLinks from "./components/NavLoanLinks";
 import Review from "./components/Review";
+import Footer from "./components/Footer";
 import Loans from "./components/Loans";
 import Card from "./components/Card";
 import Faq from "./components/Faq";
 import Nav from "./components/Nav";
 
-
 // utils
 import { loanTypesData } from "./utils/Data";
 
-export { Loans, Review, Faq, Nav, Card, loanTypesData };
+export { Loans, Review, Faq, Nav, Card, loanTypesData, NavLoanLinks, Footer };

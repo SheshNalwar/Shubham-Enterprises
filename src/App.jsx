@@ -4,6 +4,7 @@ import {
   BusinessLoan,
   CarLoan,
   CommercialVLoan,
+  Footer,
   HomeLoan,
   Homepage,
   MortgageLoan,
@@ -28,6 +29,7 @@ function App() {
           <Route path="/tractorLoan" element={<TractorLoan />} />
           <Route path="/commercialVLoan" element={<CommercialVLoan />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
