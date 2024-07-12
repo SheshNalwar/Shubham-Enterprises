@@ -154,6 +154,7 @@ const Homepage = () => {
               alt={review.alt}
               name={review.name}
               className={review.classNaav}
+              content={review.content}
             />
           ))}
         </div>
