@@ -33,10 +33,11 @@ import Faq from "./components/Faq";
 import Nav from "./components/Nav";
 
 // utils
-import { loanTypesData, reviewsData } from "./utils/Data";
+import { loanTypesData, reviewsData, faqsData } from "./utils/Data";
 
 export {
   Loans,
+  faqsData,
   Review,
   Faq,
   Nav,

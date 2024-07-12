@@ -1,8 +1,8 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
-import { Loans, Review, loanTypesData, reviewsData } from "../Index";
+import { Loans, Review, loanTypesData, reviewsData, faqsData } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
@@ -86,28 +86,10 @@ const Homepage = () => {
     }
   };
 
+  const [visibleAnswer, setVisibleAnswer] = useState(null);
+
   const toggleAnswer = (id) => {
-    var question = document.getElementById(id).previousElementSibling;
-    var answer = document.getElementById(id);
-    if (answer && question) {
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-        question.classList.remove("rotate");
-      } else {
-        document.querySelectorAll(".answer").forEach((ans) => {
-          if (ans !== answer) {
-            ans.style.display = "none";
-          }
-        });
-        document.querySelectorAll(".question").forEach((q) => {
-          if (q !== question) {
-            q.classList.remove("rotate");
-          }
-        });
-        answer.style.display = "block";
-        question.classList.add("rotate");
-      }
-    }
+    setVisibleAnswer((prevId) => (prevId === id ? null : id));
   };
 
   return (
@@ -172,55 +154,25 @@ const Homepage = () => {
         </div>
 
         <div className="faq-container">
-          <div className="faq-column">
-            <div className="question" onClick={() => toggleAnswer("q1")}>
-              What is Lorem Ipsum?
+          {faqsData.map((faq) => (
+            <div key={faq.id} className="faq-column">
+              <div
+                className={`question ${
+                  visibleAnswer === faq.id ? "rotate" : ""
+                }`}
+                onClick={() => toggleAnswer(faq.id)}
+              >
+                {faq.question}
+              </div>
+              <div
+                className="answer"
+                id={faq.id}
+                style={{ display: visibleAnswer === faq.id ? "block" : "none" }}
+              >
+                {faq.answer}
+              </div>
             </div>
-            <div className="answer" id="q1">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </div>
-
-            <div className="question" onClick={() => toggleAnswer("q2")}>
-              Why do we use it?
-            </div>
-            <div className="answer" id="q2">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout.
-            </div>
-
-            <div className="question" onClick={() => toggleAnswer("q3")}>
-              Where does it come from?
-            </div>
-            <div className="answer" id="q3">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </div>
-          </div>
-
-          <div className="faq-column">
-            <div className="question" onClick={() => toggleAnswer("q4")}>
-              Where can I get some?
-            </div>
-            <div className="answer" id="q4">
-              There are many variations of passages of Lorem Ipsum available.
-            </div>
-
-            <div className="question" onClick={() => toggleAnswer("q5")}>
-              What is Lorem Ipsum?
-            </div>
-            <div className="answer" id="q5">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </div>
-
-            <div className="question" onClick={() => toggleAnswer("q6")}>
-              Why do we use it?
-            </div>
-            <div className="answer" id="q6">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout.
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
