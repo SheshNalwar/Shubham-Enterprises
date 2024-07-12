@@ -1,5 +1,5 @@
 const MortgageLoan = () => {
-  return <div>MortgageLoan</div>;
+  return <div style={{ paddingTop: "5rem" }}>Mortgage Loan Page</div>;
 };
 
 export default MortgageLoan;

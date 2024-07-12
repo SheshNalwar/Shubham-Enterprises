@@ -1,5 +1,5 @@
 const TractorLoan = () => {
-  return <div>TractorLoan</div>;
+  return <div style={{ paddingTop: "5rem" }}>Tractor Loan Page</div>;
 };
 
 export default TractorLoan;

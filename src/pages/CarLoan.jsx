@@ -1,5 +1,6 @@
 const CarLoan = () => {
-  return <div>CarLoan</div>;
+  return <div style={{ paddingTop: "5rem" }}>Car Loan Page</div>;
 };
 
 export default CarLoan;
+

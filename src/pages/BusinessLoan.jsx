@@ -1,5 +1,5 @@
 const BusinessLoan = () => {
-  return <div>BusinessLoan</div>;
+  return <div style={{ paddingTop: "5rem" }}>Business Loan Page</div>;
 };
 
 export default BusinessLoan;

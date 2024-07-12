@@ -1,4 +1,5 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { NavLink } from "react-router-dom";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
@@ -71,9 +72,9 @@ const Nav = () => {
 
         <div className="nav-menu">
           <li>
-            <a href="#" target="_blank" className="nav-color">
+            <NavLink to="/" className="nav-color">
               Home
-            </a>
+            </NavLink>
           </li>
           <li id="dropdown">
             <p>Loans</p>
@@ -90,7 +91,7 @@ const Nav = () => {
                 <br />
               </a>
               <a href="" target="_blank">
-                Car Loans{" "}
+                Car Loans
               </a>
               <a href="" target="_blank">
                 Commercial Vehicle Loans

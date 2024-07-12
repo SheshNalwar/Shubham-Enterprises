@@ -28,4 +28,8 @@ import Card from "./components/Card";
 import Faq from "./components/Faq";
 import Nav from "./components/Nav";
 
-export { Loans, Review, Faq, Nav, Card };
+
+// utils
+import { loanTypesData } from "./utils/Data";
+
+export { Loans, Review, Faq, Nav, Card, loanTypesData };

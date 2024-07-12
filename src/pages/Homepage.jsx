@@ -2,13 +2,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
-import { Loans, Review } from "../Index";
-import Footer from "../components/Footer";
+import { Loans, Review, loanTypesData } from "../Index";
 
 gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
   useEffect(() => {
-
+    const backToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
     if (typeof window !== "undefined") {
       gsap.to("nav", {
         backgroundColor: "#fff",
@@ -45,9 +49,25 @@ const Homepage = () => {
       }
     };
 
+    const setUpBackToTop = () => {
+      let btn = document.querySelector(".top-button");
+      if (btn) {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          backToTop();
+        });
+      }
+    };
 
     dropDownBox();
+    setUpBackToTop();
 
+    return () => {
+      let btn = document.querySelector(".top-button");
+      if (btn) {
+        btn.removeEventListener("click", backToTop);
+      }
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -116,18 +136,15 @@ const Homepage = () => {
           <h1>OUR SERVICES</h1>
         </div>
         <div className="loan-types">
-          <Loans imgSrc="personaLoan.png" loan="Personal" alt="Personal-Loan" />
-          <Loans imgSrc="businessLoan.png" loan="Business" alt="BusinessLoan" />
-          <Loans imgSrc="HomeLoan.jpg" loan="Home" alt="HomeLoan" />
-          <Loans imgSrc="CarLoan.jpg" loan="Car" alt="CarLoan" />
-          <Loans imgSrc="TractorLoan.jpg" loan="Tractor" alt="Tractor-Loan" />
-          <Loans imgSrc="MortgageLoan.jpg" loan="Mortgage" alt="MortgageLoan" />
-          <Loans imgSrc="AgriLoan.jpg" loan="Agri" alt="Agri-Loan" />
-          <Loans
-            imgSrc="CommercialVLoan.jpg"
-            loan="Commercial Vehicle"
-            alt="Commercial-Vehicle"
-          />
+          {loanTypesData.map((loan, index) => (
+            <Loans
+              key={index}
+              imgSrc={loan.imgSrc}
+              navigation={loan.navigation}
+              alt={loan.alt}
+              loanName={loan.loanName}
+            />
+          ))}
         </div>
       </div>
 
@@ -222,7 +239,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* <footer>
+      <footer>
         <button className="top-button">Back to Top</button>
         <div className="footer-lists">
           <ul>
@@ -258,8 +275,7 @@ const Homepage = () => {
             <li>Copyright © 2024 Shubham Enterprises</li>
           </ul>
         </div>
-      </footer> */}
-      <Footer />
+      </footer>
     </>
   );
 };
