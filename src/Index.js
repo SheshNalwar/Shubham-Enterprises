@@ -27,32 +27,33 @@ export { LoanCalculatorPage, AboutUsPage, Homepage, ContactUsPage };
 
 // Components
 import NavLoanLinks from "./components/NavLoanLinks";
-import Review from "./components/Review";
+import LoanDetails from "./components/LoanDetails";
 import LinkBtn from "./components/LinkBtn";
+import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Loans from "./components/Loans";
 import Card from "./components/Card";
 import Faq from "./components/Faq";
 import Nav from "./components/Nav";
-import LoanDetails from "./components/LoanDetails";
+export {
+  LinkBtn,
+  Loans,
+  Review,
+  Faq,
+  Nav,
+  Card,
+  NavLoanLinks,
+  Footer,
+  LoanDetails,
+};
 
 // utils
 import { loanTypesData, reviewsData, faqsData } from "./utils/Data";
 import { calculateEMI, calculateLoanDetails } from "./utils/LoanCalculator";
-
 export {
   calculateEMI,
   calculateLoanDetails,
-  LinkBtn,
-  Loans,
   faqsData,
-  Review,
-  Faq,
-  Nav,
   reviewsData,
-  Card,
   loanTypesData,
-  NavLoanLinks,
-  Footer,
-  LoanDetails,
 };

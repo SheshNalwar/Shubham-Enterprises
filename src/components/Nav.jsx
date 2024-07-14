@@ -52,7 +52,7 @@ const Nav = () => {
           </div>
           <div className="nav-menu">
             <li>
-              <LinkBtn className="nav-color" name="Home" navTo="/" target="" />
+              <LinkBtn className="nav-color" name="Home" navTo="/" />
             </li>
             <li
               id="dropdown"
@@ -76,23 +76,16 @@ const Nav = () => {
                 className="nav-color"
                 name="Loan Calculator"
                 navTo="/loanCalculator"
-                target=""
               />
             </li>
             <li>
-              <LinkBtn
-                className="nav-color"
-                name="About Us"
-                navTo="/aboutUs"
-                target=""
-              />
+              <LinkBtn className="nav-color" name="About Us" navTo="/aboutUs" />
             </li>
             <li>
               <LinkBtn
                 className="nav-color"
                 name="Contact Us"
-                navTo="https://www.google.com/"
-                target="_blank"
+                navTo="/contactUs"
               />
             </li>
           </div>
@@ -105,7 +98,7 @@ const Nav = () => {
         <div className={isOpen ? "active" : "menuPage"}>
           <ul>
             <li>
-              <LinkBtn className="" name="Home" navTo="/" target="" />
+              <LinkBtn className="" name="Home" navTo="/" />
             </li>
             <li>
               <p onClick={() => toggleSubMenu("loansSubMenu")}>Loans</p>
@@ -127,19 +120,13 @@ const Nav = () => {
               <NavLink to="/loanCalculator">Loan Calculator</NavLink>
             </li>
             <li>
-              <LinkBtn
-                className=""
-                name="About Us"
-                navTo="/aboutUs"
-                target=""
-              />
+              <LinkBtn className="" name="About Us" navTo="/aboutUs" />
             </li>
             <li>
               <LinkBtn
                 className=""
                 name="Contact Us"
                 navTo="https://www.google.com/"
-                target="_blank"
               />
             </li>
           </ul>

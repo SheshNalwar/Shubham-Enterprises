@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-const LinkBtn = ({ navTo, name, className, target }) => {
+const LinkBtn = ({ navTo, name, className }) => {
   return (
-    <NavLink to={navTo} className={className} target={target}>
+    <NavLink to={navTo} className={className}>
       {name}
     </NavLink>
   );

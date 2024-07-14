@@ -32,7 +32,7 @@ const Footer = () => {
           <LinkBtn
             className="nav-color"
             name="Contact Us"
-            navTo="https://www.google.com/"
+            navTo="/contactUs"
             target="_blank"
           />
         </ul>

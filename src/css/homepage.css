@@ -37,20 +37,12 @@ section {
   text-align: left;
 }
 
-.content p img {
-  height: 4vw;
-  width: 4vw;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 5px 5px 10px #00000049, inset -5px -5px 10px #ffffff70;
-  margin: 0 -12px;
-}
 
 .slogan1 {
   font-size: 3.8vw;
   color: #151515;
   margin: 1vw 0;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .slogan {

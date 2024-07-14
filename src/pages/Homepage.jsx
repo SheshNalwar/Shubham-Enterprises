@@ -32,8 +32,6 @@ const Homepage = () => {
           <p className="slogan1">
             <span className="finance">Quick Loans</span>, Easy Steps: Your Fast
             Track to Financial Ease!
-            <img src="/img2.jpeg" alt="" />
-            <img src="/img1.jpeg" alt="" />
           </p>
           <p className="slogan">
             At SHUBHAM ENTERPRISES, we go beyond loans, we empower dreams. With
