@@ -73,105 +73,111 @@ const LoanCalculatorPage = () => {
     displayDetails();
   };
 
-  return (
-    <div id="mainLoanPage">
-      <div className="loanCalculatorPage">
-        <div className="sub-container">
-          <div className="view">
-            <div className="details">
-              <div>
-                <div className="detail">
-                  <div className="totalSelected">
-                    <p className="label">Amount</p>
-                    <p id="loan-amt-text" className="amtvalue">
-                      ₹ {amount.toLocaleString("en-IN")}
-                    </p>
-                  </div>
-                </div>
-                <input
-                  type="range"
-                  id="loan-amount"
-                  min="0"
-                  max="10000000"
-                  step="50000"
-                  value={amount}
-                  onChange={(e) => setAmount(parseFloat(e.target.value))}
-                />
-              </div>
-              <div>
-                <div className="detail">
-                  <div className="totalSelected">
-                    <p className="label">Length</p>
-                    <p id="loan-period-text" className="amtvalue">
-                      {years} years
-                    </p>
-                  </div>
-                </div>
 
-                <input
-                  type="range"
-                  id="loan-period"
-                  min="1"
-                  max="15"
-                  step=".1"
-                  value={years}
-                  onChange={(e) => setYears(parseFloat(e.target.value))}
-                />
-              </div>
-              <div>
-                <div className="detail">
-                  <div className="totalSelected">
-                    <p className="label">Interest</p>
-                    <p id="interest-rate-text" className="amtvalue">
-                      {interest}%
-                    </p>
+
+  return (
+    <>
+      <div id="mainLoanPage">
+        <h1>Loan Calculator</h1>
+
+        <div className="loanCalculatorPage">
+          <div className="sub-container">
+            <div className="view">
+              <div className="details">
+                <div>
+                  <div className="detail">
+                    <div className="totalSelected">
+                      <p className="label">Amount</p>
+                      <p id="loan-amt-text" className="amtvalue">
+                        ₹ {amount.toLocaleString("en-IN")}
+                      </p>
+                    </div>
                   </div>
+                  <input
+                    type="range"
+                    id="loan-amount"
+                    min="0"
+                    max="10000000"
+                    step="50000"
+                    value={amount}
+                    onChange={(e) => setAmount(parseFloat(e.target.value))}
+                  />
                 </div>
-                <input
-                  type="range"
-                  id="interest-rate"
-                  min="5"
-                  max="15"
-                  step="0.1"
-                  value={interest}
-                  onChange={(e) => setInterest(parseFloat(e.target.value))}
-                />
+                <div>
+                  <div className="detail">
+                    <div className="totalSelected">
+                      <p className="label">Length</p>
+                      <p id="loan-period-text" className="amtvalue">
+                        {years} years
+                      </p>
+                    </div>
+                  </div>
+
+                  <input
+                    type="range"
+                    id="loan-period"
+                    min="1"
+                    max="15"
+                    step=".1"
+                    value={years}
+                    onChange={(e) => setYears(parseFloat(e.target.value))}
+                  />
+                </div>
+                <div>
+                  <div className="detail">
+                    <div className="totalSelected">
+                      <p className="label">Interest</p>
+                      <p id="interest-rate-text" className="amtvalue">
+                        {interest}%
+                      </p>
+                    </div>
+                  </div>
+                  <input
+                    type="range"
+                    id="interest-rate"
+                    min="5"
+                    max="15"
+                    step="0.1"
+                    value={interest}
+                    onChange={(e) => setInterest(parseFloat(e.target.value))}
+                  />
+                </div>
+              </div>
+              <div className="footer">
+                <p id="price-container">
+                  You Will Pay
+                  <span id="price">₹ {emi.toLocaleString("en-IN")} </span>
+                  per month
+                </p>
               </div>
             </div>
-            <div className="footer">
-              <p id="price-container">
-                You Will Pay
-                <span id="price">₹ {emi.toLocaleString("en-IN")} </span>
-                per month
+            <div className="breakup">
+              <canvas id="pieChart" ref={pieChartRef}></canvas>
+            </div>
+          </div>
+          <div className="loan-details">
+            <div className="chart-details">
+              <p className="label">Principal</p>
+              <p id="cp" className="value">
+                {amount.toLocaleString("en-IN")}₹
+              </p>
+            </div>
+            <div className="chart-details">
+              <p className="label">Interest</p>
+              <p id="ci" className="value">
+                {payableInterest.toLocaleString("en-IN")}₹
+              </p>
+            </div>
+            <div className="chart-details">
+              <p className="label">Total Payable</p>
+              <p id="ct" className="value">
+                {(amount + payableInterest).toLocaleString("en-IN")}₹
               </p>
             </div>
           </div>
-          <div className="breakup">
-            <canvas id="pieChart" ref={pieChartRef}></canvas>
-          </div>
-        </div>
-        <div className="loan-details">
-          <div className="chart-details">
-            <p className="label">Principal</p>
-            <p id="cp" className="value">
-              {amount.toLocaleString("en-IN")}₹
-            </p>
-          </div>
-          <div className="chart-details">
-            <p className="label">Interest</p>
-            <p id="ci" className="value">
-              {payableInterest.toLocaleString("en-IN")}₹
-            </p>
-          </div>
-          <div className="chart-details">
-            <p className="label">Total Payable</p>
-            <p id="ct" className="value">
-              {(amount + payableInterest).toLocaleString("en-IN")}₹
-            </p>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

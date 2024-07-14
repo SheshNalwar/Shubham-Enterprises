@@ -2,9 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding-top: 15vh;
 }
+
+h1 {
+  font-size: 3vw;
+  color: #0e3041;
+  font-weight: 900;
+}
+
 .loanCalculatorPage {
-  padding: 15vh 0;
+  padding: 5vh 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -50,10 +59,12 @@
   justify-content: center;
   align-items: center;
 }
+
 .amtvalue {
   color: #000000;
   font-size: 1.2rem;
 }
+
 .totalSelected {
   display: flex;
   justify-content: space-between;
@@ -65,10 +76,12 @@
   display: flex;
   flex-direction: column;
 }
+
 #price {
   color: #000;
   font-size: 25px;
 }
+
 .breakup {
   flex: 1;
 }
@@ -97,18 +110,45 @@ input[type="range"] {
   background: transparent;
   cursor: pointer;
   width: 20rem;
+  background-color: #676565;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #676565;
+  /* background-color: #70e000; */
   border-radius: 0.5rem;
   height: 0.5rem;
 }
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   margin-top: -8px;
   background-color: #70e000;
   height: 1.5rem;
   width: 1rem;
   border-radius: 0.5rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #70e000;
+  border-radius: 50%;
+  border: none;
+
+  /* box-shadow: -407px 0 0 400px #f50; emove this line */
+  transition: .2s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(112, 224, 0, 0.445)
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(112, 224, 0, 0.445)
+}
+
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(112, 224, 0, 0.445)
 }
