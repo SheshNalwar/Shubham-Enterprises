@@ -35,13 +35,6 @@ const Nav = () => {
       scrub: 0.8,
     },
   });
-  // const toggleMenu2 = () => {
-  //   var menuOptions = document.querySelector(".menuPage");
-  //   if (menuOptions) {
-  //     menuOptions.style.display =
-  //       menuOptions.style.display === "flex" ? "none" : "flex";
-  //   }
-  // };
 
   const toggleSubMenu = (menuId) => {
     setSubMenuOpen((prevState) => ({

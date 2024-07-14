@@ -1,0 +1,100 @@
+#mainLoanPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loanCalculatorPage {
+  padding: 15vh 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 8vh; */
+  align-items: center;
+}
+
+.sub-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.view {
+  flex: 1;
+}
+.amt {
+  display: flex;
+  justify-content: space-between;
+}
+.details {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.detail {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.value {
+  color: #000000;
+}
+
+.footer {
+  text-align: center;
+}
+
+#price-container {
+  font-size: 1.5rem;
+}
+#price {
+  color: #130f31;
+  font-size: 25px;
+}
+.breakup {
+  flex: 1;
+}
+
+.loan-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.chart-details {
+  flex: 1;
+  text-align: center;
+}
+
+.chart-details .value {
+  color: #130f31;
+  font-size: 17px;
+}
+
+/*----- Styling the sliders ----*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 20rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #676565;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -8px;
+  background-color: #130f31;
+  height: 1.5rem;
+  width: 1rem;
+  border-radius: 0.5rem;
+}

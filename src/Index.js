@@ -37,8 +37,11 @@ import LoanDetails from "./components/LoanDetails";
 
 // utils
 import { loanTypesData, reviewsData, faqsData } from "./utils/Data";
+import { calculateEMI, calculateLoanDetails } from "./utils/LoanCalculator";
 
 export {
+  calculateEMI,
+  calculateLoanDetails,
   LinkBtn,
   Loans,
   faqsData,

@@ -170,20 +170,20 @@
     animation: fade 0.3s;
   }
 */
-  .active {
+  /* .active { */
     /* display: flex; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     /* height: 100%; */
     /* width: 100%; */
-    right: 50%;
-    background-color: aqua;
-    display:inline;
+    /* right: 50%; */
+    /* background-color: aqua; */
+    /* display: inline;
     position: absolute;
     animation: fade 0.3s;
-    top: 10vh;
+    top: 10vh; */
     /* z-index: 99; */
-  }
+  /* } */
 
   footer .footer-lists li {
     text-align: center;
@@ -458,5 +458,13 @@
   .faq-column {
     flex-direction: column;
     width: 100%;
+  }
+
+  /* Loan Calculator */
+  .loanCalculatorPage {
+    flex-direction: column;
+  }
+  .sub-container {
+    flex-direction: column;
   }
 }
