@@ -4,9 +4,9 @@ import Chart from "chart.js/auto";
 import "../css/loanCalculator.css";
 
 const LoanCalculatorPage = () => {
-  const [P, setP] = useState(0);
-  const [R, setR] = useState(1);
-  const [N, setN] = useState(1);
+  const [amount, setAmount] = useState(1000000);
+  const [interest, setInterest] = useState(9);
+  const [years, setYears] = useState(5);
   const [emi, setEmi] = useState(0);
   const [payableInterest, setPayableInterest] = useState(0);
   const pieChartRef = useRef(null);
@@ -19,10 +19,10 @@ const LoanCalculatorPage = () => {
     if (pieInstanceRef.current) {
       displayDetails();
     }
-  }, [P, R, N]);
+  }, [amount, interest, years]);
   const displayDetails = () => {
-    const emi = calculateEMI(P, R, N);
-    const payableInterest = calculateLoanDetails(P, R / 1200, emi);
+    const emi = calculateEMI(amount, interest, years);
+    const payableInterest = calculateLoanDetails(amount, interest / 1200, emi);
     setEmi(emi);
     setPayableInterest(payableInterest);
     const opts = {
@@ -30,18 +30,23 @@ const LoanCalculatorPage = () => {
       currency: "INR",
       maximumFractionDigits: 0,
     };
-    document.querySelector("#cp").innerText = P.toLocaleString("en-IN", opts);
+    document.querySelector("#cp").innerText = amount.toLocaleString(
+      "en-IN",
+      opts
+    );
     document.querySelector("#ci").innerText = payableInterest.toLocaleString(
       "en-IN",
       opts
     );
     document.querySelector("#ct").innerText = (
-      P + payableInterest
+      amount + payableInterest
     ).toLocaleString("en-IN", opts);
-    document.querySelector("#price").innerText =
-      emi.toLocaleString("en-IN", opts) + "/mo";
+    document.querySelector("#price").innerText = emi.toLocaleString(
+      "en-IN",
+      opts
+    );
     const pie = pieInstanceRef.current;
-    pie.data.datasets[0].data[0] = P;
+    pie.data.datasets[0].data[0] = amount;
     pie.data.datasets[0].data[1] = payableInterest;
     pie.update();
   };
@@ -58,7 +63,7 @@ const LoanCalculatorPage = () => {
           {
             label: "Home Loan Details",
             data: [0, 0],
-            backgroundColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)"],
+            backgroundColor: ["rgb(112, 224, 0)", "rgb(103, 101, 101)"],
             hoverOffset: 4,
           },
         ],
@@ -76,13 +81,11 @@ const LoanCalculatorPage = () => {
             <div className="details">
               <div>
                 <div className="detail">
-                  <p className="label">Amount</p>
-                  <p id="loan-amt-text" className="value">
-                    {P.toLocaleString("en-IN")}₹
-                  </p>
-                  <div className="amt">
-                    <p>Min</p>
-                    <p>Max</p>
+                  <div className="totalSelected">
+                    <p className="label">Amount</p>
+                    <p id="loan-amt-text" className="amtvalue">
+                      ₹ {amount.toLocaleString("en-IN")}
+                    </p>
                   </div>
                 </div>
                 <input
@@ -91,33 +94,38 @@ const LoanCalculatorPage = () => {
                   min="0"
                   max="10000000"
                   step="50000"
-                  value={P}
-                  onChange={(e) => setP(parseFloat(e.target.value))}
+                  value={amount}
+                  onChange={(e) => setAmount(parseFloat(e.target.value))}
                 />
               </div>
               <div>
                 <div className="detail">
-                  <p className="label">Length</p>
-                  <p id="loan-period-text" className="value">
-                    {N} years
-                  </p>
+                  <div className="totalSelected">
+                    <p className="label">Length</p>
+                    <p id="loan-period-text" className="amtvalue">
+                      {years} years
+                    </p>
+                  </div>
                 </div>
+
                 <input
                   type="range"
                   id="loan-period"
                   min="1"
                   max="15"
                   step=".1"
-                  value={N}
-                  onChange={(e) => setN(parseFloat(e.target.value))}
+                  value={years}
+                  onChange={(e) => setYears(parseFloat(e.target.value))}
                 />
               </div>
               <div>
                 <div className="detail">
-                  <p className="label">% Interest</p>
-                  <p id="interest-rate-text" className="value">
-                    {R}%
-                  </p>
+                  <div className="totalSelected">
+                    <p className="label">Interest</p>
+                    <p id="interest-rate-text" className="amtvalue">
+                      {interest}%
+                    </p>
+                  </div>
                 </div>
                 <input
                   type="range"
@@ -125,14 +133,16 @@ const LoanCalculatorPage = () => {
                   min="5"
                   max="15"
                   step="0.1"
-                  value={R}
-                  onChange={(e) => setR(parseFloat(e.target.value))}
+                  value={interest}
+                  onChange={(e) => setInterest(parseFloat(e.target.value))}
                 />
               </div>
             </div>
             <div className="footer">
               <p id="price-container">
-                <span id="price">{emi.toLocaleString("en-IN")}₹ </span>
+                You Will Pay
+                <span id="price">₹ {emi.toLocaleString("en-IN")} </span>
+                per month
               </p>
             </div>
           </div>
@@ -144,7 +154,7 @@ const LoanCalculatorPage = () => {
           <div className="chart-details">
             <p className="label">Principal</p>
             <p id="cp" className="value">
-              {P.toLocaleString("en-IN")}₹
+              {amount.toLocaleString("en-IN")}₹
             </p>
           </div>
           <div className="chart-details">
@@ -156,7 +166,7 @@ const LoanCalculatorPage = () => {
           <div className="chart-details">
             <p className="label">Total Payable</p>
             <p id="ct" className="value">
-              {(P + payableInterest).toLocaleString("en-IN")}₹
+              {(amount + payableInterest).toLocaleString("en-IN")}₹
             </p>
           </div>
         </div>

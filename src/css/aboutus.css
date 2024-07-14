@@ -1,163 +1,157 @@
 .about-us-main {
-    padding: 10vh 15vh;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5vw;
+  padding: 10vh 15vh;
+  height: 100vh;
+  /* width: 100vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
 
-    .about-us-content {
-        width: 55vw;
-        height: auto;
-        /* border: 2px solid black; */
-
-        h1 {
-            font-size: 3.9vw;
-            font-weight: 900;
-            color: #0e3041;
-            line-height: 1.2;
-        }
-
-        p {
-            margin-top: 10vh;
-            font-size: 1.6vw;
-            font-weight: 500;
-            color: #0e3041;
-            line-height: 1.4;
-        }
-    }
-
-    .about-us-image {
-        height: 70vh;
-        width: 30vw;
-        /* border: 2px solid black; */
-
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-    }
-}
-
-
-.about-us-choose {
+  .about-us-content {
+    width: 55vw;
     height: auto;
-    width: 100%;
-    margin: 10vh 0;
-    padding: 0 15vh;
-    color: #0e3041;
+    /* border: 2px solid black; */
 
     h1 {
-        font-size: 3vw;
-        font-weight: 900;
+      font-size: 3.9vw;
+      font-weight: 900;
+      color: #0e3041;
+      line-height: 1.2;
     }
 
     p {
-        margin-top: 5vh;
-        font-size: 1.6vw;
-        font-weight: 500;
-        color: #0e3041;
-        line-height: 1.4;
+      margin-top: 10vh;
+      font-size: 1.6vw;
+      font-weight: 500;
+      color: #0e3041;
+      line-height: 1.4;
     }
+  }
 
-    #commitment {
-        margin-top: 10vh;
+  .about-us-image {
+    height: 70vh;
+    width: 30vw;
+    /* border: 2px solid black; */
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
+  }
+}
 
-    #contact {
-        margin-top: 10vh;
+.about-us-choose {
+  height: auto;
+  width: 100%;
+  margin: 10vh 0;
+  padding: 0 15vh;
+  color: #0e3041;
+
+  h1 {
+    font-size: 3vw;
+    font-weight: 900;
+  }
+
+  p {
+    margin-top: 5vh;
+    font-size: 1.6vw;
+    font-weight: 500;
+    color: #0e3041;
+    line-height: 1.4;
+  }
+
+  #commitment {
+    margin-top: 10vh;
+  }
+
+  #contact {
+    margin-top: 10vh;
+  }
+
+  .about-us-working {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin: 10vh 0;
+
+    img {
+      height: 60vh;
+      width: 33%;
+      object-fit: cover;
+      border-radius: 10px;
     }
-
-
-    .about-us-working {
-        height: 60vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1vw;
-        margin: 10vh 0;
-
-        img {
-            height: 60vh;
-            width: 33%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-    }
-
+  }
 }
 
 @media screen and (width < 600px) {
-    .about-us-main {
-        flex-direction: column;
-        padding: 15vh 10vw;
+  .about-us-main {
+    flex-direction: column;
+    padding: 15vh 10vw;
+    width: 100%;
+    height: 110vh;
+
+    .about-us-content {
+      width: 100%;
+
+      h1 {
+        font-size: 8vw;
+      }
+
+      p {
+        margin-top: 5vh;
+        font-size: 4vw;
+        font-weight: 600;
+      }
+    }
+
+    .about-us-image {
+      width: 100%;
+
+      img {
         width: 100%;
-        height: 110vh;
+        height: 100%;
+      }
+    }
+  }
 
-        .about-us-content {
-            width: 100%;
+  .about-us-choose {
+    padding: 0 5vw;
+    margin: 0;
+    margin-bottom: 10vh;
 
-            h1 {
-                font-size: 8vw;
-            }
-
-            p {
-                margin-top: 5vh;
-                font-size: 4vw;
-                font-weight: 600;
-            }
-        }
-
-        .about-us-image {
-            width: 100%;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
+    h1 {
+      font-size: 8vw;
     }
 
-    .about-us-choose {
-        padding: 0 5vw;
-        margin: 0;
-        margin-bottom: 10vh;
-
-        h1 {
-            font-size: 8vw;
-        }
-
-        p {
-            font-size: 4vw;
-            font-weight: 600;
-        }
-
-        .about-us-working {
-            height: auto;
-            width: 100%;
-            flex-direction: column;
-            margin-top: 5vh;
-            gap: 2vh;
-
-            img {
-                height: 30vh;
-                width: 80vw;
-            }
-        }
-
-        #commitment {
-            margin-top: 5vh;
-        }
-
-        #contact {
-            margin-top: 5vh;
-        }
+    p {
+      font-size: 4vw;
+      font-weight: 600;
     }
 
+    .about-us-working {
+      height: auto;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 5vh;
+      gap: 2vh;
 
+      img {
+        height: 30vh;
+        width: 80vw;
+      }
+    }
+
+    #commitment {
+      margin-top: 5vh;
+    }
+
+    #contact {
+      margin-top: 5vh;
+    }
+  }
 }
