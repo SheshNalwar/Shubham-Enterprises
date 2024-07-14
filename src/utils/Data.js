@@ -165,15 +165,31 @@ export const faqsData = [
 export const loanDetails = [
   {
     id: 1,
+
+    imgSrc: "personal.png",
+
     title: "Perosnal Loan",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    process: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
+
+    info: "A personal loan is a type of unsecured loan that individuals can obtain from banks, credit unions, or online lenders. Unlike secured loans, such as a mortgage or auto loan, personal loans do not require collateral. They are typically used for various personal expenses, such as debt consolidation, home renovations, medical bills, or other significant expenses.\n \n ",
+
+
+    features: "Unsecured Loan: \n No Collateral Required: Personal loans are generally unsecured, meaning they do not require any collateral such as a house or car. This makes them accessible to a wider range of borrowers.\nFixed Interest Rates:\n  Consistent Payments: Most personal loans come with fixed interest rates, meaning the interest rate and monthly payment remain the same throughout the loan term.\n Fixed Loan Term:\n Set Repayment Schedule: Personal loans typically have a fixed repayment period, which can range from one to seven years. Borrowers know exactly when the loan will be paid off.\n Lump Sum Disbursement:\n Immediate Access to Funds: The loan amount is disbursed as a lump sum to the borrower’s account, providing immediate access to funds for various needs.\n Loan Amounts:\n Varied Range: Loan amounts can range from a few thousand to several hundred thousand, depending on the lender and the borrower’s creditworthiness.\n \n ",
+
+    eligibility: "To qualify for a personal loan, you have to meet certain criteria. Below are the important factors that lenders take into consideration to decide your eligibility for a personal loan.\n - Age should fall under the range of 21 years to 60 years\n - Net monthly income should be 15,000/- for salaried and self-employed,\n yearly transactions should be a minimum of 20 lakhs\n - Credit score must be above 650\n - Debt-to-income ratio\n - Employment stability\n - Maintained a good credit score\n - Clear repayment history\n - Must be a Resident Citizen of India",
+
+    process: {
+      step1: " - Apply: Click on 'Apply Now' fill in the Loan DSA Partner registration details, and submit along with the documents.",
+      step2: " - Expect a Call: Our support team will call you to guide and coordinate a meeting with you.",
+      step3: " - Meet: At the meeting, our Manager will explain all you need to know, including the process to follow while generating leads.",
+      step4: " - Sign DSA Agreement: After signing the DSA agreement, you will become a Our Partner and can start earning instantly.",
+      step5: " - Once you're comfortable with the processes and procedures, an agreement will be linked between you and Shubham Enterprises. Once signed and stamped,you will be an official Loan DSA Partner running a Loan DSA Franchise.",
+
+    },
   },
   {
     id: 2,
     title: "Business Loan",
+    imgSrc: "business.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -182,6 +198,7 @@ export const loanDetails = [
   {
     id: 3,
     title: "Home Loan",
+    imgSrc: "HomeLoan.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -190,6 +207,7 @@ export const loanDetails = [
   {
     id: 4,
     title: "Car Loan",
+    imgSrc: "car.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -198,6 +216,7 @@ export const loanDetails = [
   {
     id: 5,
     title: "Tractor Loan",
+    imgSrc: "tractor.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -206,6 +225,7 @@ export const loanDetails = [
   {
     id: 6,
     title: "Mortgage Loan",
+    imgSrc: "mortgage.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -214,6 +234,7 @@ export const loanDetails = [
   {
     id: 7,
     title: "Agri Loan",
+    imgSrc: "sprout.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -222,9 +243,10 @@ export const loanDetails = [
   {
     id: 8,
     title: "Commercial Vehicle Loan",
+    imgSrc: "dump-truck.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     process: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
   },
-] 
+]

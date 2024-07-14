@@ -1,0 +1,49 @@
+.loan-details {
+    height: auto;
+    width: 100%;
+    padding: 5vh 5vw;
+    color: var(--secondary);
+
+    .loan-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+
+        .info {
+            width: 60%;
+        }
+
+        .img {
+            width: 40%;
+
+            border: 2px solid black;
+
+            img {
+
+                height: 60vh;
+                width: 20vw;
+                object-fit: cover;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 4vw;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    h3 {
+        margin-top: 8vh;
+        font-size: 2.3vw;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 1.3vw;
+        font-weight: 500;
+        margin-top: 2vh;
+        line-height: 1.5;
+    }
+}
