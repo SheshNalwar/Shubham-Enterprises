@@ -148,7 +148,7 @@ section {
 }
 
 .page3 {
-    height: 100%;
+    height: 80vh;
     width: 100%;
     position: relative;
     margin-top: 12vh;
@@ -178,12 +178,12 @@ section {
     margin-top: 10vh;
 
     .reviewData {
-        height: 40vh;
+        height: 45vh;
         width: 20vw;
         padding: 4vh 2vw;
         background-color: #15475f;
         border-radius: 10px;
-        box-shadow: 8px 8px 16px #123b4edc,
+        box-shadow: 8px 8px 16px #123b4ea2,
             inset -8px -8px 16px #185b70a6;
 
         img {
@@ -211,7 +211,7 @@ section {
     margin: 0;
     font-family: sans-serif;
     color: #333;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 .page4 .page4-heading {
