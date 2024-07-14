@@ -30,7 +30,8 @@ const Homepage = () => {
         </div>
         <div className="content">
           <p className="slogan1">
-            Quick Loans, Easy Steps: Your Fast Track to Financial Ease!
+            <span className="finance">Quick Loans</span>, Easy Steps: Your Fast
+            Track to Financial Ease!
             <img src="/img2.jpeg" alt="" />
             <img src="/img1.jpeg" alt="" />
           </p>

@@ -11,7 +11,9 @@
     width: 55vw;
     height: auto;
     /* border: 2px solid black; */
-
+    .se{
+      color: var(--accent);
+    }
     h1 {
       font-size: 3.9vw;
       font-weight: 900;

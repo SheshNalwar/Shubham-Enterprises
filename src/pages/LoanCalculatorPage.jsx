@@ -63,7 +63,7 @@ const LoanCalculatorPage = () => {
           {
             label: "Home Loan Details",
             data: [0, 0],
-            backgroundColor: ["rgb(112, 224, 0)", "rgb(103, 101, 101)"],
+            backgroundColor: ["#70e000", "#0e3041"],
             hoverOffset: 4,
           },
         ],
@@ -73,13 +73,10 @@ const LoanCalculatorPage = () => {
     displayDetails();
   };
 
-
-
   return (
     <>
       <div id="mainLoanPage">
         <h1>Loan Calculator</h1>
-
         <div className="loanCalculatorPage">
           <div className="sub-container">
             <div className="view">
