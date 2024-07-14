@@ -8,8 +8,8 @@
 }
 
 h1 {
-  font-size: 3vw;
-  color: #0e3041;
+  font-size: clamp(2rem, 1.6795rem + 1.0256vw, 2.5rem);
+  color: var(--secondary);
   font-weight: 900;
 }
 
