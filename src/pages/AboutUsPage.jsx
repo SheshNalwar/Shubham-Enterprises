@@ -1,7 +1,7 @@
 import "../css/aboutus.css";
 const AboutUsPage = () => {
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div>
       <div className="about-us-main">
         <div className="about-us-content">
           <h1>

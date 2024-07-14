@@ -19,10 +19,11 @@ export {
 };
 
 // Pages :
-import AboutUsPage from "./pages/AboutUsPage";
-import Homepage from "./pages/Homepage";
 import LoanCalculatorPage from "./pages/LoanCalculatorPage";
-export { LoanCalculatorPage, AboutUsPage, Homepage };
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import Homepage from "./pages/Homepage";
+export { LoanCalculatorPage, AboutUsPage, Homepage, ContactUsPage };
 
 // Components
 import NavLoanLinks from "./components/NavLoanLinks";
