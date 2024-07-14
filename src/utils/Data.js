@@ -51,28 +51,24 @@ export const loanTypesData = [
 
 export const reviewsData = [
   {
-    imgSrc: "img1.jpeg",
     classNaav: "review1",
     alt: "review1",
     name: "A",
     content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
   },
   {
-    imgSrc: "img2.jpeg",
     classNaav: "review2",
     alt: "review2",
     name: "B",
     content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
   },
   {
-    imgSrc: "img1.jpeg",
     classNaav: "review3",
     alt: "review3",
     name: "C",
     content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
   },
   {
-    imgSrc: "img2.jpeg",
     classNaav: "review4",
     alt: "review4",
     name: "D",

@@ -8,9 +8,11 @@
     justify-content: center;
     padding: 10vh 8vw;
   }
+
   .nav-brand h1 {
     text-wrap: wrap;
   }
+
   section {
     height: fit-content;
     width: 100%;
@@ -171,18 +173,18 @@
   }
 */
   /* .active { */
-    /* display: flex; */
-    /* align-items: center;
+  /* display: flex; */
+  /* align-items: center;
     justify-content: center; */
-    /* height: 100%; */
-    /* width: 100%; */
-    /* right: 50%; */
-    /* background-color: aqua; */
-    /* display: inline;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* right: 50%; */
+  /* background-color: aqua; */
+  /* display: inline;
     position: absolute;
     animation: fade 0.3s;
     top: 10vh; */
-    /* z-index: 99; */
+  /* z-index: 99; */
   /* } */
 
   footer .footer-lists li {
@@ -360,6 +362,7 @@
     width: 100%;
     margin-top: 7vh;
     box-shadow: 10px 10px 20px #00000036, inset -10px -10px 20px #ffffff70;
+    padding: 5vh 0;
   }
 
   .page3 .page3-heading {
@@ -368,6 +371,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4vw;
   }
 
   .page3 .page3-heading h2 {
@@ -380,62 +384,24 @@
   }
 
   .page3 .review-container {
-    height: calc(100% - 10%);
+    height: auto;
     width: 100%;
-    display: block;
-    padding: 0 2vw;
-    color: #0e3041;
-  }
+    flex-direction: column;
+    margin-top: 5vh;
 
-  .page3 #review-box {
-    height: 25%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-  }
+    .reviewData {
+      height: 30vh;
+      width: 80vw;
+      padding: 6vw;
 
-  .page3 #review-box .review-left {
-    height: 100%;
-    width: 30%;
-    justify-content: center;
-  }
+      .review-name {
+        font-size: 6vw;
+      }
 
-  .page3 #review-box .review-right {
-    height: 100%;
-    width: 70%;
-  }
-
-  .page3 #review-box .review-left .review-img {
-    margin-top: 2vh;
-    height: 15vw;
-    width: 15vw;
-    margin-left: 30%;
-    border: none;
-    margin-top: 4vh;
-    box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
-  }
-
-  .page3 #review-box .review-left .review-name {
-    height: 10vw;
-    width: 100%;
-    margin-left: 10%;
-    margin-top: 1vh;
-    color: #0e3041;
-    font-size: 3.5vw;
-    font-weight: 500;
-    background-color: transparent;
-    box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
-  }
-
-  .page3 #review-box .review-right .review-content {
-    height: 70%;
-    width: 90%;
-    font-size: 3vw;
-    margin-top: 2vh;
-    color: #0e3041;
-    border: none;
-    box-shadow: 10px 10px 30px #00000036, inset -10px -10px 30px #ffffff70;
+      .review-content {
+        font-size: 4vw;
+      }
+    }
   }
 
   .page4 {
@@ -447,7 +413,7 @@
   .page4 .page4-heading {
     height: 10%;
     width: 100%;
-    margin-top: 5vh;
+    /* margin-top: 2vh; */
   }
 
   .page4 .page4-heading h2 {
@@ -464,6 +430,7 @@
   .loanCalculatorPage {
     flex-direction: column;
   }
+
   .sub-container {
     flex-direction: column;
   }

@@ -171,237 +171,38 @@ section {
 }
 
 .page3 .review-container {
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3vw;
-}
-
-.page3 .review-container .review1 {
-    height: 90%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.page3 .review-container .review1 .review-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 7px solid #0e3041;
-    margin-top: 2vh;
-    overflow: hidden;
-    margin-left: 1.5vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review1 .review-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    white-space: nowrap;
-}
-
-.page3 .review-container .review1 .review-name {
-    height: 7vh;
-    width: 15vw;
-    font-size: 2.3vh;
-    background-color: #0e3041;
-    margin-top: 2vh;
-    color: #fff;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
+    gap: 4vw;
+    margin-top: 10vh;
 
-.page3 .review-container .review1 .review-content {
-    height: 30vh;
-    width: 15vw;
-    font-size: 2.3vh;
-    border: 1px solid rgba(128, 128, 128, 0.281);
-    color: #0e3041;
-    margin-top: 2vh;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
+    .reviewData {
+        height: 40vh;
+        width: 20vw;
+        padding: 4vh 2vw;
+        background-color: #15475f;
+        border-radius: 10px;
+        box-shadow: 8px 8px 16px #123b4edc,
+            inset -8px -8px 16px #185b70a6;
 
-.page3 .review-container .review2 {
-    height: 90%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        img {
+            object-fit: cover;
+        }
 
-.page3 .review-container .review2 .review-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 7px solid #d39874;
-    margin-top: 2vh;
-    overflow: hidden;
-    margin-left: 1.5vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
+        .review-name {
+            font-size: 1.5vw;
+            font-weight: 700;
+            color: #fff;
+        }
 
-.page3 .review-container .review2 .review-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    white-space: nowrap;
-}
-
-.page3 .review-container .review2 .review-name {
-    height: 7vh;
-    width: 15vw;
-    font-size: 2.3vh;
-    background-color: #d39874;
-    margin-top: 2vh;
-    color: #fff;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review2 .review-content {
-    height: 30vh;
-    width: 15vw;
-    font-size: 2.3vh;
-    border: 1px solid rgba(128, 128, 128, 0.281);
-    color: #d39874;
-    margin-top: 2vh;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review3 {
-    height: 90%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.page3 .review-container .review3 .review-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 7px solid #0e3041;
-    margin-top: 2vh;
-    overflow: hidden;
-    margin-left: 1.5vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review3 .review-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    white-space: nowrap;
-}
-
-.page3 .review-container .review3 .review-name {
-    height: 7vh;
-    width: 15vw;
-    background-color: #0e3041;
-    margin-top: 2vh;
-    font-size: 2.3vh;
-    color: #fff;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review3 .review-content {
-    height: 30vh;
-    width: 15vw;
-    border: 1px solid rgba(128, 128, 128, 0.281);
-    color: #0e3041;
-    margin-top: 2vh;
-    font-size: 2.3vh;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review4 {
-    height: 90%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.page3 .review-container .review4 .review-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 7px solid #d39874;
-    margin-top: 2vh;
-    overflow: hidden;
-    margin-left: 1.5vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review4 .review-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    white-space: nowrap;
-}
-
-.page3 .review-container .review4 .review-name {
-    height: 7vh;
-    width: 15vw;
-    font-size: 2.3vh;
-    background-color: #d39874;
-    margin-top: 2vh;
-    color: #fff;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
-}
-
-.page3 .review-container .review4 .review-content {
-    height: 30vh;
-    width: 15vw;
-    font-size: 2.3vh;
-    border: 1px solid rgba(128, 128, 128, 0.281);
-    color: #d39874;
-    margin-top: 2vh;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    box-shadow: 30px 30px 60px #0000001c, inset -30px -30px 60px #ffffff2a;
+        .review-content {
+            font-size: 1.2vw;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 2vh;
+        }
+    }
 }
 
 .page4 {

@@ -1,17 +1,12 @@
-const Review = ({ className, imgSrc, alt, name, content }) => {
+const Review = ({ className, name, content }) => {
   return (
-    <div className={className}>
-      <div className="review-left">
-        <div className="review-img">
-          <img src={imgSrc} alt={alt} />
-        </div>
-        <div className="review-name">{name}</div>
-      </div>
-      <div className="review-right">
-        <div className="review-content">
-          {content}
-        </div>
-      </div>
+    <div className={`reviewData ${className}`}>
+
+      <img src="/quote.png" alt="" />
+      <p className="review-name">{name}</p>
+      <p className="review-content">{content} </p>
+
+
     </div>
   );
 };
