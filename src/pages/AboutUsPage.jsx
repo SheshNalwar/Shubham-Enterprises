@@ -1,7 +1,7 @@
 import "../css/aboutus.css"
 const AboutUsPage = () => {
   return (
-    <>
+    <div style={{ overflowX: "hidden" }}>
       <div className="about-us-main">
         <div className="about-us-content">
           <h1>About Shubham Enterprises :  Your Partner In Financial Solutions</h1>
@@ -32,7 +32,7 @@ const AboutUsPage = () => {
         <p>Visit our office or contact us to learn how we can help you achieve your financial goals. Let Shubham Enterprises be your partner in success.</p>
       </div>
 
-    </>
+    </div>
   );
 };
 
