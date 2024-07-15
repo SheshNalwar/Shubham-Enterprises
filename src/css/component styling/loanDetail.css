@@ -15,14 +15,16 @@
         }
 
         .img {
-            width: 40%;
-
-            border: 2px solid black;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid black; */
 
             img {
 
-                height: 60vh;
-                width: 20vw;
+                height: 100%;
+                width: 100%;
                 object-fit: cover;
             }
         }
@@ -32,12 +34,15 @@
         font-size: 4vw;
         font-weight: 900;
         text-align: center;
+        color: var(--accent);
     }
 
     h3 {
+
         margin-top: 8vh;
         font-size: 2.3vw;
         font-weight: 900;
+        color: var(--secondary);
     }
 
     p {
@@ -46,4 +51,55 @@
         margin-top: 2vh;
         line-height: 1.5;
     }
+
+    .calc-btn {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .link-btn {
+            width: 15vw;
+            padding: 2vh;
+            background-color: var(--accent);
+            border-radius: 50px;
+            margin-top: 5vh;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
+    }
+
+    .document-requirements {
+
+
+        .document-list {
+            list-style-type: none;
+
+        }
+    }
+
+    h4 {
+        font-size: 1.5vw;
+        margin-top: 2vh;
+        color: var(--secondary);
+    }
+
+    /* 
+    .eligibility-step {
+        display: flex;
+
+    } */
+
+    .feature-step {
+        display: flex;
+    }
+
+    .process-step {
+        display: flex;
+    }
+
+
+
 }

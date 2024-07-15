@@ -8,7 +8,9 @@ const PersonalLoan = () => {
       {
         <LoanDetails
           title={firstLoanDetail.title}
+          imgSrc={firstLoanDetail.imgSrc}
           info={firstLoanDetail.info}
+          alt={firstLoanDetail.alt}
           features={firstLoanDetail.features}
           eligibility={firstLoanDetail.eligibility}
           process={firstLoanDetail.process}

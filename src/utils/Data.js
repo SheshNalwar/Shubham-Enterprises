@@ -167,55 +167,252 @@ export const loanDetails = [
     id: 1,
 
     imgSrc: "personal.png",
+    alt: "Personal-Loan",
 
     title: "Perosnal Loan",
 
     info: "A personal loan is a type of unsecured loan that individuals can obtain from banks, credit unions, or online lenders. Unlike secured loans, such as a mortgage or auto loan, personal loans do not require collateral. They are typically used for various personal expenses, such as debt consolidation, home renovations, medical bills, or other significant expenses.\n \n ",
 
+    features: {
+      1: "  Unsecured Loan: No Collateral Required: Personal loans are generally unsecured, meaning they do not require any collateral such as a house or car. This makes them accessible to a wider range of borrowers.",
+      2: "  Fixed Interest Rates: Consistent Payments: Most personal loans come with fixed interest rates, meaning the interest rate and monthly payment remain the same throughout the loan term.",
+      3: " Fixed Loan Term: Set Repayment Schedule: Personal loans typically have a fixed repayment period, which can range from one to seven years. Borrowers know exactly when the loan will be paid off.",
+      4: " Lump Sum Disbursement: Immediate Access to Funds: The loan amount is disbursed as a lump sum to the borrower's account, providing immediate access to funds for various needs.",
+      5: "  Loan Amounts Varied Range: Loan amounts can range from a few thousand to several hundred thousand, depending on the lender and the borrower's creditworthiness."
+    },
 
-    features: "Unsecured Loan: \n No Collateral Required: Personal loans are generally unsecured, meaning they do not require any collateral such as a house or car. This makes them accessible to a wider range of borrowers.\nFixed Interest Rates:\n  Consistent Payments: Most personal loans come with fixed interest rates, meaning the interest rate and monthly payment remain the same throughout the loan term.\n Fixed Loan Term:\n Set Repayment Schedule: Personal loans typically have a fixed repayment period, which can range from one to seven years. Borrowers know exactly when the loan will be paid off.\n Lump Sum Disbursement:\n Immediate Access to Funds: The loan amount is disbursed as a lump sum to the borrower’s account, providing immediate access to funds for various needs.\n Loan Amounts:\n Varied Range: Loan amounts can range from a few thousand to several hundred thousand, depending on the lender and the borrower’s creditworthiness.\n \n ",
+    eligibility: [{
 
-    eligibility: "To qualify for a personal loan, you have to meet certain criteria. Below are the important factors that lenders take into consideration to decide your eligibility for a personal loan.\n - Age should fall under the range of 21 years to 60 years\n - Net monthly income should be 15,000/- for salaried and self-employed,\n yearly transactions should be a minimum of 20 lakhs\n - Credit score must be above 650\n - Debt-to-income ratio\n - Employment stability\n - Maintained a good credit score\n - Clear repayment history\n - Must be a Resident Citizen of India",
+      list: [
+        "  Age should fall under the range of 21 years to 60 years",
+        "  Net monthly income should be 15,000/- for salaried and self-employed",
+        " yearly transactions should be a minimum of 20 lakhs",
+        "  Credit score must be above 650",
+        "  Debt-to-income ratio",
+        "Employment stability",
+        "  Maintained a good credit score",
+        "  Clear repayment history",
+        "  Must be a Resident Citizen of India"
+      ],
+
+    }],
 
     process: {
-      step1: " - Apply: Click on 'Apply Now' fill in the Loan DSA Partner registration details, and submit along with the documents.",
-      step2: " - Expect a Call: Our support team will call you to guide and coordinate a meeting with you.",
-      step3: " - Meet: At the meeting, our Manager will explain all you need to know, including the process to follow while generating leads.",
-      step4: " - Sign DSA Agreement: After signing the DSA agreement, you will become a Our Partner and can start earning instantly.",
-      step5: " - Once you're comfortable with the processes and procedures, an agreement will be linked between you and Shubham Enterprises. Once signed and stamped,you will be an official Loan DSA Partner running a Loan DSA Franchise.",
+      1: "  Apply: Click on 'Apply Now' fill in the Loan DSA Partner registration details, and submit along with the documents.",
+      2: " Expect a Call: Our support team will call you to guide and coordinate a meeting with you.",
+      3: "  Meet: At the meeting, our Manager will explain all you need to know, including the process to follow while generating leads.",
+      4: "  Sign DSA Agreement: After signing the DSA agreement, you will become a Our Partner and can start earning instantly.",
+      5: "  Once you're comfortable with the processes and procedures, an agreement will be linked between you and Shubham Enterprises. Once signed and stamped,you will be an official Loan DSA Partner running a Loan DSA Franchise.",
 
     },
   },
   {
     id: 2,
     title: "Business Loan",
+    alt: "business-Loan",
     imgSrc: "business.png",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    process: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
+    info: "A business loan is a financial product that helps businesses cover expenses like expansion, equipment purchases, or managing cash flow. It comes with specific terms, such as repayment schedules and interest rates. By securing a loan, businesses can invest in growth opportunities and manage financial challenges.",
+
+    features: {
+      1: "  Term Loans : Fixed-term loans for long-term investments like property or large equipment purchases.",
+      2: "  Working Capital Loans : Short-term loans for covering daily operational expenses and managing cash flow.",
+      3: "  Business Expansion Loans : Funding for business growth activities such as opening new locations or renovating facilities.",
+      4: "  Equipment Financing Loans : Loans for purchasing or leasing new or used business equipment.",
+      5: "  Invoice Financing & Bill Discounting : Loans against outstanding invoices to access immediate cash flow.",
+      6: "  Machinery Loans : Loans specifically for acquiring or upgrading business machinery and equipment."
+
+    },
+
+    eligibility: [{
+
+      list: [
+        " Business Type: Most lenders provide loans to various types of businesses, including sole proprietorships, partnerships, limited liability companies (LLCs), corporations, and more.",
+        " Credit Score: A good credit score is often required to qualify for a business loan. Lenders use your credit history to assess your ability to repay the loan.",
+        " Business Age: Some lenders require a minimum operational history for your business, usually ranging from a few months to a year or more",
+        " Annual Revenue: Lenders may have a minimum annual revenue requirement to ensure your business has a stable income.",
+        " Collateral: Secured loans might require assets as collateral to secure the loan. Collateral can be real estate, equipment, inventory, or other valuable assets.",
+        "Cash Flow: Lenders often evaluate your business's cash flow to determine your ability to repay the loan.",
+        "Age Criteria: Min. 21 years at the time of loan application & Max. 65 years at the time of loan maturity",
+        " Other criteria's: - Individuals, MSMEs, Sole Proprietorships, Partnership Firms, Public and Private Limited Companies, Limited Liability Partnerships, retailers, traders, manufacturers, and other non-farm income-generating business entities engaged only in the services, trading, and manufacturing sectors,Business Vintage : Min. 1 year or above, Business experience: Min. 1 year, business location to remain same, Annual Turnover: Shall be defined by the Bank/NBFC, Credit Score: 700 or above (Preferred by most private and public sector banks) , Nationality: Indian citizens , Additional Criteria: Applicants must own either a residence, office, shop, or Godown. "
+      ],
+
+    }],
+
+    documents: [
+      {
+
+        list: [
+          "ITR for the past 2-3 years",
+          "Current Bank Account Statement for the last 12 months",
+          "Photocopy of PAN Card",
+          "Address Proof for Residence such as Voter Card, Passport, Aadhar Card, Telephone Bill, Electricity Bill",
+          "Address proof for Business such as the Telephone Bill or Electricity Bill",
+          "Last Financial Year's provisional Financials and future year's projections",
+          "Company's business profile on the letterhead",
+          "2 photographs of promoters and property owners",
+          "Sanction letter and Repayment schedule of existing loan",
+          "GST registration certificate and GST returns of latest 2 years",
+          "D - Vat / Sale tax registration copy",
+          "Udhayam Aadhar registration certificate",
+          "Rent agreement copy of factory and residence (if property is rented)",
+          "Business Continuity proof of 3 years (3 years old ITR / Company registration etc.)",
+          "Company PAN Card, Certificate of Incorporation, MOA, AOA, List of Directors, and Shareholding pattern for Pvt Ltd companies",
+          "Partnership Deed, Company PAN Card for Partnership Companies"
+        ]
+      }
+    ]
+
+
   },
   {
     id: 3,
     title: "Home Loan",
+    alt: "home-Loan",
     imgSrc: "HomeLoan.png",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    process: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
+
+    info: "A home loan, commonly known as a mortgage, is a financial arrangement where a lender provides funds to individuals or families to purchase or refinance residential real estate. The loan is secured by the property itself, and borrowers repay it over a specified period, typically 15 to 30 years, through monthly payments that include principal, interest, property taxes, and insurance. This enables borrowers to spread the cost of homeownership over time, making it feasible to acquire homes without needing to pay the full purchase price upfront.",
+    features: {
+      1: "A vast array of institutions offer you the best home loan rates at the most competitive rates and affordable EMIs.",
+      2: "Home Construction Loan: If you have a plot of land and lack financial support to construct a home on that piece of property, you may choose a house construction loan. Such borrowing is mainly made to construct or repair a major part of your home.",
+      3: "Home Extension Loan: Should you already own a home, and feel the need to extend the building, add an annexe, or build another floor, etc., Home Extension Loan is your go-to option that finances such needs.",
+      4: "Home Improvement Loan: All of us wish to improve and upgrade our homes for a better life. From your old-age furniture, fixtures to faulty lightning systems, Home Improvement Loan funds all your plans.",
+      5: "NRI Home Loan: If you are a patriot, a Non-Resident Indian, and wish to own residential property in India, NRI Home Loan is your answer. Though the formalities for application may be a little different."
+    },
+
+    eligibility: [
+      {
+
+        list: [
+          "Above 21 years at the time of loan commencement, up to 65 years or less at loan maturity",
+          "21 years to 58 years",
+          "25 years to 65 years",
+          "Minimum Rs. 10,000 per month",
+          "Minimum Rs. 2,00,000 per year",
+          "Minimum 2 to 3 years of experience in MNC, Private, or Public Limited Company",
+          "Minimum 3 years of experience in the current field",
+          "A credit score of 750 is considered a good score for approval"
+        ]
+      }
+    ],
+
+    documents: [
+      {
+        type: "Income Proof Documents for Salaried Individuals",
+        list: [
+          "Form 16",
+          "Employee Identity Card",
+          "3 Months Salary Slip",
+          "6 Month Bank Account Statement",
+          "Duration of Employment Evidence"
+        ]
+      },
+      {
+        type: "Income Proof Documents for Self-Employed Individuals",
+        list: [
+          "PAN",
+          "Trade License",
+          "Partnership Deed",
+          "Article of Association",
+          "Memorandum of Association",
+          "Import Export Code",
+          "SEBI Registration Certificate",
+          "ROC Registration Certificate",
+          "Financial Statement Audited by CA",
+          "Profit & Loss Account Statement",
+          "Balance Sheet",
+          "6 Months Bank Account Statement",
+          "Professional Practice License for Doctors, Consultants, etc.",
+          "Registration Certificate of Establishment for Shops, Factories, and Other Establishments",
+          "Business Address Proof"
+        ]
+      },
+      {
+        type: "Documents Required from Non-Resident Indian (NRI) Applicants",
+        list: [
+          "Income Proof Documents for NRI",
+          "Property Papers",
+          "Property Documents",
+          "Sale Deed",
+          "Stamped Agreement of Sale",
+          "Allotment Letter",
+          "No Objection Certificate or NOC",
+          "Housing Society",
+          "Builder",
+          "Possession Certificate",
+          "Land Tax Receipt",
+          "Construction Cost Estimate",
+          "Bank Account Statement of Payment Made to Seller or Builder",
+          "Payment Receipt of Payment Made to Seller or Builder",
+          "In case of resale property share certificate is required",
+          "Occupancy Certificate"
+        ]
+      }
+    ]
+
   },
   {
     id: 4,
     title: "Car Loan",
+    alt: "car-Loan",
     imgSrc: "car.png",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    eligibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
-    process: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
+    info: "A car loan is a financial product where a lender provides funds to an individual to purchase a vehicle. The loan is secured by the car itself, and borrowers repay it through monthly installments over a set period, typically ranging from 2 to 7 years. The loan amount, interest rate, and repayment term are agreed upon upfront, allowing borrowers to spread the cost of the vehicle over time, making car ownership more affordable.",
+    features: {
+      1: "Access to Immediate Funds: Quick financial support for purchasing a vehicle.",
+      2: "Flexible Loan Tenures: Various repayment periods to suit individual needs.",
+      3: "Fixed Interest Rates: Predictable monthly payments with set interest rates.",
+      4: "Customized Loan Amounts: Loan amounts tailored to fit the borrower's requirements.",
+      5: "Convenient Monthly Repayments: Manageable monthly installments.",
+      6: "Potential Tax Benefits: Possible tax deductions on interest payments.",
+      7: "Option for New and Used Cars: Financing available for both new and used vehicles.",
+      8: "Ownership from Day One: Immediate ownership of the car upon purchase.",
+      9: "No Need for Full Upfront Payment: Spread the cost over time without paying in full initially.",
+      10: "Improve Credit Score through Timely Payments: Positive impact on credit score with on-time repayments."
+    },
+    eligibility: [
+      {
+        type: "Salaried Individuals",
+        list: [
+          "At least 21 years old at the time of loan application and no older than 60 at the end of the loan tenure",
+          "Minimum two years of total work experience, with at least one year with the current employer",
+          "Minimum earning of Rs. 3,00,000 per year, including the income of the spouse/co-applicant"
+        ]
+      },
+      {
+        type: "Self Employed Individuals",
+        list: [
+          "At least 21 years old at the time of application and no older than 65 at the end of the loan tenure",
+          "Minimum two years of business experience",
+          "Should earn at least Rs. 3,000,000 per year"
+        ]
+      }
+    ],
+    documents: [
+      {
+        list: [
+          "ITR for the past 2-3 years",
+          "Current Bank Account Statement for the last 12 months",
+          "Photocopy of PAN Card",
+          "Address Proof for Residence such as Voter Card, Passport, Aadhar Card, Telephone Bill, Electricity Bill",
+          "Address proof for Business such as the Telephone Bill or Electricity Bill",
+          "Last Financial Year's provisional Financials and future year's projections",
+          "Company's business profile on the letterhead",
+          "2 photographs of promoters and property owners",
+          "Sanction letter and Repayment schedule of existing loan",
+          "GST registration certificate and GST returns of latest 2 years",
+          "D - Vat / Sale tax registration copy",
+          "Udhayam Aadhar registration certificate",
+          "Rent agreement copy of factory and residence (if property is rented)",
+          "Business Continuity proof of 3 years (3 years old ITR / Company registration etc.)",
+          "Company PAN Card, Certificate of Incorporation, MOA, AOA, List of Directors, and Shareholding pattern for Pvt Ltd companies",
+          "Partnership Deed, Company PAN Card for Partnership Companies"
+        ]
+      }
+    ]
   },
   {
     id: 5,
     title: "Tractor Loan",
+    alt: "tractor-Loan",
     imgSrc: "tractor.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -225,6 +422,7 @@ export const loanDetails = [
   {
     id: 6,
     title: "Mortgage Loan",
+    alt: "mortgage-Loan",
     imgSrc: "mortgage.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -234,6 +432,7 @@ export const loanDetails = [
   {
     id: 7,
     title: "Agri Loan",
+    alt: "agri-Loan",
     imgSrc: "sprout.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
@@ -243,6 +442,7 @@ export const loanDetails = [
   {
     id: 8,
     title: "Commercial Vehicle Loan",
+    alt: "dump-truck-Loan",
     imgSrc: "dump-truck.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",

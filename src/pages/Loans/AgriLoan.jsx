@@ -7,6 +7,8 @@ const AgriLoan = () => {
       {
         <LoanDetails
           title={firstLoanDetail.title}
+          alt={firstLoanDetail.alt}
+          imgSrc={firstLoanDetail.imgSrc}
           info={firstLoanDetail.info}
           features={firstLoanDetail.features}
           eligibility={firstLoanDetail.eligibility}

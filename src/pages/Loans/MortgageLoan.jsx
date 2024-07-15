@@ -9,6 +9,8 @@ const MortgageLoan = () => {
         <LoanDetails
           title={firstLoanDetail.title}
           info={firstLoanDetail.info}
+          imgSrc={firstLoanDetail.imgSrc}
+          alt={firstLoanDetail.alt}
           features={firstLoanDetail.features}
           eligibility={firstLoanDetail.eligibility}
           process={firstLoanDetail.process}

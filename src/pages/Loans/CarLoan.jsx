@@ -7,11 +7,13 @@ const CarLoan = () => {
       {
         <LoanDetails
           title={firstLoanDetail.title}
+          imgSrc={firstLoanDetail.imgSrc}
+          alt={firstLoanDetail.alt}
           info={firstLoanDetail.info}
           features={firstLoanDetail.features}
           eligibility={firstLoanDetail.eligibility}
           process={firstLoanDetail.process}
-
+          documents={firstLoanDetail.documents}
         />
       }
     </div>
