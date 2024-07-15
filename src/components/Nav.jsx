@@ -1,6 +1,6 @@
 import { LinkBtn, loanTypesData, NavLoanLinks } from "../Index";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
 import { NavLink } from "react-router-dom";
@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [arrowSrc, setArrowSrc] = useState("up-arrow.png");
+  const menuRef = useRef(null);
+  const hamburgerMenuRef = useRef(null);
   const [subMenuOpen, setSubMenuOpen] = useState({
     loansSubMenu: false,
     calculatorSubMenu: false,
@@ -23,6 +25,22 @@ const Nav = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        hamburgerMenuRef.current &&
+        !hamburgerMenuRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   gsap.to("nav", {
     backgroundColor: "#fff",
     borderBottom: "1px solid #D3D3D3",
@@ -90,18 +108,23 @@ const Nav = () => {
             </li>
           </div>
         </div>
-        <div id="hamburger" onClick={toggleMenu}>
+        <div id="hamburger" onClick={toggleMenu} ref={hamburgerMenuRef}>
           <div id="line1" className={`lines ${isOpen ? "line1" : ""}`}></div>
           <div id="line2" className={`lines ${isOpen ? "line2" : ""}`}></div>
           <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
         </div>
-        <div className={isOpen ? "menuActive" : "menuPage"}>
+        <div className={isOpen ? "menuActive" : "menuPage"} ref={menuRef}>
           <ul>
             <li>
               <LinkBtn className="" name="Home" navTo="/" />
             </li>
             <li>
-              <p onClick={() => toggleSubMenu("loansSubMenu")}>Loans</p>
+              <p
+                onClick={() => toggleSubMenu("loansSubMenu")}
+                style={{ cursor: "pointer" }}
+              >
+                Loans
+              </p>
             </li>
             <div
               className={`sub-menu ${
