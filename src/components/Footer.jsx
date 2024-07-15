@@ -48,9 +48,9 @@ const Footer = () => {
         </ul>
         <ul>
           <b>Contact Us</b>
-          <li>Phone: xxxxxxx199</li>
-          <li>Email : xyz@gmail.com</li>
-          <li>Address: Solapur</li>
+          <li>Phone: 9096992611</li>
+          <li>Email : maheshnalwar3011@gmail.com</li>
+          <li>Address: 59/2, Old Santosh Nagar, Near Sudha Idli Gruh, Bijapur Road, Solapur -413 004</li>
         </ul>
       </div>
       <div className="footer-bottom">
