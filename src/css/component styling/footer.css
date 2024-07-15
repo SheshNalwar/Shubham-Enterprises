@@ -16,6 +16,7 @@ footer .top-button {
   background-color: #094d6ec2;
   cursor: pointer;
 }
+
 footer .footer-lists {
   height: 65%;
   width: 100%;
@@ -27,6 +28,7 @@ footer .footer-lists {
   justify-content: center;
   /* gap: 2vw; */
 }
+
 footer .footer-lists a {
   text-decoration: none;
   margin-top: 1vh;
@@ -56,9 +58,11 @@ footer .footer-bottom ul {
   gap: 3vw;
   top: 50%;
 }
+
 .footerUL {
-  width: 30%;
+  width: 30vw;
 }
+
 .footerUL li {
   text-wrap: wrap;
   width: 100%;
@@ -77,18 +81,34 @@ footer .footer-bottom ul {
 }
 
 @media screen and (max-width: 600px) {
+  footer .footer-lists {
+    gap: 2vw;
+  }
+
   footer .footer-lists li {
     text-align: center;
     font-size: 2.8vw;
   }
-  .footerUL {
-    border: 1.5px solid red;
+
+  footer .footer-lists a {
+    text-align: center;
+    font-size: 2.8vw;
   }
+
+  footer .footer-lists .contact {
+    color: var(--accent);
+  }
+
+  /* .footerUL {
+    border: 1.5px solid red;
+  } */
+
   .footer-bottom ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
+
   .footer-bottom ul li {
     font-size: 3vw;
     text-align: center;
