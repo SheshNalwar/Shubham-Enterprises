@@ -1,29 +1,30 @@
 .about-us-main {
-  padding: 10vh 15vh;
-  height: 100vh;
-  /* width: 100vw; */
+  height: clamp(70vh, 100vh, 110vh);
+  padding: clamp(8rem, 10vh, 10vw) clamp(8rem, 15vh, 15vw);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
+  gap: clamp(3vw, 5vw, 5vw);
   background-color: var(--bg);
+
   .about-us-content {
-    width: 55vw;
+    width: clamp(40vw, 55vw, 70vw);
     height: auto;
-    /* border: 2px solid black; */
+
     .se {
       color: var(--accent);
     }
+
     h1 {
-      font-size: 3.9vw;
+      font-size: clamp(3.2vw, 3.9vw, 8vw);
       font-weight: 900;
       color: var(--secondary);
       line-height: 1.2;
     }
 
     p {
-      margin-top: 10vh;
-      font-size: 1.6vw;
+      margin-top: clamp(5vh, 10vh, 20vh);
+      font-size: clamp(1.2vw, 1.6vw, 4vw);
       font-weight: 500;
       color: var(--secondary);
       line-height: 1.4;
@@ -31,15 +32,14 @@
   }
 
   .about-us-image {
-    height: 70vh;
-    width: 30vw;
-    /* border: 2px solid black; */
+    height: clamp(50vh, 70vh, 100vh);
+    width: clamp(20vw, 30vw, 50vw);
 
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: clamp(5px, 10px, 20px);
     }
   }
 }
@@ -47,66 +47,85 @@
 .about-us-choose {
   height: auto;
   width: 100%;
-  margin: 10vh 0;
-  padding: 0 15vh;
+  margin: clamp(10vh, 10vh, 20vh) 0;
+  padding: 0 clamp(5vw, 15vh, 15vw);
   color: var(--secondary);
 
   h1 {
-    font-size: 3vw;
+    font-size: clamp(2.5vw, 3vw, 8vw);
     font-weight: 900;
   }
 
   p {
-    margin-top: 5vh;
-    font-size: 1.6vw;
+    margin-top: clamp(3vh, 5vh, 10vh);
+    font-size: clamp(1.2vw, 1.6vw, 4vw);
     font-weight: 500;
     color: var(--secondary);
     line-height: 1.4;
   }
 
   #commitment {
-    margin-top: 10vh;
+    margin-top: clamp(5vh, 10vh, 15vh);
   }
 
   #contact {
-    margin-top: 10vh;
+    margin-top: clamp(5vh, 10vh, 15vh);
   }
 
   .about-us-working {
-    height: 60vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1vw;
-    margin: 10vh 0;
+    flex-direction: row;
+    gap: clamp(1vh, 2vh, 5vh);
+    margin-top: clamp(5vh, 10vh, 15vh);
 
     img {
       height: 60vh;
-      width: 33%;
+      width: 30vw;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: clamp(5px, 10px, 20px);
+    }
+  }
+
+  .contactButton {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .contact-btn {
+      width: 10vw;
+      padding: clamp(1vh, 2vh, 5vh);
+      background-color: var(--accent);
+      border-radius: clamp(15px, 25px, 50px);
+      margin-top: clamp(2vh, 3vh, 10vh);
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
     }
   }
 }
 
-@media screen and (width < 600px) {
+@media screen and (max-width: 600px) {
   .about-us-main {
     flex-direction: column;
-    padding: 15vh 10vw;
+    padding: clamp(20vh, 30vh, 40vh) clamp(5vw, 10vw, 15vw);
     width: 100%;
-    height: 110vh;
+    height: clamp(80vh, 110vh, 150vh);
 
     .about-us-content {
-      width: 100%;
+      width: clamp(70%, 100%, 120%);
 
       h1 {
-        font-size: 8vw;
+        font-size: clamp(6vw, 8vw, 15vw);
       }
 
       p {
-        margin-top: 5vh;
-        font-size: 4vw;
+        margin-top: clamp(3vh, 5vh, 10vh);
+        font-size: clamp(2vw, 4vw, 8vw);
         font-weight: 600;
       }
     }
@@ -122,16 +141,16 @@
   }
 
   .about-us-choose {
-    padding: 0 5vw;
+    padding: 0 clamp(2vw, 5vw, 15vw);
     margin: 0;
-    margin-bottom: 10vh;
+    margin-bottom: clamp(5vh, 10vh, 20vh);
 
     h1 {
-      font-size: 8vw;
+      font-size: clamp(6vw, 8vw, 15vw);
     }
 
     p {
-      font-size: 4vw;
+      font-size: clamp(2vw, 4vw, 8vw);
       font-weight: 600;
     }
 
@@ -139,21 +158,33 @@
       height: auto;
       width: 100%;
       flex-direction: column;
-      margin-top: 5vh;
-      gap: 2vh;
+      margin-top: clamp(3vh, 5vh, 10vh);
+      gap: clamp(1vh, 2vh, 5vh);
 
       img {
-        height: 30vh;
-        width: 80vw;
+        height: clamp(15vh, 30vh, 50vh);
+        width: clamp(50vw, 80vw, 100vw);
       }
     }
 
     #commitment {
-      margin-top: 5vh;
+      margin-top: clamp(3vh, 5vh, 10vh);
     }
 
     #contact {
-      margin-top: 5vh;
+      margin-top: clamp(3vh, 5vh, 10vh);
     }
+
+    .contactButton {
+      .contact-btn {
+        width: clamp(20vw, 40vw, 60vw);
+
+        border: 1px solid black;
+        /* padding: 2vh 5vw; */
+      }
+    }
+
   }
+
+
 }

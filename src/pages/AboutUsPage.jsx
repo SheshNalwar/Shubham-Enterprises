@@ -1,4 +1,5 @@
 import "../css/aboutus.css";
+import { LinkBtn } from "../Index"
 const AboutUsPage = () => {
   return (
     <div>
@@ -59,6 +60,16 @@ const AboutUsPage = () => {
           your financial goals. Let Shubham Enterprises be your partner in
           success.
         </p>
+
+        <div className="contactButton">
+          <LinkBtn
+            navTo={"/contactUs"}
+            name={"Contact Us"}
+            className={"contact-btn"}
+          />
+        </div>
+
+
       </div>
     </div>
   );
