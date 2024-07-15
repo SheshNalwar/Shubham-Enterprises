@@ -1,28 +1,27 @@
 .loanDetails {
-    height: auto;
+    /* Height adjusted with clamp function */
+    height: clamp(20vh, auto, 100vh);
     width: 100%;
-    padding: 5vh 5vw;
+    padding: clamp(3vh, 5vw, 5vh) clamp(3vw, 5vw, 5vw);
     color: var(--secondary);
 
     .loan-info {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5vw;
+        gap: clamp(3vw, 5vw, 5vw);
 
         .info {
-            width: 60%;
+            width: clamp(40%, 60%, 80%);
         }
 
         .img {
-            width: 30%;
+            width: clamp(20%, 30%, 50%);
             display: flex;
             align-items: center;
             justify-content: center;
-            /* border: 2px solid black; */
 
             img {
-
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
@@ -31,39 +30,37 @@
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: clamp(3.5vw, 4vw, 10vw);
         font-weight: 900;
         text-align: center;
         color: var(--accent);
     }
 
     h3 {
-
-        margin-top: 8vh;
-        font-size: 2.3vw;
+        margin-top: clamp(5vh, 8vh, 10vh);
+        font-size: clamp(2vw, 2.3vw, 6vw);
         font-weight: 900;
         color: var(--secondary);
     }
 
     p {
-        font-size: 1.3vw;
+        font-size: clamp(1.2vw, 1.3vw, 3.5vw);
         font-weight: 500;
-        margin-top: 2vh;
+        margin-top: clamp(1.5vh, 2vh, 5vh);
         line-height: 1.5;
     }
 
     .calc-btn {
-
         display: flex;
         align-items: center;
         justify-content: center;
 
         .link-btn {
-            width: 15vw;
-            padding: 2vh;
+            width: clamp(10vw, 15vw, 60vw);
+            padding: clamp(1.5vh, 2vh, 5vh);
             background-color: var(--accent);
-            border-radius: 50px;
-            margin-top: 5vh;
+            border-radius: clamp(30px, 50px, 100px);
+            margin-top: clamp(3vh, 5vh, 10vh);
             text-align: center;
             text-decoration: none;
             color: black;
@@ -72,34 +69,62 @@
     }
 
     .document-requirements {
-
-
         .document-list {
             list-style-type: none;
-
         }
     }
 
     h4 {
-        font-size: 1.5vw;
-        margin-top: 2vh;
+        font-size: clamp(1vw, 1.5vw, 3vw);
+        margin-top: clamp(1vh, 2vh, 5vh);
         color: var(--secondary);
     }
 
-    /* 
-    .eligibility-step {
-        display: flex;
-
-    } */
-
-    .feature-step {
-        display: flex;
-    }
-
+    .feature-step,
     .process-step {
         display: flex;
     }
+}
 
+/* Media Query for screens narrower than 600px */
+@media screen and (max-width: 600px) {
+    .loanDetails {
+        padding: clamp(5vh, 8vw, 10vh);
 
+        .loan-info {
+            flex-direction: column;
 
+            .info {
+                width: 100%;
+            }
+
+            .img {
+                width: 100%;
+
+                img {
+                    height: clamp(20vh, 30vh, 50vh);
+                    width: clamp(30vw, 50vw, 100vw);
+                }
+            }
+        }
+
+        h1 {
+            font-size: clamp(6vw, 10vw, 15vw);
+        }
+
+        h3 {
+            margin-top: clamp(2vh, 3vh, 6vh);
+            font-size: clamp(3vw, 6vw, 10vw);
+        }
+
+        p {
+            font-size: clamp(1.5vw, 3.5vw, 8vw);
+        }
+
+        .calc-btn {
+            .link-btn {
+                width: clamp(30vw, 60vw, 100vw);
+            }
+        }
+    }
 }

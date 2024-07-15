@@ -169,7 +169,7 @@ export const loanDetails = [
     imgSrc: "personal.png",
     alt: "Personal-Loan",
 
-    title: "Perosnal Loan",
+    title: "Personal Loan",
 
     info: "A personal loan is a type of unsecured loan that individuals can obtain from banks, credit unions, or online lenders. Unlike secured loans, such as a mortgage or auto loan, personal loans do not require collateral. They are typically used for various personal expenses, such as debt consolidation, home renovations, medical bills, or other significant expenses.\n \n ",
 
