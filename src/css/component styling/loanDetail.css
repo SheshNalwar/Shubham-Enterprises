@@ -1,130 +1,88 @@
 .loanDetails {
-    /* Height adjusted with clamp function */
-    height: clamp(20vh, auto, 100vh);
-    width: 100%;
-    padding: clamp(3vh, 5vw, 5vh) clamp(3vw, 5vw, 5vw);
+  width: 100%;
+  padding: 5vw;
+  color: var(--secondary);
+  background-color: var(--bg);
+  .loan-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    .info {
+      width: 70%;
+    }
+    .img {
+      width: 28%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 2.1795rem + 1.0256vw, 3rem);
+    font-weight: 900;
+    text-align: center;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-size: clamp(2.5rem, 2.3077rem + 0.6154vw, 2.8rem);
+    margin-top: 5vh;
+    font-size: 2rem;
+    font-weight: 900;
     color: var(--secondary);
+  }
 
-    .loan-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: clamp(3vw, 5vw, 5vw);
-
-        .info {
-            width: clamp(40%, 60%, 80%);
-        }
-
-        .img {
-            width: clamp(20%, 30%, 50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
+  p {
+    font-size: clamp(1.1rem, 1.0038rem + 0.3077vw, 1.25rem);
+    font-weight: 500;
+    margin-top: 2vh;
+    line-height: 1.5;
+  }
+  .calc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .link-btn {
+      width: max-content;
+      padding: 1em;
+      background-color: var(--accent);
+      border-radius: 25px;
+      margin-top: 3vh;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
     }
-
-    h1 {
-        font-size: clamp(3.5vw, 4vw, 10vw);
-        font-weight: 900;
-        text-align: center;
-        color: var(--accent);
+  }
+  .document-requirements {
+    .document-list {
+      list-style-type: none;
     }
-
-    h3 {
-        margin-top: clamp(5vh, 8vh, 10vh);
-        font-size: clamp(2vw, 2.3vw, 6vw);
-        font-weight: 900;
-        color: var(--secondary);
-    }
-
-    p {
-        font-size: clamp(1.2vw, 1.3vw, 3.5vw);
-        font-weight: 500;
-        margin-top: clamp(1.5vh, 2vh, 5vh);
-        line-height: 1.5;
-    }
-
-    .calc-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .link-btn {
-            width: clamp(10vw, 15vw, 60vw);
-            padding: clamp(1.5vh, 2vh, 5vh);
-            background-color: var(--accent);
-            border-radius: clamp(30px, 50px, 100px);
-            margin-top: clamp(3vh, 5vh, 10vh);
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            font-weight: 700;
-        }
-    }
-
-    .document-requirements {
-        .document-list {
-            list-style-type: none;
-        }
-    }
-
-    h4 {
-        font-size: clamp(1vw, 1.5vw, 3vw);
-        margin-top: clamp(1vh, 2vh, 5vh);
-        color: var(--secondary);
-    }
-
-    .feature-step,
-    .process-step {
-        display: flex;
-    }
+  }
+  .feature-step,
+  .process-step {
+    display: flex;
+  }
 }
 
 /* Media Query for screens narrower than 600px */
 @media screen and (max-width: 600px) {
-    .loanDetails {
-        padding: clamp(5vh, 8vw, 10vh);
-
-        .loan-info {
-            flex-direction: column;
-
-            .info {
-                width: 100%;
-            }
-
-            .img {
-                width: 100%;
-
-                img {
-                    height: clamp(20vh, 30vh, 50vh);
-                    width: clamp(30vw, 50vw, 100vw);
-                }
-            }
-        }
-
-        h1 {
-            font-size: clamp(6vw, 10vw, 15vw);
-        }
-
-        h3 {
-            margin-top: clamp(2vh, 3vh, 6vh);
-            font-size: clamp(3vw, 6vw, 10vw);
-        }
-
-        p {
-            font-size: clamp(1.5vw, 3.5vw, 8vw);
-        }
-
-        .calc-btn {
-            .link-btn {
-                width: clamp(30vw, 60vw, 100vw);
-            }
-        }
+  .loanDetails {
+    .loan-info {
+      flex-direction: column;
+      .info {
+        width: 100%;
+      }
+      .img {
+        width: 80%;
+      }
     }
+  }
 }

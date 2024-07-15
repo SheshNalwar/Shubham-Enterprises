@@ -165,14 +165,10 @@ export const faqsData = [
 export const loanDetails = [
   {
     id: 1,
-
     imgSrc: "personal.png",
     alt: "Personal-Loan",
-
     title: "Personal Loan",
-
     info: "A personal loan is a type of unsecured loan that individuals can obtain from banks, credit unions, or online lenders. Unlike secured loans, such as a mortgage or auto loan, personal loans do not require collateral. They are typically used for various personal expenses, such as debt consolidation, home renovations, medical bills, or other significant expenses.\n \n ",
-
     features: {
       1: "  Unsecured Loan: No Collateral Required: Personal loans are generally unsecured, meaning they do not require any collateral such as a house or car. This makes them accessible to a wider range of borrowers.",
       2: "  Fixed Interest Rates: Consistent Payments: Most personal loans come with fixed interest rates, meaning the interest rate and monthly payment remain the same throughout the loan term.",
@@ -180,9 +176,7 @@ export const loanDetails = [
       4: " Lump Sum Disbursement: Immediate Access to Funds: The loan amount is disbursed as a lump sum to the borrower's account, providing immediate access to funds for various needs.",
       5: "  Loan Amounts Varied Range: Loan amounts can range from a few thousand to several hundred thousand, depending on the lender and the borrower's creditworthiness."
     },
-
     eligibility: [{
-
       list: [
         "  Age should fall under the range of 21 years to 60 years",
         "  Net monthly income should be 15,000/- for salaried and self-employed",
@@ -194,16 +188,13 @@ export const loanDetails = [
         "  Clear repayment history",
         "  Must be a Resident Citizen of India"
       ],
-
     }],
-
     process: {
       1: "  Apply: Click on 'Apply Now' fill in the Loan DSA Partner registration details, and submit along with the documents.",
       2: " Expect a Call: Our support team will call you to guide and coordinate a meeting with you.",
       3: "  Meet: At the meeting, our Manager will explain all you need to know, including the process to follow while generating leads.",
       4: "  Sign DSA Agreement: After signing the DSA agreement, you will become a Our Partner and can start earning instantly.",
       5: "  Once you're comfortable with the processes and procedures, an agreement will be linked between you and Shubham Enterprises. Once signed and stamped,you will be an official Loan DSA Partner running a Loan DSA Franchise.",
-
     },
   },
   {
@@ -212,7 +203,6 @@ export const loanDetails = [
     alt: "business-Loan",
     imgSrc: "business.png",
     info: "A business loan is a financial product that helps businesses cover expenses like expansion, equipment purchases, or managing cash flow. It comes with specific terms, such as repayment schedules and interest rates. By securing a loan, businesses can invest in growth opportunities and manage financial challenges.",
-
     features: {
       1: "  Term Loans : Fixed-term loans for long-term investments like property or large equipment purchases.",
       2: "  Working Capital Loans : Short-term loans for covering daily operational expenses and managing cash flow.",
@@ -220,11 +210,8 @@ export const loanDetails = [
       4: "  Equipment Financing Loans : Loans for purchasing or leasing new or used business equipment.",
       5: "  Invoice Financing & Bill Discounting : Loans against outstanding invoices to access immediate cash flow.",
       6: "  Machinery Loans : Loans specifically for acquiring or upgrading business machinery and equipment."
-
     },
-
     eligibility: [{
-
       list: [
         " Business Type: Most lenders provide loans to various types of businesses, including sole proprietorships, partnerships, limited liability companies (LLCs), corporations, and more.",
         " Credit Score: A good credit score is often required to qualify for a business loan. Lenders use your credit history to assess your ability to repay the loan.",
@@ -235,12 +222,9 @@ export const loanDetails = [
         "Age Criteria: Min. 21 years at the time of loan application & Max. 65 years at the time of loan maturity",
         " Other criteria's: - Individuals, MSMEs, Sole Proprietorships, Partnership Firms, Public and Private Limited Companies, Limited Liability Partnerships, retailers, traders, manufacturers, and other non-farm income-generating business entities engaged only in the services, trading, and manufacturing sectors,Business Vintage : Min. 1 year or above, Business experience: Min. 1 year, business location to remain same, Annual Turnover: Shall be defined by the Bank/NBFC, Credit Score: 700 or above (Preferred by most private and public sector banks) , Nationality: Indian citizens , Additional Criteria: Applicants must own either a residence, office, shop, or Godown. "
       ],
-
     }],
-
     documents: [
       {
-
         list: [
           "ITR for the past 2-3 years",
           "Current Bank Account Statement for the last 12 months",
@@ -261,15 +245,12 @@ export const loanDetails = [
         ]
       }
     ]
-
-
   },
   {
     id: 3,
     title: "Home Loan",
     alt: "home-Loan",
     imgSrc: "HomeLoan.png",
-
     info: "A home loan, commonly known as a mortgage, is a financial arrangement where a lender provides funds to individuals or families to purchase or refinance residential real estate. The loan is secured by the property itself, and borrowers repay it over a specified period, typically 15 to 30 years, through monthly payments that include principal, interest, property taxes, and insurance. This enables borrowers to spread the cost of homeownership over time, making it feasible to acquire homes without needing to pay the full purchase price upfront.",
     features: {
       1: "A vast array of institutions offer you the best home loan rates at the most competitive rates and affordable EMIs.",
@@ -278,10 +259,8 @@ export const loanDetails = [
       4: "Home Improvement Loan: All of us wish to improve and upgrade our homes for a better life. From your old-age furniture, fixtures to faulty lightning systems, Home Improvement Loan funds all your plans.",
       5: "NRI Home Loan: If you are a patriot, a Non-Resident Indian, and wish to own residential property in India, NRI Home Loan is your answer. Though the formalities for application may be a little different."
     },
-
     eligibility: [
       {
-
         list: [
           "Above 21 years at the time of loan commencement, up to 65 years or less at loan maturity",
           "21 years to 58 years",
@@ -294,7 +273,6 @@ export const loanDetails = [
         ]
       }
     ],
-
     documents: [
       {
         type: "Income Proof Documents for Salaried Individuals",

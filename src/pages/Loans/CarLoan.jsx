@@ -1,5 +1,4 @@
-import LoanDetails from "../../components/LoanDetails";
-import { loanDetails } from "../../utils/Data"
+import { LoanDetails, loanDetails } from "../../Index";
 const CarLoan = () => {
   const firstLoanDetail = loanDetails[3];
   return (
@@ -17,9 +16,7 @@ const CarLoan = () => {
         />
       }
     </div>
-
   );
 };
 
 export default CarLoan;
-

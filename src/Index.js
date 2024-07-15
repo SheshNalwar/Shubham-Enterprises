@@ -48,10 +48,16 @@ export {
 };
 
 // utils
-import { loanTypesData, reviewsData, faqsData } from "./utils/Data";
+import {
+  loanTypesData,
+  reviewsData,
+  faqsData,
+  loanDetails,
+} from "./utils/Data";
 import { calculateEMI, calculateLoanDetails } from "./utils/LoanCalculator";
 export {
   calculateEMI,
+  loanDetails,
   calculateLoanDetails,
   faqsData,
   reviewsData,

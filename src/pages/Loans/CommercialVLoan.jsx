@@ -1,5 +1,4 @@
-import LoanDetails from "../../components/LoanDetails";
-import { loanDetails } from "../../utils/Data"
+import { LoanDetails, loanDetails } from "../../Index";
 const CommercialVLoan = () => {
   const firstLoanDetail = loanDetails[7];
   return (
@@ -13,11 +12,9 @@ const CommercialVLoan = () => {
           features={firstLoanDetail.features}
           eligibility={firstLoanDetail.eligibility}
           process={firstLoanDetail.process}
-
         />
       }
     </div>
-
   );
 };
 

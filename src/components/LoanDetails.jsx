@@ -30,7 +30,6 @@ const LoanDetails = ({ title, info, features, eligibility, process, imgSrc, alt,
                 <div className="eligibility">
                     {eligibility.map((item, index) => (
                         <div key={index} className="eligibility-step">
-                            <h4>{item.type} </h4>
                             <ul>
                                 {item.list.map((detail, idx) => (
                                     <p key={idx}>{idx + 1}. {detail}</p>
