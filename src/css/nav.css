@@ -15,6 +15,7 @@ nav {
   display: flex;
   padding: 0 2vw;
   color: #000;
+  box-shadow: #000;  
   justify-content: space-between;
   align-items: center;
   z-index: 2;
@@ -32,10 +33,9 @@ nav {
   border-radius: 50%;
 }
 
-
 .nav-brand h1 {
   font-size: 5vh;
-  color: #0e3041;
+  color: var(--secondary);
   font-weight: 900;
   text-transform: uppercase;
   text-wrap: nowrap;
@@ -54,7 +54,7 @@ nav {
 
 .nav-menu li a {
   text-decoration: none;
-  color: #0e3041;
+  color: var(--secondary);
   font-weight: 700;
   text-wrap: nowrap;
 }
@@ -66,7 +66,7 @@ nav {
   position: absolute;
   height: 2px;
   border-radius: 1px;
-  background-color: #0e3041;
+  background-color: var(--secondary);
   left: 0;
   bottom: 0;
   transition: transform 0.3s ease;
@@ -103,7 +103,7 @@ nav {
 }
 
 .line2 {
-  transform: translateX(200px);
+  opacity: 0;
 }
 
 .line3 {
@@ -125,14 +125,13 @@ p {
 }
 
 #dropdown p {
-  color: #0e3041;
+  color: var(--secondary);
   font-weight: 700;
   text-wrap: nowrap;
 }
 
 #dropdown {
   display: inline-block;
-  color: white;
   padding: 14px 16px;
   width: fit-content;
   display: flex;
@@ -141,7 +140,7 @@ p {
 }
 
 .dropdown-content a:hover {
-  background-color: #80ff01;
+  background-color: var(--accent);
 }
 
 .dropdown-content a {

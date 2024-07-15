@@ -44,7 +44,7 @@ const Homepage = () => {
 
       <div className="page2">
         <div id="page2-heading">
-          <h1>OUR SERVICES</h1>
+          <h1>What We Provide</h1>
         </div>
         <div className="loan-types">
           {loanTypesData.map((loan, index) => (

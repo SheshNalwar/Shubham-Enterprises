@@ -95,7 +95,7 @@ const Nav = () => {
           <div id="line2" className={`lines ${isOpen ? "line2" : ""}`}></div>
           <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
         </div>
-        <div className={isOpen ? "active" : "menuPage"}>
+        <div className={isOpen ? "menuActive" : "menuPage"}>
           <ul>
             <li>
               <LinkBtn className="" name="Home" navTo="/" />
@@ -123,11 +123,7 @@ const Nav = () => {
               <LinkBtn className="" name="About Us" navTo="/aboutUs" />
             </li>
             <li>
-              <LinkBtn
-                className=""
-                name="Contact Us"
-                navTo="https://www.google.com/"
-              />
+              <LinkBtn className="" name="Contact Us" navTo="/contactUs" />
             </li>
           </ul>
         </div>

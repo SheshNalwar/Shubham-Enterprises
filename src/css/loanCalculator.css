@@ -7,54 +7,51 @@
   background-color: var(--bg);
 }
 
-h1 {
+.loanCalciH1 {
   font-size: clamp(2rem, 1.6795rem + 1.0256vw, 2.5rem);
-  color: var(--secondary);
+  color: rgba(0, 0, 0, 0.731);
   font-weight: 900;
 }
 
 .loanCalculatorPage {
   padding: 5vh 0;
-  width: 100%;
   display: flex;
+  width: 80%;
   justify-content: center;
-  /* margin-top: 8vh; */
   align-items: center;
 }
 
 .sub-container {
   display: flex;
   gap: 2rem;
-}
-
-.view {
-  flex: 1;
+  padding: 1rem;
 }
 
 .details {
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 .detail {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-
+.chart-details > .loanDetailsP {
+  color: white;
+  font-size: clamp(1.4rem, 1.2359rem + 0.2051vw, 1.5rem);
+}
 .label {
   font-size: 1.5rem;
   color: #000000;
 }
 
-.value {
-  color: #000000;
-}
-
-.footer {
+.emiDisplayer {
   text-align: center;
   background-color: var(--secondary);
   border-radius: 25px;
+  width: 100%;
+  margin-top: 5vh;
   height: clamp(8rem, 6.7179rem + 4.1026vw, 10rem);
   display: flex;
   justify-content: center;
@@ -73,7 +70,7 @@ h1 {
 }
 
 #price-container {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.4718rem + 0.4103vw, 1.8rem);
   display: flex;
   color: #ffffffde;
   flex-direction: column;
@@ -81,7 +78,7 @@ h1 {
 
 #price {
   color: var(--accent);
-  font-size: 25px;
+  font-size: clamp(1.6rem, 1.4718rem + 0.4103vw, 1.8rem);
 }
 
 .breakup {
@@ -91,18 +88,14 @@ h1 {
 .loan-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.chart-details {
-  flex: 1;
+  border-radius: 25px;
+  background-color: var(--secondary);
   text-align: center;
 }
 
 .chart-details .value {
-  color: #130f31d9;
-  font-size: 1.2rem;
+  color: var(--accent);
+  font-size: clamp(1.6rem, 1.4718rem + 0.4103vw, 1.8rem);
 }
 
 /*----- Styling the sliders ----*/
@@ -136,8 +129,6 @@ input[type="range"]::-moz-range-thumb {
   background-color: var(--accent);
   border-radius: 50%;
   border: none;
-
-  /* box-shadow: -407px 0 0 400px #f50; emove this line */
   transition: 0.2s ease-in-out;
 }
 

@@ -76,7 +76,7 @@ const LoanCalculatorPage = () => {
   return (
     <>
       <div id="mainLoanPage">
-        <h1>Loan Calculator</h1>
+        <h1 className="loanCalciH1">Loan Calculator</h1>
         <div className="loanCalculatorPage">
           <div className="sub-container">
             <div className="view">
@@ -115,7 +115,7 @@ const LoanCalculatorPage = () => {
                     id="loan-period"
                     min="1"
                     max="15"
-                    step=".1"
+                    step="1"
                     value={years}
                     onChange={(e) => setYears(parseFloat(e.target.value))}
                   />
@@ -140,7 +140,7 @@ const LoanCalculatorPage = () => {
                   />
                 </div>
               </div>
-              <div className="footer">
+              <div className="emiDisplayer">
                 <p id="price-container">
                   You Will Pay
                   <span id="price">₹ {emi.toLocaleString("en-IN")} </span>
@@ -154,19 +154,19 @@ const LoanCalculatorPage = () => {
           </div>
           <div className="loan-details">
             <div className="chart-details">
-              <p className="label">Principal</p>
+              <p className="loanDetailsP">Principal</p>
               <p id="cp" className="value">
                 {amount.toLocaleString("en-IN")}₹
               </p>
             </div>
             <div className="chart-details">
-              <p className="label">Interest</p>
+              <p className="loanDetailsP">Interest</p>
               <p id="ci" className="value">
                 {payableInterest.toLocaleString("en-IN")}₹
               </p>
             </div>
             <div className="chart-details">
-              <p className="label">Total Payable</p>
+              <p className="loanDetailsP">Total Payable</p>
               <p id="ct" className="value">
                 {(amount + payableInterest).toLocaleString("en-IN")}₹
               </p>
