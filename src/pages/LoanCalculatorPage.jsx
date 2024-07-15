@@ -152,7 +152,7 @@ const LoanCalculatorPage = () => {
               <canvas id="pieChart" ref={pieChartRef}></canvas>
             </div>
           </div>
-          <div className="loan-details">
+          <div className="loanCalDetails">
             <div className="chart-details">
               <p className="loanDetailsP">Principal</p>
               <p id="cp" className="value">

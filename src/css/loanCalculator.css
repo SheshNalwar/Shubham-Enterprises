@@ -85,12 +85,14 @@
   flex: 1;
 }
 
-.loan-details {
+.loanCalDetails {
   display: flex;
   flex-direction: column;
   border-radius: 25px;
   background-color: var(--secondary);
   text-align: center;
+  width: 100%;
+  padding: 1rem 0;
 }
 
 .chart-details .value {
