@@ -16,7 +16,6 @@ footer .top-button {
   background-color: #094d6ec2;
   cursor: pointer;
 }
-
 footer .footer-lists {
   height: 65%;
   width: 100%;
@@ -26,7 +25,7 @@ footer .footer-lists {
   display: flex;
   text-align: center;
   justify-content: center;
-  gap: 15vw;
+  /* gap: 2vw; */
 }
 footer .footer-lists a {
   text-decoration: none;
@@ -57,7 +56,13 @@ footer .footer-bottom ul {
   gap: 3vw;
   top: 50%;
 }
-
+.footerUL {
+  width: 30%;
+}
+.footerUL li {
+  text-wrap: wrap;
+  width: 100%;
+}
 
 @keyframes fade {
   from {
@@ -68,5 +73,24 @@ footer .footer-bottom ul {
   to {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer .footer-lists li {
+    text-align: center;
+    font-size: 2.8vw;
+  }
+  .footerUL {
+    border: 1.5px solid red;
+  }
+  .footer-bottom ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .footer-bottom ul li {
+    font-size: 3vw;
+    text-align: center;
   }
 }

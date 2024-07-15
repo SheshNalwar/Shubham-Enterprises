@@ -14,29 +14,18 @@ const Footer = () => {
         Back to Top
       </button>
       <div className="footer-lists">
-        <ul>
+        <ul className="footerUL">
           <b>Quick Links</b>
           <LinkBtn className="" name="Home" navTo="/" />
           <LinkBtn
             className="nav-color"
             name="Loan Calculator"
             navTo="/loanCalculator"
-            target=""
           />
-          <LinkBtn
-            className="nav-color"
-            name="About Us"
-            navTo="/aboutUs"
-            target=""
-          />
-          <LinkBtn
-            className="nav-color"
-            name="Contact Us"
-            navTo="/contactUs"
-            target="_blank"
-          />
+          <LinkBtn className="nav-color" name="About Us" navTo="/aboutUs" />
+          <LinkBtn className="nav-color" name="Contact Us" navTo="/contactUs" />
         </ul>
-        <ul>
+        <ul className="footerUL">
           <b>Our Services </b>
           {loanTypesData.map((loan, index) => (
             <NavLoanLinks
@@ -46,11 +35,14 @@ const Footer = () => {
             />
           ))}
         </ul>
-        <ul>
+        <ul className="footerUL">
           <b>Contact Us</b>
           <li>Phone: 9096992611</li>
           <li>Email : maheshnalwar3011@gmail.com</li>
-          <li>Address: 59/2, Old Santosh Nagar, Near Sudha Idli Gruh, Bijapur Road, Solapur -413 004</li>
+          <li>
+            Address: 59/2, Old Santosh Nagar, Near Sudha Idli Gruh, Bijapur
+            Road, Solapur -413 004
+          </li>
         </ul>
       </div>
       <div className="footer-bottom">

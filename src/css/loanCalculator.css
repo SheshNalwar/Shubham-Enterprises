@@ -145,3 +145,12 @@ input[type="range"]:active::-webkit-slider-thumb {
 input[type="range"]:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 13px rgba(112, 224, 0, 0.445);
 }
+
+@media screen and (max-width: 600px) {
+  .loanCalculatorPage {
+    flex-direction: column;
+  }
+  .sub-container {
+    flex-direction: column;
+  }
+}
