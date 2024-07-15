@@ -26,7 +26,7 @@ const Homepage = () => {
     <>
       <section id="landingPage">
         <div className="phuto">
-          <img src="/img3.jpeg" alt="" />
+          <img src="/group.jpeg" alt="" />
         </div>
         <div className="content">
           <p className="slogan1">
@@ -88,9 +88,8 @@ const Homepage = () => {
             {firstColumnFaqs.map((faq) => (
               <div key={faq.id}>
                 <div
-                  className={`question ${
-                    visibleAnswer === faq.id ? "rotate" : ""
-                  }`}
+                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
+                    }`}
                   onClick={() => toggleAnswer(faq.id)}
                 >
                   {faq.question}
@@ -107,9 +106,8 @@ const Homepage = () => {
             {secondColumnFaqs.map((faq) => (
               <div key={faq.id}>
                 <div
-                  className={`question ${
-                    visibleAnswer === faq.id ? "rotate" : ""
-                  }`}
+                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
+                    }`}
                   onClick={() => toggleAnswer(faq.id)}
                 >
                   {faq.question}
