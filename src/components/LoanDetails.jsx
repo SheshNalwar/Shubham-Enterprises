@@ -4,7 +4,7 @@ import { LinkBtn } from '../Index';
 
 const LoanDetails = ({ title, info, features, eligibility, process, imgSrc, alt, documents }) => {
     return (
-        <div className='loan-details'>
+        <div className='loanDetails'>
             <h1>{title}</h1>
             <div className="loan-info">
                 <div className='info'>
