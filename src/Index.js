@@ -54,8 +54,15 @@ import {
   faqsData,
   loanDetails,
 } from "./utils/Data";
-import { calculateEMI, calculateLoanDetails } from "./utils/LoanCalculator";
+import {
+  calculateEMI,
+  calculateLoanDetails,
+  initialize,
+  displayDetails,
+} from "./utils/LoanCalculator";
 export {
+  initialize,
+  displayDetails,
   calculateEMI,
   loanDetails,
   calculateLoanDetails,

@@ -1,5 +1,5 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
 import {
@@ -21,7 +21,9 @@ const Homepage = () => {
   const toggleAnswer = (id) => {
     setVisibleAnswer((prevId) => (prevId === id ? null : id));
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section id="landingPage">
@@ -88,8 +90,9 @@ const Homepage = () => {
             {firstColumnFaqs.map((faq) => (
               <div key={faq.id}>
                 <div
-                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
-                    }`}
+                  className={`question ${
+                    visibleAnswer === faq.id ? "rotate" : ""
+                  }`}
                   onClick={() => toggleAnswer(faq.id)}
                 >
                   {faq.question}
@@ -106,8 +109,9 @@ const Homepage = () => {
             {secondColumnFaqs.map((faq) => (
               <div key={faq.id}>
                 <div
-                  className={`question ${visibleAnswer === faq.id ? "rotate" : ""
-                    }`}
+                  className={`question ${
+                    visibleAnswer === faq.id ? "rotate" : ""
+                  }`}
                   onClick={() => toggleAnswer(faq.id)}
                 >
                   {faq.question}

@@ -1,11 +1,15 @@
+import { useEffect } from "react";
 import "../css/aboutus.css";
-import { LinkBtn } from "../Index"
+import { LinkBtn } from "../Index";
 const AboutUsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="about-us-main">
         <div className="about-us-content">
-          <h1>
+          <h1 className="aboutUsMainTitle">
             Shubham Enterprises : Your Partner In
             <span className="se"> Financial</span>
             <br></br>
@@ -68,8 +72,6 @@ const AboutUsPage = () => {
             className={"contact-btn"}
           />
         </div>
-
-
       </div>
     </div>
   );
