@@ -28,7 +28,6 @@ const Homepage = () => {
         end: "top 200",
         scrub: 3,
         pin: "reviewData",
-        markers: true,
       },
     });
     gsap.from(".loans", {
