@@ -2,14 +2,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useState } from "react";
 import "../css/homepage.css";
 import gsap from "gsap";
-import {
-  Loans,
-  Review,
-  loanTypesData,
-  reviewsData,
-  faqsData,
-  LinkBtn,
-} from "../Index";
+import { Loans, loanTypesData, faqsData, LinkBtn } from "../Index";
+import ReviewCarousel from "../components/ReviewCarousel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,15 +60,7 @@ const Homepage = () => {
           <h2>" In the Words of Our Customers "</h2>
         </div>
 
-        <div className="review-container">
-          {reviewsData.slice(0,4).map((review, index) => (
-            <Review
-              key={index}
-              name={review.name}
-              content={review.content}
-            />
-          ))}
-        </div>
+        <ReviewCarousel />
       </div>
 
       <div className="page4">

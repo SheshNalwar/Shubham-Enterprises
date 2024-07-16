@@ -178,16 +178,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4vw;
+  padding-left: 5vw;
   margin-top: 10vh;
-
+  width: 100%;
   .reviewData {
     height: 45vh;
     width: 20vw;
     padding: 4vh 2vw;
     background-color: #15475f;
     border-radius: 10px;
-    box-shadow: 8px 8px 16px #123b4ea2, inset -8px -8px 16px #185b70a6;
 
     img {
       object-fit: cover;
@@ -288,68 +287,6 @@ section {
   max-height: 200px;
   /* adjust based on the height of your answers */
   padding: 15px;
-}
-
-footer {
-  height: auto;
-  width: 100%;
-  background-color: #0e3041;
-}
-
-footer .top-button {
-  height: 10%;
-  width: 100%;
-  padding: 2vh;
-  color: #fff;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #094d6ec2;
-  cursor: pointer;
-}
-
-footer .footer-lists {
-  height: 65%;
-  width: 100%;
-  padding: 3vh;
-  border-bottom: 1px solid grey;
-  color: #fff;
-  display: flex;
-  /* margin-top: 2vw; */
-  justify-content: center;
-  gap: 15vw;
-}
-
-footer .footer-lists li {
-  margin-top: 1vh;
-  list-style-type: none;
-  cursor: pointer;
-  font-size: 1.1vw;
-}
-
-footer .footer-lists ul {
-  text-align: center;
-}
-
-footer .footer-bottom {
-  padding: 3vh;
-  height: 10%;
-  width: 100%;
-  color: #fff;
-  font-size: 1vw;
-}
-
-footer .footer-bottom ul {
-  height: 100%;
-  width: 100%;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  gap: 3vw;
-  top: 50%;
 }
 
 @keyframes fade {
