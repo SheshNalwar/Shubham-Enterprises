@@ -18,18 +18,18 @@ const Homepage = () => {
   const firstColumnFaqs = faqsData.slice(0, 7);
   const secondColumnFaqs = faqsData.slice(7, 14);
   useGSAP(() => {
-    gsap.from(".reviewData", {
-      duration: 5,
-      x: 300,
-      scrollTrigger: {
-        trigger: ".reviewData",
-        scroller: "body",
-        start: "top 450",
-        end: "top 200",
-        scrub: 3,
-        pin: "reviewData",
-      },
-    });
+    // gsap.from(".reviewData", {
+    //   duration: 5,
+    //   x: 300,
+    //   scrollTrigger: {
+    //     trigger: ".reviewData",
+    //     scroller: "body",
+    //     start: "top 450",
+    //     end: "top 200",
+    //     scrub: 3,
+    //     pin: "reviewData",
+    //   },
+    // });
     gsap.from(".loans", {
       duration: 1,
       opacity: 0,
