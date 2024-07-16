@@ -67,13 +67,10 @@ const Homepage = () => {
         </div>
 
         <div className="review-container">
-          {reviewsData.map((review, index) => (
+          {reviewsData.slice(0,4).map((review, index) => (
             <Review
               key={index}
-              imgSrc={review.imgSrc}
-              alt={review.alt}
               name={review.name}
-              className={review.classNaav}
               content={review.content}
             />
           ))}
