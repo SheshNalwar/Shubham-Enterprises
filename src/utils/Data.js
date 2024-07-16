@@ -51,28 +51,44 @@ export const loanTypesData = [
 
 export const reviewsData = [
   {
-    classNaav: "review1",
-    alt: "review1",
     name: "A",
-    content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
   },
   {
-    classNaav: "review2",
-    alt: "review2",
     name: "B",
-    content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
   },
   {
-    classNaav: "review3",
-    alt: "review3",
     name: "C",
-    content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
   },
   {
-    classNaav: "review4",
-    alt: "review4",
     name: "D",
-    content: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo "
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
+  },
+  {
+    name: "E",
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
+  },
+  {
+    name: "F",
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
+  },
+  {
+    name: "G",
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
+  },
+  {
+    name: "H",
+    content:
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam animi quos reiciendis cumque esse, explicabo ",
   },
 ];
 
@@ -97,7 +113,8 @@ export const faqsData = [
   },
   {
     question: " How long does the application process take?",
-    answer: "The application process can vary, but typically you will receive a decision within 1-5 business days after submitting all required documents.",
+    answer:
+      "The application process can vary, but typically you will receive a decision within 1-5 business days after submitting all required documents.",
     id: "q4",
   },
   {
@@ -174,21 +191,23 @@ export const loanDetails = [
       2: "  Fixed Interest Rates: Consistent Payments: Most personal loans come with fixed interest rates, meaning the interest rate and monthly payment remain the same throughout the loan term.",
       3: " Fixed Loan Term: Set Repayment Schedule: Personal loans typically have a fixed repayment period, which can range from one to seven years. Borrowers know exactly when the loan will be paid off.",
       4: " Lump Sum Disbursement: Immediate Access to Funds: The loan amount is disbursed as a lump sum to the borrower's account, providing immediate access to funds for various needs.",
-      5: "  Loan Amounts Varied Range: Loan amounts can range from a few thousand to several hundred thousand, depending on the lender and the borrower's creditworthiness."
+      5: "  Loan Amounts Varied Range: Loan amounts can range from a few thousand to several hundred thousand, depending on the lender and the borrower's creditworthiness.",
     },
-    eligibility: [{
-      list: [
-        "  Age should fall under the range of 21 years to 60 years",
-        "  Net monthly income should be 15,000/- for salaried and self-employed",
-        " yearly transactions should be a minimum of 20 lakhs",
-        "  Credit score must be above 650",
-        "  Debt-to-income ratio",
-        "Employment stability",
-        "  Maintained a good credit score",
-        "  Clear repayment history",
-        "  Must be a Resident Citizen of India"
-      ],
-    }],
+    eligibility: [
+      {
+        list: [
+          "  Age should fall under the range of 21 years to 60 years",
+          "  Net monthly income should be 15,000/- for salaried and self-employed",
+          " yearly transactions should be a minimum of 20 lakhs",
+          "  Credit score must be above 650",
+          "  Debt-to-income ratio",
+          "Employment stability",
+          "  Maintained a good credit score",
+          "  Clear repayment history",
+          "  Must be a Resident Citizen of India",
+        ],
+      },
+    ],
     process: {
       1: "  Apply: Click on 'Apply Now' fill in the Loan DSA Partner registration details, and submit along with the documents.",
       2: " Expect a Call: Our support team will call you to guide and coordinate a meeting with you.",
@@ -209,20 +228,22 @@ export const loanDetails = [
       3: "  Business Expansion Loans : Funding for business growth activities such as opening new locations or renovating facilities.",
       4: "  Equipment Financing Loans : Loans for purchasing or leasing new or used business equipment.",
       5: "  Invoice Financing & Bill Discounting : Loans against outstanding invoices to access immediate cash flow.",
-      6: "  Machinery Loans : Loans specifically for acquiring or upgrading business machinery and equipment."
+      6: "  Machinery Loans : Loans specifically for acquiring or upgrading business machinery and equipment.",
     },
-    eligibility: [{
-      list: [
-        " Business Type: Most lenders provide loans to various types of businesses, including sole proprietorships, partnerships, limited liability companies (LLCs), corporations, and more.",
-        " Credit Score: A good credit score is often required to qualify for a business loan. Lenders use your credit history to assess your ability to repay the loan.",
-        " Business Age: Some lenders require a minimum operational history for your business, usually ranging from a few months to a year or more",
-        " Annual Revenue: Lenders may have a minimum annual revenue requirement to ensure your business has a stable income.",
-        " Collateral: Secured loans might require assets as collateral to secure the loan. Collateral can be real estate, equipment, inventory, or other valuable assets.",
-        "Cash Flow: Lenders often evaluate your business's cash flow to determine your ability to repay the loan.",
-        "Age Criteria: Min. 21 years at the time of loan application & Max. 65 years at the time of loan maturity",
-        " Other criteria's: - Individuals, MSMEs, Sole Proprietorships, Partnership Firms, Public and Private Limited Companies, Limited Liability Partnerships, retailers, traders, manufacturers, and other non-farm income-generating business entities engaged only in the services, trading, and manufacturing sectors,Business Vintage : Min. 1 year or above, Business experience: Min. 1 year, business location to remain same, Annual Turnover: Shall be defined by the Bank/NBFC, Credit Score: 700 or above (Preferred by most private and public sector banks) , Nationality: Indian citizens , Additional Criteria: Applicants must own either a residence, office, shop, or Godown. "
-      ],
-    }],
+    eligibility: [
+      {
+        list: [
+          " Business Type: Most lenders provide loans to various types of businesses, including sole proprietorships, partnerships, limited liability companies (LLCs), corporations, and more.",
+          " Credit Score: A good credit score is often required to qualify for a business loan. Lenders use your credit history to assess your ability to repay the loan.",
+          " Business Age: Some lenders require a minimum operational history for your business, usually ranging from a few months to a year or more",
+          " Annual Revenue: Lenders may have a minimum annual revenue requirement to ensure your business has a stable income.",
+          " Collateral: Secured loans might require assets as collateral to secure the loan. Collateral can be real estate, equipment, inventory, or other valuable assets.",
+          "Cash Flow: Lenders often evaluate your business's cash flow to determine your ability to repay the loan.",
+          "Age Criteria: Min. 21 years at the time of loan application & Max. 65 years at the time of loan maturity",
+          " Other criteria's: - Individuals, MSMEs, Sole Proprietorships, Partnership Firms, Public and Private Limited Companies, Limited Liability Partnerships, retailers, traders, manufacturers, and other non-farm income-generating business entities engaged only in the services, trading, and manufacturing sectors,Business Vintage : Min. 1 year or above, Business experience: Min. 1 year, business location to remain same, Annual Turnover: Shall be defined by the Bank/NBFC, Credit Score: 700 or above (Preferred by most private and public sector banks) , Nationality: Indian citizens , Additional Criteria: Applicants must own either a residence, office, shop, or Godown. ",
+        ],
+      },
+    ],
     documents: [
       {
         list: [
@@ -241,10 +262,10 @@ export const loanDetails = [
           "Rent agreement copy of factory and residence (if property is rented)",
           "Business Continuity proof of 3 years (3 years old ITR / Company registration etc.)",
           "Company PAN Card, Certificate of Incorporation, MOA, AOA, List of Directors, and Shareholding pattern for Pvt Ltd companies",
-          "Partnership Deed, Company PAN Card for Partnership Companies"
-        ]
-      }
-    ]
+          "Partnership Deed, Company PAN Card for Partnership Companies",
+        ],
+      },
+    ],
   },
   {
     id: 3,
@@ -257,7 +278,7 @@ export const loanDetails = [
       2: "Home Construction Loan: If you have a plot of land and lack financial support to construct a home on that piece of property, you may choose a house construction loan. Such borrowing is mainly made to construct or repair a major part of your home.",
       3: "Home Extension Loan: Should you already own a home, and feel the need to extend the building, add an annexe, or build another floor, etc., Home Extension Loan is your go-to option that finances such needs.",
       4: "Home Improvement Loan: All of us wish to improve and upgrade our homes for a better life. From your old-age furniture, fixtures to faulty lightning systems, Home Improvement Loan funds all your plans.",
-      5: "NRI Home Loan: If you are a patriot, a Non-Resident Indian, and wish to own residential property in India, NRI Home Loan is your answer. Though the formalities for application may be a little different."
+      5: "NRI Home Loan: If you are a patriot, a Non-Resident Indian, and wish to own residential property in India, NRI Home Loan is your answer. Though the formalities for application may be a little different.",
     },
     eligibility: [
       {
@@ -269,9 +290,9 @@ export const loanDetails = [
           "Minimum Rs. 2,00,000 per year",
           "Minimum 2 to 3 years of experience in MNC, Private, or Public Limited Company",
           "Minimum 3 years of experience in the current field",
-          "A credit score of 750 is considered a good score for approval"
-        ]
-      }
+          "A credit score of 750 is considered a good score for approval",
+        ],
+      },
     ],
     documents: [
       {
@@ -281,8 +302,8 @@ export const loanDetails = [
           "Employee Identity Card",
           "3 Months Salary Slip",
           "6 Month Bank Account Statement",
-          "Duration of Employment Evidence"
-        ]
+          "Duration of Employment Evidence",
+        ],
       },
       {
         type: "Income Proof Documents for Self-Employed Individuals",
@@ -301,8 +322,8 @@ export const loanDetails = [
           "6 Months Bank Account Statement",
           "Professional Practice License for Doctors, Consultants, etc.",
           "Registration Certificate of Establishment for Shops, Factories, and Other Establishments",
-          "Business Address Proof"
-        ]
+          "Business Address Proof",
+        ],
       },
       {
         type: "Documents Required from Non-Resident Indian (NRI) Applicants",
@@ -322,11 +343,10 @@ export const loanDetails = [
           "Bank Account Statement of Payment Made to Seller or Builder",
           "Payment Receipt of Payment Made to Seller or Builder",
           "In case of resale property share certificate is required",
-          "Occupancy Certificate"
-        ]
-      }
-    ]
-
+          "Occupancy Certificate",
+        ],
+      },
+    ],
   },
   {
     id: 4,
@@ -344,7 +364,7 @@ export const loanDetails = [
       7: "Option for New and Used Cars: Financing available for both new and used vehicles.",
       8: "Ownership from Day One: Immediate ownership of the car upon purchase.",
       9: "No Need for Full Upfront Payment: Spread the cost over time without paying in full initially.",
-      10: "Improve Credit Score through Timely Payments: Positive impact on credit score with on-time repayments."
+      10: "Improve Credit Score through Timely Payments: Positive impact on credit score with on-time repayments.",
     },
     eligibility: [
       {
@@ -352,17 +372,17 @@ export const loanDetails = [
         list: [
           "At least 21 years old at the time of loan application and no older than 60 at the end of the loan tenure",
           "Minimum two years of total work experience, with at least one year with the current employer",
-          "Minimum earning of Rs. 3,00,000 per year, including the income of the spouse/co-applicant"
-        ]
+          "Minimum earning of Rs. 3,00,000 per year, including the income of the spouse/co-applicant",
+        ],
       },
       {
         type: "Self Employed Individuals",
         list: [
           "At least 21 years old at the time of application and no older than 65 at the end of the loan tenure",
           "Minimum two years of business experience",
-          "Should earn at least Rs. 3,000,000 per year"
-        ]
-      }
+          "Should earn at least Rs. 3,000,000 per year",
+        ],
+      },
     ],
     documents: [
       {
@@ -382,10 +402,10 @@ export const loanDetails = [
           "Rent agreement copy of factory and residence (if property is rented)",
           "Business Continuity proof of 3 years (3 years old ITR / Company registration etc.)",
           "Company PAN Card, Certificate of Incorporation, MOA, AOA, List of Directors, and Shareholding pattern for Pvt Ltd companies",
-          "Partnership Deed, Company PAN Card for Partnership Companies"
-        ]
-      }
-    ]
+          "Partnership Deed, Company PAN Card for Partnership Companies",
+        ],
+      },
+    ],
   },
   {
     id: 5,
@@ -427,4 +447,4 @@ export const loanDetails = [
     eligibility: [],
     process: [],
   },
-]
+];
