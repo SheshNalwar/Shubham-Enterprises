@@ -65,6 +65,9 @@ const AboutUsPage = () => {
           success.
         </p>
 
+        {/* <div className="contactButton">
+          <Contact />
+        </div> */}
         <div className="contactButton">
           <Contact />
         </div>
