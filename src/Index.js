@@ -31,7 +31,7 @@ import ReviewCarousel from "./components/Review/ReviewCarousel";
 import ChartDetails from "./components/LoanCalci/ChartDetails";
 import NavLoanLinks from "./components/NavBar/NavLoanLinks";
 import LoanDetails from "./components/LoanDetails";
-import { Contact } from "./components/Contact";
+import Contact from "./components/Contact";
 import LinkBtn from "./components/LinkBtn";
 import Nav from "./components/NavBar/Nav";
 import Footer from "./components/Footer";

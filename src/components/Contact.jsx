@@ -1,13 +1,12 @@
 import "../css/component styling/contact.css";
 import Popup from "reactjs-popup";
-import React from 'react';
 
 const Contact = () => {
-  const phoneNumber = '+91 738595199';
-  const email = 'sheshnalwar@gmail.com';
+  const phoneNumber = "+917385395199";
+  const email = "sheshnalwar@gmail.com";
 
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/${phoneNumber}`, '_blank');
+    window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 
   const handleCallClick = () => {
@@ -47,4 +46,4 @@ const Contact = () => {
   );
 };
 
-export { Contact };
+export default Contact;
