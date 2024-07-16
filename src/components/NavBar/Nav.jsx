@@ -3,7 +3,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../../css/component styling/nav.css";
-import { NavLink } from "react-router-dom";
+import Hamburger from "./Hamburger";
+import MenuPage from "./MenuPage";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
@@ -11,10 +12,6 @@ const Nav = () => {
   const [arrowSrc, setArrowSrc] = useState("up-arrow.png");
   const menuRef = useRef(null);
   const hamburgerMenuRef = useRef(null);
-  const [subMenuOpen, setSubMenuOpen] = useState({
-    loansSubMenu: false,
-    calculatorSubMenu: false,
-  });
   const handleMouseOver = () => {
     setArrowSrc("down-arrow.png");
   };
@@ -53,12 +50,6 @@ const Nav = () => {
     },
   });
 
-  const toggleSubMenu = (menuId) => {
-    setSubMenuOpen((prevState) => ({
-      ...prevState,
-      [menuId]: !prevState[menuId],
-    }));
-  };
   return (
     <>
       <nav>
@@ -103,48 +94,8 @@ const Nav = () => {
             </li>
           </div>
         </div>
-        <div id="hamburger" onClick={toggleMenu} ref={hamburgerMenuRef}>
-          <div id="line1" className={`lines ${isOpen ? "line1" : ""}`}></div>
-          <div id="line2" className={`lines ${isOpen ? "line2" : ""}`}></div>
-          <div id="line3" className={`lines ${isOpen ? "line3" : ""}`}></div>
-        </div>
-        <div className={isOpen ? "menuActive" : "menuPage"} ref={menuRef}>
-          <ul>
-            <li>
-              <LinkBtn className="" name="Home" navTo="/" />
-            </li>
-            <li>
-              <p
-                onClick={() => toggleSubMenu("loansSubMenu")}
-                style={{ cursor: "pointer" }}
-              >
-                Loans
-              </p>
-            </li>
-            <div
-              className={`sub-menu ${
-                subMenuOpen.loansSubMenu ? "show" : "hide"
-              }`}
-            >
-              {loanTypesData.map((loan, index) => (
-                <NavLoanLinks
-                  key={index}
-                  loanName={loan.loanName}
-                  navTo={loan.navigation}
-                />
-              ))}
-            </div>
-            <li>
-              <NavLink to="/loanCalculator">Loan Calculator</NavLink>
-            </li>
-            <li>
-              <LinkBtn className="" name="About Us" navTo="/aboutUs" />
-            </li>
-            <li>
-              <Contact />
-            </li>
-          </ul>
-        </div>
+        <Hamburger togMenu={toggleMenu} op={isOpen} rf={hamburgerMenuRef} />
+        <MenuPage op={isOpen} rf={menuRef} />
       </nav>
     </>
   );
