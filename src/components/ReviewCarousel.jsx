@@ -8,7 +8,7 @@ const ReviewCarousel = () => {
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 500, min: 464 },
       items: 1,
     },
     mobile: {
@@ -27,7 +27,6 @@ const ReviewCarousel = () => {
       rewind
     >
       {reviewsData.map((review, index) => {
-        console.log(index);
         return (
           <Review key={index} name={review.name} content={review.content} />
         );

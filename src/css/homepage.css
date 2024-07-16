@@ -175,11 +175,10 @@ section {
 }
 
 .page3 .review-container {
+  margin-top: 10vh;
+  padding: 0 10vw;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-left: 5vw;
-  margin-top: 10vh;
   width: 100%;
   .reviewData {
     height: 45vh;

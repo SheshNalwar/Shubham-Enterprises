@@ -210,7 +210,6 @@
   .page3 .review-container {
     height: auto;
     width: 100%;
-    flex-direction: column;
     margin-top: 5vh;
 
     .reviewData {
