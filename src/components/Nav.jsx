@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../css/nav.css";
 import { NavLink } from "react-router-dom";
-
+import { Contact } from "./Contact";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
@@ -100,11 +100,7 @@ const Nav = () => {
               <LinkBtn className="nav-color" name="About Us" navTo="/aboutUs" />
             </li>
             <li>
-              <LinkBtn
-                className="nav-color"
-                name="Contact Us"
-                navTo="/contactUs"
-              />
+              <Contact />
             </li>
           </div>
         </div>
@@ -127,9 +123,8 @@ const Nav = () => {
               </p>
             </li>
             <div
-              className={`sub-menu ${
-                subMenuOpen.loansSubMenu ? "show" : "hide"
-              }`}
+              className={`sub-menu ${subMenuOpen.loansSubMenu ? "show" : "hide"
+                }`}
             >
               {loanTypesData.map((loan, index) => (
                 <NavLoanLinks
@@ -146,7 +141,7 @@ const Nav = () => {
               <LinkBtn className="" name="About Us" navTo="/aboutUs" />
             </li>
             <li>
-              <LinkBtn className="" name="Contact Us" navTo="/contactUs" />
+              <Contact />
             </li>
           </ul>
         </div>
