@@ -30,7 +30,10 @@ import LoanCalDetails from "./components/LoanCalci/LoanCalDetails";
 import ReviewCarousel from "./components/Review/ReviewCarousel";
 import ChartDetails from "./components/LoanCalci/ChartDetails";
 import NavLoanLinks from "./components/NavBar/NavLoanLinks";
+import Hamburger from "./components/NavBar/Hamburger";
+import MenuPage from "./components/NavBar/MenuPage";
 import LoanDetails from "./components/LoanDetails";
+import NavMenu from "./components/NavBar/NavMenu";
 import Contact from "./components/Contact";
 import LinkBtn from "./components/LinkBtn";
 import Nav from "./components/NavBar/Nav";
@@ -38,6 +41,9 @@ import Footer from "./components/Footer";
 import Loans from "./components/Loans";
 import Faq from "./components/Faq";
 export {
+  Hamburger,
+  MenuPage,
+  NavMenu,
   Contact,
   LoanCalDetails,
   DetailWithInput,

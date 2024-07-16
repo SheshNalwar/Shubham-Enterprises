@@ -20,10 +20,8 @@ const ReviewCarousel = () => {
   return (
     <Carousel
       responsive={responsive}
-      autoPlay={true}
       containerClass="review-container"
       infinite
-      customTransition="all 1s"
       rewindWithAnimation
       rewind
     >

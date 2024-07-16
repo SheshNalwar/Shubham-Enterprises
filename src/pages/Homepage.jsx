@@ -1,6 +1,7 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FaqColumn from "../components/FaqColumn";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 import "../css/homepage.css";
 import gsap from "gsap";
@@ -13,14 +14,43 @@ import {
 } from "../Index";
 
 const Homepage = () => {
+  const container = useRef();
   const firstColumnFaqs = faqsData.slice(0, 7);
   const secondColumnFaqs = faqsData.slice(7, 14);
+  useGSAP(() => {
+    gsap.from(".reviewData", {
+      duration: 5,
+      x: 300,
+      scrollTrigger: {
+        trigger: ".reviewData",
+        scroller: "body",
+        start: "top 450",
+        end: "top 200",
+        scrub: 3,
+        pin: "reviewData",
+        markers: true,
+      },
+    });
+    gsap.from(".loans", {
+      duration: 1,
+      opacity: 0,
+      x: -50,
+      scale: 1.1,
+      scrollTrigger: {
+        trigger: ".loans",
+        scroller: "body",
+        start: "top 450",
+        end: "top 200",
+        scrub: 3,
+      },
+    });
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <section id="landingPage">
+      <section id="landingPage" ref={container}>
         <div className="phuto">
           <img src="/group.jpeg" alt="" />
         </div>
@@ -34,7 +64,11 @@ const Homepage = () => {
             a legacy of trust and financial expertise, we are your dedicated
             partner in achieving your goals and aspirations.
           </p>
-          <LinkBtn className="homeAboutUs" name="About Us" navTo="/aboutUs" />
+          <LinkBtn
+            className="homeAboutUs"
+            name="About Us"
+            financeTo="/aboutUs"
+          />
         </div>
       </section>
       <div className="page2">
@@ -46,7 +80,7 @@ const Homepage = () => {
             <Loans
               key={index}
               imgSrc={loan.imgSrc}
-              navigation={loan.navigation}
+              financeigation={loan.financeigation}
               alt={loan.alt}
               loanName={loan.loanName}
             />
