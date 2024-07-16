@@ -4,7 +4,7 @@ p {
   font-weight: 700;
   color: var(--secondary);
   font-size: 1.2vw;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .button {
@@ -66,14 +66,14 @@ p {
   cursor: pointer;
 }
 
-.modal > .actions {
+.modal>.actions {
   width: 100%;
   padding: 10px 5px;
   margin: auto;
   text-align: center;
 }
 
-.modal > .close {
+.modal>.close {
   cursor: pointer;
   position: absolute;
   display: block;
@@ -122,7 +122,7 @@ p {
     font-size: 4vw;
   }
 
-  .modal > .close {
+  .modal>.close {
     padding: 5px 8px;
   }
 }
