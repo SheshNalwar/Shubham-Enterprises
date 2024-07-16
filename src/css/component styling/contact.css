@@ -63,6 +63,7 @@ p {
   background-color: var(--accent);
   font-size: 1rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .modal > .actions {

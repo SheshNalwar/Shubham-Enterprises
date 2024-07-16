@@ -22,8 +22,8 @@ const ReviewCarousel = () => {
       responsive={responsive}
       autoPlay={true}
       containerClass="review-container"
-      autoPlaySpeed={5000}
       infinite
+      customTransition="all 1s"
       rewindWithAnimation
       rewind
     >

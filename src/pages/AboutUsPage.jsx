@@ -1,4 +1,4 @@
-import { Contact, LinkBtn } from "../Index";
+import { Contact } from "../Index";
 import { useEffect } from "react";
 import "../css/aboutus.css";
 const AboutUsPage = () => {
@@ -64,10 +64,6 @@ const AboutUsPage = () => {
           your financial goals. Let Shubham Enterprises be your partner in
           success.
         </p>
-
-        {/* <div className="contactButton">
-          <Contact />
-        </div> */}
         <div className="contactButton">
           <Contact />
         </div>
