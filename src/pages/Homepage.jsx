@@ -66,7 +66,7 @@ const Homepage = () => {
           <LinkBtn
             className="homeAboutUs"
             name="About Us"
-            financeTo="/aboutUs"
+            navTo="/aboutUs"
           />
         </div>
       </section>
