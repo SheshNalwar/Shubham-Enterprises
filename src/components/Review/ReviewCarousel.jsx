@@ -1,6 +1,7 @@
-import { Review, reviewsData } from "../Index";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel";
+import { reviewsData } from "../../Index";
+import Review from "./Review";
 const ReviewCarousel = () => {
   const responsive = {
     desktop: {

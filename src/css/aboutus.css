@@ -93,19 +93,17 @@
   .contactButton {
     display: flex;
     align-items: center;
-    justify-content: start;
-
-    .contact-btn {
-      width: 10vw;
-      padding: clamp(1vh, 2vh, 5vh);
-      background-color: var(--accent);
-      border-radius: clamp(15px, 25px, 50px);
-      margin-top: clamp(2vh, 3vh, 10vh);
-      text-align: center;
-      text-decoration: none;
-      color: black;
-      font-weight: 700;
-    }
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    padding: .5rem 0;
+    background-color: var(--accent);
+    border-radius: 10px;
+    margin-top: 2vh;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
   }
 }
 
@@ -183,8 +181,5 @@
         /* padding: 2vh 5vw; */
       }
     }
-
   }
-
-
 }

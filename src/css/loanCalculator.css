@@ -81,9 +81,6 @@
   font-size: clamp(1.6rem, 1.4718rem + 0.4103vw, 1.8rem);
 }
 
-.breakup {
-  flex: 1;
-}
 
 .loanCalDetails {
   display: flex;

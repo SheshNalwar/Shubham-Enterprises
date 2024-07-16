@@ -1,10 +1,9 @@
-import { LinkBtn, loanTypesData, NavLoanLinks } from "../Index";
+import { LinkBtn, Contact, loanTypesData, NavLoanLinks } from "../../Index";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
-import "../css/nav.css";
+import "../../css/component styling/nav.css";
 import { NavLink } from "react-router-dom";
-import { Contact } from "./Contact";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
@@ -123,8 +122,9 @@ const Nav = () => {
               </p>
             </li>
             <div
-              className={`sub-menu ${subMenuOpen.loansSubMenu ? "show" : "hide"
-                }`}
+              className={`sub-menu ${
+                subMenuOpen.loansSubMenu ? "show" : "hide"
+              }`}
             >
               {loanTypesData.map((loan, index) => (
                 <NavLoanLinks

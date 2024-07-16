@@ -1,6 +1,6 @@
+import { Contact, LinkBtn } from "../Index";
 import { useEffect } from "react";
 import "../css/aboutus.css";
-import { LinkBtn } from "../Index";
 const AboutUsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,11 +66,7 @@ const AboutUsPage = () => {
         </p>
 
         <div className="contactButton">
-          <LinkBtn
-            navTo={"/contactUs"}
-            name={"Contact Us"}
-            className={"contact-btn"}
-          />
+          <Contact />
         </div>
       </div>
     </div>

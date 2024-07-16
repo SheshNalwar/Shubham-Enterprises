@@ -1,4 +1,4 @@
-import { loanTypesData, NavLoanLinks, LinkBtn } from "../Index";
+import { loanTypesData, NavLoanLinks, LinkBtn, Contact } from "../Index";
 import "../css/component styling/footer.css";
 const Footer = () => {
   const backToTop = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="footer-lists">
         <ul className="footerUL">
           <b>Contact Us</b>
-          <LinkBtn className="contact" name="Click Here" navTo="/contactUs" />
+          <Contact />
           <li>
             Address: 59/2, Old Santosh Nagar, Near Sudha Idli Gruh, Bijapur
             Road, Solapur -413 004
@@ -31,7 +31,6 @@ const Footer = () => {
             navTo="/loanCalculator"
           />
           <LinkBtn className="nav-color" name="About Us" navTo="/aboutUs" />
-          {/* <LinkBtn className="nav-color" name="Contact Us" navTo="/contactUs" /> */}
         </ul>
         <ul className="footerUL">
           <b>Our Services </b>
@@ -43,7 +42,6 @@ const Footer = () => {
             />
           ))}
         </ul>
-
       </div>
       <div className="footer-bottom">
         <ul>

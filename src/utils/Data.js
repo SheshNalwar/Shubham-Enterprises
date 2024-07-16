@@ -448,3 +448,27 @@ export const loanDetails = [
     process: [],
   },
 ];
+
+export const inputDetails = [
+  {
+    label: "Amount",
+    unit: "",
+    min: 0,
+    max: 10000000,
+    step: 50000,
+  },
+  {
+    label: "Length",
+    unit: "years",
+    min: 1,
+    max: 15,
+    step: 1,
+  },
+  {
+    label: "Interest",
+    unit: "%",
+    min: 5,
+    max: 15,
+    step: 0.1,
+  },
+];

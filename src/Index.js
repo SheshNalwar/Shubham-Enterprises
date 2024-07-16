@@ -21,38 +21,45 @@ export {
 // Pages :
 import LoanCalculatorPage from "./pages/LoanCalculatorPage";
 import AboutUsPage from "./pages/AboutUsPage";
-import ContactUsPage from "./pages/ContactUsPage";
 import Homepage from "./pages/Homepage";
-export { LoanCalculatorPage, AboutUsPage, Homepage, ContactUsPage };
+export { LoanCalculatorPage, AboutUsPage, Homepage };
 
 // Components
-import NavLoanLinks from "./components/NavLoanLinks";
+import DetailWithInput from "./components/LoanCalci/DetailWithInput";
+import LoanCalDetails from "./components/LoanCalci/LoanCalDetails";
+import ReviewCarousel from "./components/Review/ReviewCarousel";
+import ChartDetails from "./components/LoanCalci/ChartDetails";
+import NavLoanLinks from "./components/NavBar/NavLoanLinks";
 import LoanDetails from "./components/LoanDetails";
+import { Contact } from "./components/Contact";
 import LinkBtn from "./components/LinkBtn";
-import Review from "./components/Review";
+import Nav from "./components/NavBar/Nav";
 import Footer from "./components/Footer";
 import Loans from "./components/Loans";
-import Card from "./components/Card";
 import Faq from "./components/Faq";
-import Nav from "./components/Nav";
 export {
+  Contact,
+  LoanCalDetails,
+  DetailWithInput,
+  ChartDetails,
+  ReviewCarousel,
   LinkBtn,
   Loans,
-  Review,
   Faq,
   Nav,
-  Card,
   NavLoanLinks,
   Footer,
   LoanDetails,
 };
 
 // utils
+import useLoanCalculator from "./utils/useLoanCalculator";
 import {
   loanTypesData,
   reviewsData,
   faqsData,
   loanDetails,
+  inputDetails,
 } from "./utils/Data";
 import {
   calculateEMI,
@@ -61,6 +68,8 @@ import {
   displayDetails,
 } from "./utils/LoanCalculator";
 export {
+  useLoanCalculator,
+  inputDetails,
   initialize,
   displayDetails,
   calculateEMI,
