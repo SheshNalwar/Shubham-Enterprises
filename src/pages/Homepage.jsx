@@ -1,5 +1,6 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect, useState } from "react";
+import FaqColumn from "../components/FaqColumn";
+import React, { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import "../css/homepage.css";
 import gsap from "gsap";
@@ -12,12 +13,8 @@ import {
 } from "../Index";
 
 const Homepage = () => {
-  const [visibleAnswer, setVisibleAnswer] = useState(null);
   const firstColumnFaqs = faqsData.slice(0, 7);
   const secondColumnFaqs = faqsData.slice(7, 14);
-  const toggleAnswer = (id) => {
-    setVisibleAnswer((prevId) => (prevId === id ? null : id));
-  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,7 +37,6 @@ const Homepage = () => {
           <LinkBtn className="homeAboutUs" name="About Us" navTo="/aboutUs" />
         </div>
       </section>
-
       <div className="page2">
         <div id="page2-heading">
           <h1>What We Provide</h1>
@@ -68,44 +64,8 @@ const Homepage = () => {
           <h2>FREQUENTLY ASKED QUESTIONS</h2>
         </div>
         <div className="faq-container">
-          <div className="faq-column">
-            {firstColumnFaqs.map((faq) => (
-              <div key={faq.id}>
-                <div
-                  className={`question ${
-                    visibleAnswer === faq.id ? "rotate" : ""
-                  }`}
-                  onClick={() => toggleAnswer(faq.id)}
-                >
-                  {faq.question}
-                </div>
-                <div
-                  className={`answer ${visibleAnswer === faq.id ? "show" : ""}`}
-                >
-                  {faq.answer}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="faq-column">
-            {secondColumnFaqs.map((faq) => (
-              <div key={faq.id}>
-                <div
-                  className={`question ${
-                    visibleAnswer === faq.id ? "rotate" : ""
-                  }`}
-                  onClick={() => toggleAnswer(faq.id)}
-                >
-                  {faq.question}
-                </div>
-                <div
-                  className={`answer ${visibleAnswer === faq.id ? "show" : ""}`}
-                >
-                  {faq.answer}
-                </div>
-              </div>
-            ))}
-          </div>
+          <FaqColumn coln={firstColumnFaqs} />
+          <FaqColumn coln={secondColumnFaqs} />
         </div>
       </div>
     </>
