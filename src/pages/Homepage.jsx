@@ -1,10 +1,6 @@
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FaqColumn from "../components/FaqColumn";
-import React, { useEffect, useRef } from "react";
-import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(ScrollTrigger);
+import React, { useEffect } from "react";
 import "../css/homepage.css";
-import gsap from "gsap";
 import {
   Loans,
   loanTypesData,
@@ -14,30 +10,15 @@ import {
 } from "../Index";
 
 const Homepage = () => {
-  const container = useRef();
   const firstColumnFaqs = faqsData.slice(0, 7);
   const secondColumnFaqs = faqsData.slice(7, 14);
-  useGSAP(() => {
-    gsap.from(".loans", {
-      duration: 1,
-      opacity: 0,
-      x: -50,
-      scale: 1.1,
-      scrollTrigger: {
-        trigger: ".loans",
-        scroller: "body",
-        start: "top 450",
-        end: "top 200",
-        scrub: 3,
-      },
-    });
-  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <section id="landingPage" ref={container}>
+      <section id="landingPage">
         <div className="phuto">
           <img src="/group.jpeg" alt="" />
         </div>
@@ -51,11 +32,7 @@ const Homepage = () => {
             a legacy of trust and financial expertise, we are your dedicated
             partner in achieving your goals and aspirations.
           </p>
-          <LinkBtn
-            className="homeAboutUs"
-            name="About Us"
-            navTo="/aboutUs"
-          />
+          <LinkBtn className="homeAboutUs" name="About Us" navTo="/aboutUs" />
         </div>
       </section>
       <div className="page2">
