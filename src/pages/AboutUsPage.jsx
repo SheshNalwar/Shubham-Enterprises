@@ -25,7 +25,7 @@ const AboutUsPage = () => {
         </div>
 
         <div className="about-us-image">
-          <img src="About-us-img.jpeg" alt="" />
+          <img src="About-us-img.jpeg" alt="aboutUsImg" />
         </div>
       </div>
 
@@ -43,9 +43,9 @@ const AboutUsPage = () => {
         </p>
 
         <div className="about-us-working">
-          <img src="/laptop.jpeg" alt="" />
-          <img src="/meeting.jpeg" alt="" />
-          <img src="/individual.jpeg" alt="" />
+          <img src="/laptop.jpeg" alt="laptop" />
+          <img src="/meeting.jpeg" alt="meeting" />
+          <img src="/individual.jpeg" alt="individual" />
         </div>
 
         <h1 id="commitment">Our Commitment</h1>

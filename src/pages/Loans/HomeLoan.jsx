@@ -2,7 +2,7 @@ import { LoanDetails, loanDetails } from "../../Index";
 const HomeLoan = () => {
   const firstLoanDetail = loanDetails[2];
   return (
-    <div style={{ paddingTop: "5rem" }}>
+    <div>
       {
         <LoanDetails
           title={firstLoanDetail.title}

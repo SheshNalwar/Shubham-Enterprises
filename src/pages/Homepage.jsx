@@ -20,7 +20,7 @@ const Homepage = () => {
     <>
       <section id="landingPage">
         <div className="phuto">
-          <img src="/group.jpeg" alt="" />
+          <img src="/group.jpeg" alt="landingPageImg" />
         </div>
         <div className="content">
           <p className="slogan1">
