@@ -20,7 +20,7 @@ p {
   font-size: 12px;
   background-color: var(--secondary);
   color: white;
-  height: 50vh;
+  height: 55vh;
   width: 40vw;
   border-radius: 20px;
   display: flex;
@@ -43,7 +43,7 @@ p {
 }
 
 .modal .content {
-  height: 35vh;
+  height: 40vh;
   width: 100%;
   padding: 2vh 5vw;
   border-top: 1.5px solid white;
@@ -64,6 +64,15 @@ p {
   font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.modal .content button img {
+  height: 2vw;
+  width: 2vw;
 }
 
 .modal>.actions {
@@ -101,14 +110,20 @@ p {
   }
 
   .modal .header {
-    height: 10vh;
+    height: 5vh;
     font-size: 6vw;
   }
 
   .modal .content button {
-    width: 40vw;
+    width: 60vw;
     font-size: 4vw;
     font-weight: 700;
+    gap: 2vw;
+  }
+
+  .modal .content button img {
+    height: 4vh;
+    width: 7vw;
   }
 
   .modal .actions {

@@ -26,9 +26,9 @@ const Contact = () => {
           </button>
           <div className="header"> Contact Us </div>
           <div className="content">
-            <button onClick={handleWhatsAppClick}>WhatsApp</button>
-            <button onClick={handleCallClick}>Call</button>
-            <button onClick={handleEmailClick}>Email</button>
+            <button onClick={handleWhatsAppClick}><img src="/whatsapp.png" alt="whatsapp" /> {phoneNumber} </button>
+            <button onClick={handleCallClick}><img src="/telephone.png" alt="" /> {phoneNumber}</button>
+            <button onClick={handleEmailClick}><img src="/gmail.png" alt="" /> {email} </button>
           </div>
           <div className="actions">
             <button
