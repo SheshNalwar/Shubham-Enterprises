@@ -36,7 +36,7 @@ const Nav = () => {
           <NavMenu />
         </div>
         <Hamburger togMenu={toggleMenu} op={isOpen} rf={hamburgerMenuRef} />
-        <MenuPage op={isOpen} rf={menuRef} />
+        <MenuPage op={isOpen} rf={menuRef} toggleMenu={toggleMenu} />
       </nav>
     </>
   );

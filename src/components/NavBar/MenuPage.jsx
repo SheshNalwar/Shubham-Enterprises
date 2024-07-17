@@ -1,6 +1,7 @@
-import { LinkBtn, NavLoanLinks, Contact, loanTypesData } from "../../Index";
+import { NavLink } from "react-router-dom";
+import { Contact, loanTypesData } from "../../Index";
 import { useState } from "react";
-const MenuPage = ({ op, rf }) => {
+const MenuPage = ({ op, rf, toggleMenu }) => {
   const [subMenuOpen, setSubMenuOpen] = useState({
     loansSubMenu: false,
     calculatorSubMenu: false,
@@ -11,11 +12,16 @@ const MenuPage = ({ op, rf }) => {
       [menuId]: !prevState[menuId],
     }));
   };
+  const handleCloseMenu = () => {
+    toggleMenu();
+  };
   return (
     <div className={op ? "menuActive" : "menuPage"} ref={rf}>
       <ul>
         <li>
-          <LinkBtn className="" name="Home" navTo="/" />
+          <NavLink to="/" onClick={handleCloseMenu}>
+            Home
+          </NavLink>
         </li>
         <li>
           <p
@@ -29,22 +35,25 @@ const MenuPage = ({ op, rf }) => {
           className={`sub-menu ${subMenuOpen.loansSubMenu ? "show" : "hide"}`}
         >
           {loanTypesData.map((loan, index) => (
-            <NavLoanLinks
+            <NavLink
               key={index}
-              loanName={loan.loanName}
-              navTo={loan.navigation}
-            />
+              to={loan.navigation}
+              id="hamMenuH4"
+              onClick={handleCloseMenu}
+            >
+              {loan.loanName} Loan
+            </NavLink>
           ))}
         </div>
         <li>
-          <LinkBtn
-            className=""
-            name="Loan Calculator"
-            navTo="/loanCalculator"
-          />
+          <NavLink to="/loanCalculator" onClick={handleCloseMenu}>
+            Loan Calculator
+          </NavLink>
         </li>
         <li>
-          <LinkBtn className="" name="About Us" navTo="/aboutUs" />
+          <NavLink to="/aboutUs" onClick={handleCloseMenu}>
+            About Us
+          </NavLink>
         </li>
         <li>
           <Contact />
