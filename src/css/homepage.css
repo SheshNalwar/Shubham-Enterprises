@@ -4,7 +4,21 @@ section {
   min-height: fit-content;
   box-shadow: 10px 10px 40px #00000041, inset -10px -10px 40px #ffffff40;
 }
-
+.page404Div {
+  padding: 10rem;
+  display: flex;
+  background-color: var(--bg);
+  flex-direction: column;
+  align-items: center;
+}
+.page404Div h1 {
+  font-size: clamp(5rem, 1.7949rem + 10.2564vw, 10rem);
+  color: var(--accent);
+}
+.page404Div h2 {
+  font-size: clamp(1.5rem, 0.7949rem + 1.2564vw, 2rem);
+  color: var(--secondary);
+}
 #landingPage {
   display: flex;
   align-items: center;

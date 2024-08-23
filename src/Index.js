@@ -22,7 +22,8 @@ export {
 import LoanCalculatorPage from "./pages/LoanCalculatorPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import Homepage from "./pages/Homepage";
-export { LoanCalculatorPage, AboutUsPage, Homepage };
+import Page404 from "./pages/Page404";
+export { LoanCalculatorPage, AboutUsPage, Homepage, Page404 };
 
 // Components
 import DetailWithInput from "./components/LoanCalci/DetailWithInput";

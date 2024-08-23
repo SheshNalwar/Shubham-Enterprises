@@ -8,6 +8,7 @@ import {
   Footer,
   HomeLoan,
   Homepage,
+  Page404,
   LoanCalculatorPage,
   MortgageLoan,
   Nav,
@@ -21,6 +22,7 @@ function App() {
       <Router>
         <Nav />
         <Routes>
+          <Route path="*" element={<Page404 />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutUs" element={<AboutUsPage />} />
           <Route path="/loanCalculator" element={<LoanCalculatorPage />} />
