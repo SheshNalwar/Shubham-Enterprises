@@ -42,6 +42,7 @@ const Homepage = () => {
         <div className="loan-types">
           {loanTypesData.map((loan, index) => (
             <Loans
+              navigation={loan.navigation}
               key={index}
               imgSrc={loan.imgSrc}
               financeigation={loan.financeigation}
