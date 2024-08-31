@@ -2,7 +2,7 @@ export const loanTypesData = [
   {
     imgSrc: "personal.png",
     loanName: "Personal",
-    alt: "Personal-Loan",
+    alt: "PersonalLoan",
     navigation: "personalLoan",
   },
   {
@@ -26,7 +26,7 @@ export const loanTypesData = [
   {
     imgSrc: "tractor.png",
     loanName: "Tractor",
-    alt: "Tractor-Loan",
+    alt: "TractorLoan",
     navigation: "tractorLoan",
   },
   {
@@ -38,13 +38,13 @@ export const loanTypesData = [
   {
     imgSrc: "sprout.png",
     loanName: "Agri",
-    alt: "Agri-Loan",
+    alt: "AgriLoan",
     navigation: "agriLoan",
   },
   {
     imgSrc: "dump-truck.png",
     loanName: "Commercial Vehicle",
-    alt: "Commercial-Vehicle",
+    alt: "CommercialVehicle",
     navigation: "commercialVLoan",
   },
 ];
@@ -183,7 +183,7 @@ export const loanDetails = [
   {
     id: 1,
     imgSrc: "personal.png",
-    alt: "Personal-Loan",
+    alt: "PersonalLoan",
     title: "Personal Loan",
     info: "A personal loan is a type of unsecured loan that individuals can obtain from banks, credit unions, or online lenders. Unlike secured loans, such as a mortgage or auto loan, personal loans do not require collateral. They are typically used for various personal expenses, such as debt consolidation, home renovations, medical bills, or other significant expenses.\n \n ",
     features: {
@@ -219,7 +219,7 @@ export const loanDetails = [
   {
     id: 2,
     title: "Business Loan",
-    alt: "business-Loan",
+    alt: "BusinessLoan",
     imgSrc: "business.png",
     info: "A business loan is a financial product that helps businesses cover expenses like expansion, equipment purchases, or managing cash flow. It comes with specific terms, such as repayment schedules and interest rates. By securing a loan, businesses can invest in growth opportunities and manage financial challenges.",
     features: {
@@ -270,7 +270,7 @@ export const loanDetails = [
   {
     id: 3,
     title: "Home Loan",
-    alt: "home-Loan",
+    alt: "HomeLoan",
     imgSrc: "HomeLoan.png",
     info: "A home loan, commonly known as a mortgage, is a financial arrangement where a lender provides funds to individuals or families to purchase or refinance residential real estate. The loan is secured by the property itself, and borrowers repay it over a specified period, typically 15 to 30 years, through monthly payments that include principal, interest, property taxes, and insurance. This enables borrowers to spread the cost of homeownership over time, making it feasible to acquire homes without needing to pay the full purchase price upfront.",
     features: {
@@ -351,7 +351,7 @@ export const loanDetails = [
   {
     id: 4,
     title: "Car Loan",
-    alt: "car-Loan",
+    alt: "CarLoan",
     imgSrc: "car.png",
     info: "A car loan is a financial product where a lender provides funds to an individual to purchase a vehicle. The loan is secured by the car itself, and borrowers repay it through monthly installments over a set period, typically ranging from 2 to 7 years. The loan amount, interest rate, and repayment term are agreed upon upfront, allowing borrowers to spread the cost of the vehicle over time, making car ownership more affordable.",
     features: {
@@ -410,7 +410,7 @@ export const loanDetails = [
   {
     id: 5,
     title: "Tractor Loan",
-    alt: "tractor-Loan",
+    alt: "TractorLoan",
     imgSrc: "tractor.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: {},
@@ -420,7 +420,7 @@ export const loanDetails = [
   {
     id: 6,
     title: "Mortgage Loan",
-    alt: "mortgage-Loan",
+    alt: "MortgageLoan",
     imgSrc: "mortgage.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: {},
@@ -430,7 +430,7 @@ export const loanDetails = [
   {
     id: 7,
     title: "Agri Loan",
-    alt: "agri-Loan",
+    alt: "AgriLoan",
     imgSrc: "sprout.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: {},
@@ -440,7 +440,7 @@ export const loanDetails = [
   {
     id: 8,
     title: "Commercial Vehicle Loan",
-    alt: "dump-truck-Loan",
+    alt: "CommercialVehicle",
     imgSrc: "dump-truck.png",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum aliquam sapiente ad delectus nam, praesentium",
     features: {},

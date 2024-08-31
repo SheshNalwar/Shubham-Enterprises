@@ -1,29 +1,10 @@
-// Loan Pages :
-import CommercialVLoan from "./pages/Loans/CommercialVLoan";
-import BusinessLoan from "./pages/Loans/BusinessLoan";
-import MortgageLoan from "./pages/Loans/MortgageLoan";
-import PersonalLoan from "./pages/Loans/PersonalLoan";
-import TractorLoan from "./pages/Loans/TractorLoan";
-import HomeLoan from "./pages/Loans/HomeLoan";
-import AgriLoan from "./pages/Loans/AgriLoan";
-import CarLoan from "./pages/Loans/CarLoan";
-export {
-  CommercialVLoan,
-  BusinessLoan,
-  MortgageLoan,
-  PersonalLoan,
-  TractorLoan,
-  HomeLoan,
-  AgriLoan,
-  CarLoan,
-};
-
 // Pages :
 import LoanCalculatorPage from "./pages/LoanCalculatorPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import LoansPage from "./pages/LoansPage";
 import Homepage from "./pages/Homepage";
 import Page404 from "./pages/Page404";
-export { LoanCalculatorPage, AboutUsPage, Homepage, Page404 };
+export { LoanCalculatorPage, AboutUsPage, Homepage, Page404, LoansPage };
 
 // Components
 import DetailWithInput from "./components/LoanCalci/DetailWithInput";

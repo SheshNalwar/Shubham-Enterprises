@@ -1,21 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   AboutUsPage,
-  AgriLoan,
-  BusinessLoan,
-  CarLoan,
-  CommercialVLoan,
   Footer,
-  HomeLoan,
   Homepage,
   Page404,
   LoanCalculatorPage,
-  MortgageLoan,
   Nav,
-  PersonalLoan,
-  TractorLoan,
+  loanDetails,
+  loanTypesData,
+  LoansPage,
 } from "./Index";
-
+const mergedLoanData = loanTypesData
+  .map((loanType) => {
+    const loanDetail = loanDetails.find(
+      (detail) => detail.alt === loanType.alt
+    );
+    if (loanDetail) {
+      return { ...loanType, ...loanDetail };
+    } else {
+      console.warn(`No matching loan detail found for ${loanType.alt}`);
+      return null;
+    }
+  })
+  .filter((loan) => loan !== null);
 function App() {
   return (
     <>
@@ -26,14 +33,13 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutUs" element={<AboutUsPage />} />
           <Route path="/loanCalculator" element={<LoanCalculatorPage />} />
-          <Route path="/personalLoan" element={<PersonalLoan />} />
-          <Route path="/homeLoan" element={<HomeLoan />} />
-          <Route path="/agriLoan" element={<AgriLoan />} />
-          <Route path="/carLoan" element={<CarLoan />} />
-          <Route path="/businessLoan" element={<BusinessLoan />} />
-          <Route path="/mortgageLoan" element={<MortgageLoan />} />
-          <Route path="/tractorLoan" element={<TractorLoan />} />
-          <Route path="/commercialVLoan" element={<CommercialVLoan />} />
+          {mergedLoanData.map((loan) => (
+            <Route
+              key={loan.id || loan.navigation}
+              path={`/${loan.navigation}`}
+              element={<LoansPage loan={loan} />}
+            />
+          ))}
         </Routes>
         <Footer />
       </Router>
