@@ -24,6 +24,8 @@ const NavMenu = () => {
           {loanTypesData.map((loan, index) => (
             <NavLoanLinks
               key={index}
+              img={loan.imgSrc}
+              alt={loan.alt}
               loanName={loan.loanName}
               navTo={loan.navigation}
             />

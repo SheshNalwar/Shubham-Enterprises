@@ -63,7 +63,9 @@ footer .footer-bottom ul {
 .footerUL {
   width: 30vw;
 }
-
+.footerUL img{
+  display: none;
+}
 .footerUL li {
   text-wrap: wrap;
   width: 100%;
